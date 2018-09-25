@@ -3,10 +3,10 @@
 <?php include_once "html/inc/head.php"; ?>
 <body class="">
 <header class="">    
-    <div class="logo"></div>
+    <img src="media/c4m.png" alt="" class="logo" />
     <nav class=""><!-- Navigation -->
         <ul class="">
-            <li class="fa fa-user">Mon compte</li><!-- Mon compte ou login/out -->
+            <li class=""></li>
             <li class=""></li>
             <li class=""></li>
             <li class=""></li>
@@ -34,5 +34,3 @@
 </body>
 <?php include_once "html/inc/footer.php"; ?>
 </html>
-
-
