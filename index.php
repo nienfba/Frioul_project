@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-<?php include_once "inc/head.php"; ?>
+<?php include_once "html/inc/head.php"; ?>
 <body class="">
 <header class="">    
     <div class="logo"></div>
@@ -24,7 +24,7 @@
         <button class="btn-medium">Choisissez une ville</button>
         <button class="btn-medium">Choisissez une activité</button>
         <button class="btn-medium">Découvrir les bons plans</button>
-        <button class="btn-medium">autou de moi</button>
+        <button class="btn-medium">Autour de moi</button>
     </section>
 </article>
 
@@ -33,7 +33,7 @@
 
 
 </body>
-<?php include_once "inc/footer.php"; ?>
+<?php include_once "html/inc/footer.php"; ?>
 </html>
 
 
