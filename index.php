@@ -3,7 +3,7 @@
 <?php include_once "html/inc/head.php"; ?>
 <body class="">
 <header class="">    
-    <div class="logo"></div>
+    <img src="media/c4m.png" alt="" class="logo" />
     <nav class=""><!-- Navigation -->
         <ul class="">
             <li class=""></li>
