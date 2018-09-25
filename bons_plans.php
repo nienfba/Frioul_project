@@ -15,8 +15,8 @@
         </ul>
     </nav>
     <section><!-- Bas de page visible page home avec fond transparent-->
-        <a href="partager" title=""></a><button class="btn-medium">Partager vos bons plans</button></a>
-        <a href="decouvrir" title=""><button class="btn-medium">Découvrir les bons plans</button></a>
+        <a href="/partager.php" title=""><button class="btn-medium">Partager vos bons plans</button></a>
+        <a href="/decouvrir.php" title=""><button class="btn-medium">Découvrir les bons plans</button></a>
         <button class="btn-medium fa fa-search"></button><!-- Bouton de recherche -->
     </section>    
 </header>
