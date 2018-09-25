@@ -9,6 +9,9 @@
                 <ul class="listeInfo">
                     // ICI ON VA CREER UNE BALISE li PAR INFO RECUPERE
                 </ul>
+                <p class="listeInfo">
+
+                </p>
             </section>
         </main>
         <script>
@@ -38,14 +41,19 @@ fetch(urlApiAjax)
         var description = infoCourante.description;
         var publicationDate = infoCourante.publicationDate;
 
-        var baliseUl = document.querySelector("ul.listeInfo");
+        var TagP = document.querySelector("p.listeInfo");
+        //var baliseUl = document.querySelector("ul.listeInfo");
         // DOM Document Object Model
         // AJOUTER UNE BALISE li
-        var codeHtmlLi =      '<li>'
+        /*var codeHtmlLi =      '<li>'
                                 + '<h4>' + title + '</h4>'
-                            + '</li>';
+                            + '</li>';*/
         // AJOUTER NOTRE CODE POUR LA BALISE li DANS LA BALISE ul
-        baliseUl.innerHTML += codeHtmlLi;
+        //baliseUl.innerHTML += codeHtmlLi;
+        var showInfo =
+        'titre :' + title + ', <br> Coordonnée latitude:' + latitude +', <br> Coordonnée longitude:'+ longitude + ', <br> Description : ' + description + ', <br> Date de publication :' + publicationDate + '<br> <br>';
+
+          TagP.innerHTML += showInfo;
     }
 
 })
