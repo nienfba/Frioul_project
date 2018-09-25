@@ -6,7 +6,7 @@
     <div class="logo"></div>
     <nav class=""><!-- Navigation -->
         <ul class="">
-            <li class=""></li>
+            <li class="fa fa-user">Mon compte</li><!-- Mon compte ou login/out -->
             <li class=""></li>
             <li class=""></li>
             <li class=""></li>

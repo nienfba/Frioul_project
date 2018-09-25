@@ -4,25 +4,25 @@
 <body class="">
 <header class="">    
     <div class="logo"></div>
-    <nav class=""><!-- Navigation autre class rouge idem boutons-->
+    <nav class=""><!-- Navigation autre class bouton rouge fond blanc-->
         <ul class="">
-            <li class="fa fa-">Mes favoris </li>
-            <li class="fa fa-user">Mon compte</li>
-            <li class=""></li>
-            <li class=""></li>
-            <li class=""></li>
-            <li class=""></li>
+            <li class="">Choisissez une ville</li>
+            <li class="">Espace naturel</li>
+            <li class="">Valider</li>
         </ul>
-    </nav>
-    <section><!-- Bas de page visible page home avec fond transparent-->
-        <a href="/partager.php" title=""><button class="btn-medium">Partager vos bons plans</button></a>
-        <a href="/decouvrir.php" title=""><button class="btn-medium">Découvrir les bons plans</button></a>
-        <button class="btn-medium fa fa-search"></button><!-- Bouton de recherche -->
-    </section>    
+    </nav>  
 </header>
-<article>
-    <!-- Liste des photos et informations -->
-    <section></section>
+<article><!-- Liste des photos et informations -->    
+    <section><!-- 2 Colonnes / Voir pour limiter le nombre de photos -->
+        <div class=""></div><!-- Photo en background -->
+        <h3 class=""></h3><!-- Titre -->
+        <p class="">
+            <!-- Description avec picto / Gras -->
+            <!-- Durée et distance avec picto -->
+            <!-- # Hashtag / Gras-->
+        </p>
+
+    </section>
 </article>
 <aside>
     <!-- Carte -->
