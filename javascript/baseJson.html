@@ -40,20 +40,33 @@ fetch(urlApiAjax)
         var longitude = infoCourante.longitude;
         var description = infoCourante.description;
         var publicationDate = infoCourante.publicationDate;
+        var media = infoCourante.media;
+        var memberName = infoCourante.member.username;
+        var categoryName = infoCourante.categories.name;
+        var categoryDesc = infoCourante.categories.description
 
-        var TagP = document.querySelector("p.listeInfo");
-        //var baliseUl = document.querySelector("ul.listeInfo");
+        var baliseUl = document.querySelector("ul.listeInfo");
         // DOM Document Object Model
         // AJOUTER UNE BALISE li
-        /*var codeHtmlLi =      '<li>'
-                                + '<h4>' + title + '</h4>'
-                            + '</li>';*/
-        // AJOUTER NOTRE CODE POUR LA BALISE li DANS LA BALISE ul
-        //baliseUl.innerHTML += codeHtmlLi;
-        var showInfo =
-        'titre :' + title + ', <br> Coordonnée latitude:' + latitude +', <br> Coordonnée longitude:'+ longitude + ', <br> Description : ' + description + ', <br> Date de publication :' + publicationDate + '<br> <br>';
+        var codeHtmlLi = '<li>'
+                            + '<h4>' + title + '</h4>'
+                          + '</li>' +
+                          '<li>'
+                            + '<h4>' + media + '</h4>'
+                          + '</li>' +
+                          '<li>'
+                            + '<h4>' + description + '</h4>'
+                          + '</li>' +
+                          '<li>'
+                            + '<h4>' + publicationDate + '</h4>'
+                          + '</li>' +
+                          '<li>'
+                            + '<h4>' + memberName + '</h4>'
+                          + '</li> <hr>';
 
-          TagP.innerHTML += showInfo;
+// AJOUTER NOTRE CODE POUR LA BALISE li DANS LA BALISE ul
+        baliseUl.innerHTML += codeHtmlLi;
+
     }
 
 })
