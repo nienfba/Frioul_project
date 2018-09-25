@@ -14,6 +14,11 @@
             <li class=""></li>
         </ul>
     </nav>
+    <section><!-- Bas de page visible page home avec fond transparent-->
+        <button class="btn-medium">Partager vos bons plans</button>
+        <button class="btn-medium">Découvrir les bons plans</button>
+        <button class="btn-medium fa fa-x"></button>
+    </section>    
 </header>
 <article>
     <!-- Liste des photos et informations -->
