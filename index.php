@@ -21,16 +21,16 @@
         <p class=""></p>
     </section>
     <section><!-- Bas de page visible page home avec fond transparent-->
-        <button class="btn-medium">Choisissez une ville</button>
-        <button class="btn-medium">Choisissez une activité</button>
-        <button class="btn-medium">Découvrir les bons plans</button>
-        <button class="btn-medium">Autour de moi</button>
+        <a href="" title=""><button class="btn-medium">Choisissez une ville</button></a>
+        <a href="" title=""><button class="btn-medium">Choisissez une activité</button></a>
+        <a href="/bons_plans.php" title=""><button class="btn-medium">Découvrir les bons plans</button></a>
+        <a href="/autour.php" title=""><button class="btn-medium">Autour de moi</button></a>
     </section>
     <section>
         <!-- Bas de page contenu à définir -->
     </section>
 </article>
-<aside class=""></aside><!-- Block flottant -->
+<aside class=""></aside><!-- Block flottant à droite -->
 </body>
 <?php include_once "html/inc/footer.php"; ?>
 </html>
