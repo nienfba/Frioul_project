@@ -4,7 +4,7 @@
 <body class="">
 <header class="">    
     <div class="logo"></div>
-    <nav class="">
+    <nav class=""><!-- Navigation -->
         <ul class="">
             <li class=""></li>
             <li class=""></li>
@@ -20,18 +20,16 @@
         <h1 class=""><span class=""></span></h1>
         <p class=""></p>
     </section>
-    <section><!-- Bas de page visible page home -->
-        <button class=""></button>
-        <button class=""></button>
-        <button class=""></button>
-        <button class=""></button>
+    <section><!-- Bas de page visible page home avec fond transparent-->
+        <button class="btn-medium">Choisissez une ville</button>
+        <button class="btn-medium">Choisissez une activité</button>
+        <button class="btn-medium">Découvrir les bons plans</button>
+        <button class="btn-medium">autou de moi</button>
     </section>
 </article>
 
 
-<aside class=""></aside>
-
-
+<aside class=""></aside><!-- Block flottant -->
 
 
 </body>
