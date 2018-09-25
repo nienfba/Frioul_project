@@ -26,12 +26,11 @@
         <button class="btn-medium">Découvrir les bons plans</button>
         <button class="btn-medium">Autour de moi</button>
     </section>
+    <section>
+        <!-- Bas de page contenu à définir -->
+    </section>
 </article>
-
-
 <aside class=""></aside><!-- Block flottant -->
-
-
 </body>
 <?php include_once "html/inc/footer.php"; ?>
 </html>
