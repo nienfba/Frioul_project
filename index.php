@@ -15,6 +15,7 @@
         </ul>
     </nav>
 </header>
+
 <article class=""><!-- Full width -->
     
     <section id="intro" class="text-center"><!-- Background animé à définir -->
@@ -26,15 +27,17 @@
         <div class="">
         <a href="" title=""><button class="btn-medium">Choisissez une ville</button></a>
         <a href="" title=""><button class="btn-medium">Choisissez une activité</button></a>
-        <a href="/bons_plans.php" title=""><button class="btn-medium">Découvrir les bons plans</button></a>
-        <a href="/autour.php" title=""><button class="btn-medium">Autour de moi</button></a>
+        <a href="bons_plans.php" title=""><button class="btn-medium">Découvrir les bons plans</button></a>
+        <a href="autour.php" title=""><button class="btn-medium">Autour de moi</button></a>
         </div>
     </section>
 
     <section>
         <!-- Bas de page contenu à définir -->
     </section>
+
 </article>
+
 <aside class=""></aside><!-- Block flottant à droite -->
 </body>
 <?php include_once "html/inc/footer.php"; ?>
