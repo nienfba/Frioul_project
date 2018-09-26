@@ -15,7 +15,7 @@
         </ul>
     </nav>
 </header>
-<article class=""><!-- Full width -->
+<article class="container-fluid"><!-- Full width -->
     <section id="intro"><!-- Background animé à définir -->
         <h1 class="">Découvrez en direct les merveilles de Marseille. <span class="hashtag">#Panier</span></h1>
         <p class="">Une ville contemporaine qui abrite des petits villages de pêcheurs et des quartiers alternatifs.</p>
