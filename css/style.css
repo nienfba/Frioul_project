@@ -38,6 +38,7 @@ header{
 .accueil #intro p{
     font-size:1em;
     color: #ffffff;
+    margin-top:20px;
 }
 
 .accueil article{
@@ -48,7 +49,6 @@ header{
     width:100%;
     height: calc(100% - 80px);
     min-height:800px;
-    padding-bottom:180px;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
 }
@@ -56,26 +56,20 @@ header{
 .accueil section {
     width:100%;
     display:block;
-}
-
-.accueil section{
     background-color: transparent;
+
 }
 
 .accueil section#intro {
     display:block;
     position:relative;    
-    display:block;
-    height:75%;
-    min-height:800px;
+    padding:30px;
     padding-top:30%;
 }
 
 .accueil section#bandeau {
     display:block;
-    position:absolute;
     bottom:0px;
-    display:block;
     padding:30px;
     text-align:center;
     background-color: rgba(0,0,0,0.5);
@@ -94,7 +88,7 @@ header{
     left:0px;
 }
 
-.btn-medium {
+.accueil .btn-medium {
     color: #999999;
     border: 1px solid #999999;
     padding: 10px 15px; 
@@ -131,5 +125,21 @@ header{
     .accueil #intro p{
         font-size: 0.9em;
         color: #ffffff;
+    }
+
+    .accueil section#intro {
+        padding-top:10%;
+    }
+    
+    .accueil section#bandeau {
+        padding:10px;
+        border-top: 1px solid rgba(255,255,255,0.2);
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .accueil button{
+        display:block;
+        width:90%;
+        margin: 10px auto;
     }
   }
