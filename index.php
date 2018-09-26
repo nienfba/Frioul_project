@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <?php include_once "html/inc/head.php"; ?>
-<body class="">
+<body class="accueil">
 <header class="accueil">    
     <img src="media/c4m.png" alt="" class="logo" />
     <nav class=""><!-- Navigation -->
