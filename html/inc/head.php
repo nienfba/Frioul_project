@@ -40,4 +40,7 @@ Le protocole Open Graph a été crée à l'origine par Facebook et est désormai
 
 <!-- Début liens CSS -->
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/bonsplans.css">
+<link rel="stylesheet" type="text/css" href="css/decouvrir.css">
+
 <!-- Fin liens CSS -->

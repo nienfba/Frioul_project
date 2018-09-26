@@ -44,7 +44,7 @@ header{
     display:block;
     background-image: url("../media/mucem.jpg");
     background-size: cover;
-    background-position: center center;
+    background-position: center center;    
     width:100%;
     height: calc(100% - 80px);
     min-height:800px;
@@ -56,6 +56,10 @@ header{
 .accueil section {
     width:100%;
     display:block;
+}
+
+.accueil section{
+    background-color: transparent;
 }
 
 .accueil section#intro {
