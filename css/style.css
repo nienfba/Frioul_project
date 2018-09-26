@@ -71,6 +71,7 @@ header{
 
 .accueil section#intro {
     display:block;
+    position:relative;
     padding:30px;
     padding-top:30%;
     margin: 0;
@@ -78,6 +79,7 @@ header{
 
 .accueil section#bandeau {
     display:block;
+    position:absolute;
     bottom:0px;
     left:0px;
     padding:30px;
@@ -93,8 +95,20 @@ header{
 }
 
 .accueil footer{
-    background-color: #f8f8f8;
-    height:100px;
+    font-size: 1em;
+    display:block;
+    color: #333;
+    background-color: #eeeeee;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.accueil footer p, .accueil footer a {
+    font-size: 1em;
+    text-decoration: none;
+    color: #333;
+    padding:0;
+    margin:0;
 }
 
 .logo{
@@ -106,7 +120,6 @@ header{
     left:0px;
 }
 
-
 .accueil .btn-medium {
     color: #111;
     border: 1px solid #999999;
@@ -114,8 +127,16 @@ header{
     border-radius: 50px;
     font-weight: lighter;
     opacity: 1;
+    min-width:200px;
    }
 
+.accueil button{
+    cursor:pointer;
+}
+
+.accueil button:hover{
+    background-color: rgba(246,223,77,1);
+}
 
 .accueil .dropdown {
     opacity: 1;
@@ -140,7 +161,7 @@ header{
 
 .accueil .dropdown-item:hover{
     display:block;
-    background-color: rgba(246,223,77,1);
+    background-color: #fff;;
     border-radius:20px;
     padding:10px;
     margin:10px;
@@ -171,7 +192,7 @@ header{
 .vertical-center {
     min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
     min-height: 100vh; /* These two lines are counted as one :-)       */
-  
+
     display: flex;
     align-items: center;
   }
