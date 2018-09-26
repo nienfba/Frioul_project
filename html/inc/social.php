@@ -28,7 +28,7 @@ ul.listeInfo img {
 </div>
 <script>
 // URL API AJAX
-var urlApiAjax = 'https://htdocs-symfony1.c9users.io/myprovence/public/api/instas?itemsPerPage=24';
+var urlApiAjax = 'https://myprovence.code4marseille.fr/api/instas?itemsPerPage=24';
 // https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch
 fetch(urlApiAjax)
 .then(function(data){
