@@ -24,12 +24,19 @@
     </section>
 
     <section id="bandeau"><!-- Bas de page visible page home avec fond transparent-->
-        <div class="">
-        <a href="" title=""><button class="btn-medium">Choisissez une ville</button></a>
-        <a href="" title=""><button class="btn-medium">Choisissez une activité</button></a>
-        <a href="bons_plans.php" title=""><button class="btn-medium">Découvrir les bons plans</button></a>
-        <a href="autour.php" title=""><button class="btn-medium">Autour de moi</button></a>
-        </div>
+        <span class="dropdown">
+            <button class="dropdown btn-medium" data-toggle="dropdown">Choisissez une ville
+                <div class="dropdown-menu">
+                    <div class="dropdown-item">Marseille</div>
+                    <div class="dropdown-item">Plan de Cuques</div>
+                    <div class="dropdown-item">Allauch</div>
+                    <div class="dropdown-item">Aix en Provence</div>
+                </div>
+            </button> 
+</span>       
+        <a href="" title=""><button class="btn-medium bouton">Choisissez une activité</button></a>
+        <a href="bons_plans.php" title=""><button class="btn-medium bouton">Découvrir les bons plans</button></a>
+        <a href="autour.php" title=""><button class="btn-medium bouton">Autour de moi</button></a>
     </section>
 
     <section>
@@ -39,6 +46,6 @@
 </article>
 
 <aside class=""></aside><!-- Block flottant à droite -->
-</body>
 <?php include_once "html/inc/footer.php"; ?>
+</body>
 </html>
