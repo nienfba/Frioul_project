@@ -42,7 +42,6 @@ header{
 }
 
 .accueil article{
-    position:relative;
     display:block;
     background-image: url("../media/mucem.jpg");
     background-size: cover;
@@ -63,14 +62,12 @@ header{
 
 .accueil section#intro {
     display:block;
-    position:relative;
     padding:30px;
     padding-top:30%;
 }
 
 .accueil section#bandeau {
     display:block;
-    position:absolute;  
     bottom:0px;
     padding:30px;
     text-align:center;
@@ -90,17 +87,6 @@ header{
     left:0px;
 }
 
-.accueil a, button{
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.accueil button, .accueil .bouton{
-    display:inline-block;
-    width:20%;
-    min-width: 250px;
-    margin: 10px auto;
-}
 
 .accueil .btn-medium {
     color: #999999;
@@ -110,6 +96,7 @@ header{
     font-weight: lighter;
     opacity: 1;
    }
+
 
 .accueil .dropdown {
     opacity: 1;
@@ -141,6 +128,7 @@ header{
     top:0px;
     left:0px;
 }
+
 
 .hidden{
     visibility:hidden;
@@ -182,7 +170,9 @@ header{
         border-bottom: 1px solid rgba(255,255,255,0.2);
     }
 
+
     .accueil button, .accueil .bouton{
+
         display:block;
         width:90%;
         margin: 10px auto;

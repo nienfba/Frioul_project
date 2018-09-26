@@ -2,6 +2,7 @@
 <html lang="fr">
 <?php include_once "html/inc/head.php"; ?>
 
+
 <body class="decouvrir">
     <header class="">
         <img src="media/c4m.png" alt="" class="logo" />
@@ -17,6 +18,7 @@
     <article class="">
         <!-- Full width -->
         <section>
+
             <!-- 1 Colonnes / Voir pour limiter le nombre de photos -->
             <div class="">
             <img src="http://placehold.it/580x410" alt="">
