@@ -14,13 +14,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-<title>$variable_</title>
+<title>Code4Marseille - Provence Tourisme</title>
 
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-<meta name="author" content="$variable_">
-<meta name="copyright" content="$variable_">
-<meta name="keywords" content="$variables_">
+<meta name="author" content="Provence Tourisme">
+<meta name="copyright" content="Provence Tourisme">
+<meta name="keywords" content="Provence Tourisme">
 
 <!-- Début Section OG 
 Définition du protocole Open Graph
@@ -29,13 +29,13 @@ Plus concrètement, le protocole Open Graph est un ensemble de balises qui perme
 Le protocole Open Graph a été crée à l'origine par Facebook et est désormais géré par l'Open Web Fondation.
 -->
 
-<meta property="og:url" content="$variable_" />
-<meta property="og:site_name" content="$variable_" />
+<meta property="og:url" content="https://bonsplans.myprovence.fr" />
+<meta property="og:site_name" content="Provence Tourisme" />
 <meta property="og:locale" content="fr_FR" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="$variable_" />
-<meta property="og:description" content="$variable_" />
-<meta property="og:image" content="$variable_" />
+<meta property="og:title" content="Provence Tourisme" />
+<meta property="og:description" content="Provence Tourisme" />
+<meta property="og:image" content="media/departement-13.svg" />
 <!-- Fin Section OG -->
 
 <!-- Début liens CSS -->
