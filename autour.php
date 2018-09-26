@@ -57,17 +57,26 @@
             <div class="col-sm-6">
                 <div id="map">
                 </div>
+                
+                <!-- leafletjs: etape1 -->
                 <script>
-var mymap = L.map('map').setView([43.3, 5.4], 10);
+var map = L.map('map').setView([43.3, 5.4], 10);
 this.tileLayer = L.tileLayer(
                 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png', {
                     maxZoom: 18,
                     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>',
                 }
             );                
-            this.tileLayer.addTo(mymap);
+            this.tileLayer.addTo(map);
             
             </script>
+            
+            <!-- leafletjs: geolocalisation -->
+            <script>
+map.locate({setView: true, maxZoom: 16});
+            
+            </script>
+            
             </div>
         </div>
     </section>
