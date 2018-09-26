@@ -59,8 +59,9 @@
         </div>
     </section>
 
-    <aside class=""></aside><!-- Block flottant à droite -->
-    <?php include_once "html/inc/footer.php"; ?>
+<aside class=""></aside><!-- Block flottant à droite -->
+<?php include_once "html/inc/footer.php"; ?>
+
 </body>
 
 </html>
