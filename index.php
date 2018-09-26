@@ -2,7 +2,7 @@
 <html lang="fr">
 <?php include_once "html/inc/head.php"; ?>
 <body class="accueil">
-<header class="accueil">    
+<header class="">    
     <img src="media/c4m.png" alt="" class="logo" />
     <nav class=""><!-- Navigation -->
         <ul class="hidden">
@@ -15,10 +15,10 @@
         </ul>
     </nav>
 </header>
-<article class="accueil"><!-- Full width -->
-    <section><!-- Background animé à définir -->
-        <h1 class="">Découvrez en direct les merveilles de Marseille<span class="hashtag">#Panier</span></h1>
-        <p class=""></p>
+<article class=""><!-- Full width -->
+    <section id="intro"><!-- Background animé à définir -->
+        <h1 class="">Découvrez en direct les merveilles de Marseille. <span class="hashtag">#Panier</span></h1>
+        <p class="">Une ville contemporaine qui abrite des petits villages de pêcheurs et des quartiers alternatifs.</p>
     </section>
     <section><!-- Bas de page visible page home avec fond transparent-->
         <a href="" title=""><button class="btn-medium">Choisissez une ville</button></a>

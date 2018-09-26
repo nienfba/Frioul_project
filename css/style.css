@@ -9,26 +9,33 @@ body{
     width:100%;
     height:100%;
     overflow-x:hidden;  
+    font-size: 18px;
 }
 
 header{
     background-color: #b82c35;
     display:block;
     height:60px;
+
+
     overflow:hidden;
 }
 
-header.accueil{
+.accueil header{
     background-color: #ffffff;
 }
 
-h1{
+.accueil h1{
     font-size:2em;
     color: #ffffff;
     text-transform: uppercase;
+    font-weight: 700;
 }
-
-article.accueil{
+.accueil #intro p{
+    font-size:1em;
+    color: #ffffff;
+}
+.accueil article{
     background-image: url("../media/mucem.jpg");
     background-size: cover;
     background-position: center center;
@@ -62,4 +69,8 @@ footer{
 .hidden{
     visibility:hidden;
     display:none;
+}
+
+.hashtag{
+    color:#f6df4d;
 }
