@@ -1,16 +1,3 @@
-*{
-    box-sizing: border-box;
-}
-
-.btn-medium {
-    color: #999999;
-    border: 1px solid #999999;
-    padding: 10px 15px; 
-    border-radius: 50px;
-    font-weight: lighter;
-    opacity: 0.6;
-   }
-   
 .logo{
     height: 60px;
     margin: 20px 0 20px 60px;
@@ -23,4 +10,23 @@
     width:100%;
     height:100%;
     overflow-x:hidden;
+}
+
+.header{
+    background-color: #b82c35;
+}
+.footer{
+    background-color: #f8f8f8;
+}
+
+.btn-medium {
+    color: #999999;
+    border: 1px solid #999999;
+    padding: 10px 15px; 
+    border-radius: 50px;
+    font-weight: lighter;
+    opacity: 0.6;
+   }
+   *{
+    box-sizing: border-box;
 }
