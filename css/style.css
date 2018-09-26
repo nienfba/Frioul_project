@@ -4,11 +4,14 @@
 
 html,body {
     height: 100%;
+    margin:0;
+    padding:0;
   }
 
 body.accueil{
     background-color: #fff;
     margin:0;
+    padding:0;
     display:block;
     width:100%;
     overflow-x:hidden;  
@@ -26,6 +29,10 @@ header{
 
 .accueil header{
     background-color: #ffffff;
+    height:80px;
+    padding:10px;
+    margin:0px;
+    overflow:hidden;    
 }
 
 .accueil h1{
@@ -52,13 +59,15 @@ header{
     min-height:800px;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
+    margin: 0;
+    padding:0;
 }
 
 .accueil section {
     width:100%;
     display:block;
     background-color: transparent;
-
+    margin: 0;
 }
 
 .accueil section#intro {
@@ -66,16 +75,27 @@ header{
     position:relative;
     padding:30px;
     padding-top:30%;
+    margin: 0;
 }
 
 .accueil section#bandeau {
     display:block;
+    width:100%;
     position:absolute;  
     bottom:0px;
+    left:0px;
     padding:30px;
     text-align:center;
     background-color: rgba(0,0,0,0.5);
+    margin: 0;
 }
+.accueil section#infos{
+    display:block;
+    position:relative;
+    text-align:center;
+    margin: 0;
+}
+
 .accueil footer{
     background-color: #f8f8f8;
     height:100px;
@@ -103,7 +123,7 @@ header{
 }
 
 .accueil .btn-medium {
-    color: #999999;
+    color: #111;
     border: 1px solid #999999;
     padding: 10px 15px; 
     border-radius: 50px;
@@ -114,6 +134,7 @@ header{
 .accueil .dropdown {
     opacity: 1;
 } 
+
 .accueil .dropdown-menu{
     border-radius:20px;
     width:100%;
@@ -121,6 +142,7 @@ header{
     z-index: 100;
     background-color:transparent;
 }
+
 .accueil .dropdown-item{
     display:block;
     background-color: rgba(246,223,77,1);
@@ -140,6 +162,15 @@ header{
     position:relative;
     top:0px;
     left:0px;
+}
+
+.accueil #infos h1{
+    color: #2b3376;
+    font-size:2em;
+    font-weight: 800;   
+    text-align:center; 
+    text-transform: none;
+    margin:20px;
 }
 
 .hidden{
@@ -166,7 +197,10 @@ header{
         text-transform: uppercase;
         font-weight: 700;
     }
-    
+    .accueil #infos h1{
+        font-size:1.5em;
+    }
+
     .accueil #intro p{
         font-size: 0.9em;
         color: #ffffff;
