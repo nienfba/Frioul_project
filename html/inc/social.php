@@ -27,17 +27,23 @@ ul.listeInfo img {
     </div>
 </div>
 <script>
+var appelAjax = function(urlApiAjax, callbackJson)
+{
+    // https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch
+    fetch(urlApiAjax)
+    .then(function(data){
+        // DEBUG
+        console.log(data);
+        // ON VEUT RECEVOIR UN OBJET JAVASCRIPT
+        return data.json();
+    })
+    .then(callbackJson)    
+}
+
 // URL API AJAX
 var urlApiAjax = 'https://myprovence.code4marseille.fr/api/instas?itemsPerPage=24';
-// https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch
-fetch(urlApiAjax)
-.then(function(data){
-    // DEBUG
-    console.log(data);
-    // ON VEUT RECEVOIR UN OBJET JAVASCRIPT
-    return data.json();
-})
-.then(function(objetJS){
+var ajouterImage = function(objetJS)
+{
     console.log(objetJS);
     // CA Y'EST J'AI UN OBJET JS AVEC TOUTES INFOS PLANQUEES DEDANS...
     // IL FAUT ALLER RECUPERER LES INFOS QUI NOUS INTERESSENT
@@ -65,5 +71,9 @@ fetch(urlApiAjax)
         }
     }
     
-})    
+}
+   
+   
+appelAjax(urlApiAjax, ajouterImage);    
+
 </script>

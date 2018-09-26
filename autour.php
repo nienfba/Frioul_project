@@ -52,7 +52,9 @@
     <section class="container">
         <div class="row">
             <div class="col-sm-6">
-                LISTE DES BONS PLANS
+                <div class="listeInfo row">
+                <!-- ICI ON VA CREER UNE BALISE li PAR INFO RECUPERE -->
+                </div>
             </div>
             <div class="col-sm-6">
                 <div id="map">
@@ -74,9 +76,75 @@ this.tileLayer = L.tileLayer(
             <!-- leafletjs: geolocalisation -->
             <script>
 map.locate({setView: true, maxZoom: 16});
-            
+function onLocationFound(e) 
+{
+    var radius = e.accuracy / 2;
+
+    L.marker(e.latlng, { draggable: true }).addTo(map)
+        .bindPopup("Vous êtes à " + radius + "m de ce point ?").openPopup();
+
+    L.circle(e.latlng, radius).addTo(map);
+}
+
+map.on('locationfound', onLocationFound);
+
             </script>
-            
+<script>
+var appelAjax = function(urlApiAjax, callbackJson)
+{
+    // https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch
+    fetch(urlApiAjax)
+    .then(function(data){
+        // DEBUG
+        console.log(data);
+        // ON VEUT RECEVOIR UN OBJET JAVASCRIPT
+        return data.json();
+    })
+    .then(callbackJson)    
+}
+
+// URL API AJAX
+var urlApiAjax = 'https://myprovence.code4marseille.fr/api/instas?itemsPerPage=24';
+var ajouterImage = function(objetJS)
+{
+    console.log(objetJS);
+    // CA Y'EST J'AI UN OBJET JS AVEC TOUTES INFOS PLANQUEES DEDANS...
+    // IL FAUT ALLER RECUPERER LES INFOS QUI NOUS INTERESSENT
+    var tableauInfo = objetJS["hydra:member"]; 
+    // objet.propriete OU objet["propriete"]
+    // BOUCLE POUR PARCOURIR LES INFOS UNE PAR UNE
+    for(var index=0; index < tableauInfo.length; index++) {
+        var infoCourante = tableauInfo[index];
+        console.log(infoCourante);
+        var link = infoCourante.link;
+        var caption = infoCourante.caption;
+        var thumbnail = infoCourante.thumbnail;
+        var lowResolution = infoCourante.lowResolution;
+        var standardResolution = infoCourante.standardResolution;
+        if (link) {
+            var baliseUl = document.querySelector(".listeInfo");
+            // DOM Document Object Model
+            // AJOUTER UNE BALISE li
+            var codeHtmlLi =      '<div class="col-sm-4">'
+                                    + '<a href="' + link + '">'
+                                        + '<img class="img-fluid" src="' + thumbnail + '">'
+                                    + '</a>'
+                                    + '</div>'
+                                    + '<div class="col-sm-8">'
+                                       + '<span>' + caption + '</span>'
+                                    + '</div>';
+            // AJOUTER NOTRE CODE POUR LA BALISE li DANS LA BALISE ul
+            baliseUl.innerHTML += codeHtmlLi;
+        }
+    }
+    
+}
+   
+   
+appelAjax(urlApiAjax, ajouterImage);    
+
+</script>
+
             </div>
         </div>
     </section>
