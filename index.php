@@ -43,6 +43,7 @@
             </section>
         </div>
     </article>
+    
     <section id="infos">
         <!-- Bas de page contenu à définir -->
         <h1>Vous pouvez dès à présent publier vos photos avec Instagram</h1>
