@@ -5,7 +5,7 @@
 <header class="">    
     <img src="media/c4m.png" alt="" class="logo" />
     <nav class=""><!-- Navigation -->
-        <ul class="">
+        <ul class="hidden">
             <li class=""></li>
             <li class=""></li>
             <li class=""></li>

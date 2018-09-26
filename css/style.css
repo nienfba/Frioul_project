@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 
 body{
     background-color: #fff;
@@ -10,16 +13,23 @@ body{
 
 header{
     background-color: #b82c35;
+    dislay:block;
+    height:60px;
+    overflow:hidden;
 }
+
 footer{
     background-color: #f8f8f8;
 }
 
 .logo{
     height: 60px;
-    margin: 20px 0 20px 60px;
+    margin: 0;
+    padding:0;
+    position:relative;
+    top:0px;
+    left:0px;
 }
-
 
 .btn-medium {
     color: #999999;
@@ -29,6 +39,8 @@ footer{
     font-weight: lighter;
     opacity: 0.6;
    }
-   *{
-    box-sizing: border-box;
+
+.hidden{
+    visibility:hidden;
+    display:none;
 }
