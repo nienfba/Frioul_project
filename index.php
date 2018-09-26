@@ -2,7 +2,7 @@
 <html lang="fr">
 <?php include_once "html/inc/head.php"; ?>
 <body class="">
-<header class="">    
+<header class="accueil">    
     <img src="media/c4m.png" alt="" class="logo" />
     <nav class=""><!-- Navigation -->
         <ul class="hidden">
