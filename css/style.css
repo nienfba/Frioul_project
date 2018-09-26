@@ -1,9 +1,5 @@
-.logo{
-    height: 60px;
-    margin: 20px 0 20px 60px;
-}
 
-.body{
+body{
     background-color: #fff;
     margin:0;
     display:block;
@@ -12,12 +8,18 @@
     overflow-x:hidden;
 }
 
-.header{
+header{
     background-color: #b82c35;
 }
-.footer{
+footer{
     background-color: #f8f8f8;
 }
+
+.logo{
+    height: 60px;
+    margin: 20px 0 20px 60px;
+}
+
 
 .btn-medium {
     color: #999999;
