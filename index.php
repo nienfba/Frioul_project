@@ -15,6 +15,7 @@
         </ul>
     </nav>
 </header>
+
 <article class=""><!-- Full width -->
     
     <section id="intro" class="text-center"><!-- Background animé à définir -->
@@ -34,7 +35,9 @@
     <section>
         <!-- Bas de page contenu à définir -->
     </section>
+
 </article>
+
 <aside class=""></aside><!-- Block flottant à droite -->
 </body>
 <?php include_once "html/inc/footer.php"; ?>
