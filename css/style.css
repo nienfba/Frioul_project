@@ -1,5 +1,15 @@
+.logo{
+    height: 60px;
+    margin: 20px 0 20px 60px;
+}
+
 .body{
-    background-color: #ffffff;
+    background-color: #fff;
+    margin:0;
+    display:block;
+    width:100%;
+    height:100%;
+    overflow-x:hidden;
 }
 
 .header{
@@ -17,3 +27,6 @@
     font-weight: lighter;
     opacity: 0.6;
    }
+   *{
+    box-sizing: border-box;
+}
