@@ -58,7 +58,6 @@ header{
     width:100%;
     display:block;
     background-color: transparent;
-
 }
 
 .accueil section#intro {
@@ -76,6 +75,12 @@ header{
     text-align:center;
     background-color: rgba(0,0,0,0.5);
 }
+.accueil section#infos{
+    display:block;
+    position:relative;
+    text-align:center;
+}
+
 .accueil footer{
     background-color: #f8f8f8;
     height:100px;
@@ -114,6 +119,7 @@ header{
 .accueil .dropdown {
     opacity: 1;
 } 
+
 .accueil .dropdown-menu{
     border-radius:20px;
     width:100%;
@@ -121,6 +127,7 @@ header{
     z-index: 100;
     background-color:transparent;
 }
+
 .accueil .dropdown-item{
     display:block;
     background-color: rgba(246,223,77,1);
@@ -140,6 +147,15 @@ header{
     position:relative;
     top:0px;
     left:0px;
+}
+
+.accueil #infos h1{
+    color: #2b3376;
+    font-size:2em;
+    font-weight: 800;   
+    text-align:center; 
+    text-transform: none;
+    margin:20px;
 }
 
 .hidden{
@@ -166,7 +182,10 @@ header{
         text-transform: uppercase;
         font-weight: 700;
     }
-    
+    .accueil #infos h1{
+        font-size:1.5em;
+    }
+
     .accueil #intro p{
         font-size: 0.9em;
         color: #ffffff;
