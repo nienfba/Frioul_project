@@ -11,9 +11,6 @@
                 <li class=""></li>
                 <li class=""></li>
                 <li class=""></li>
-                <li class=""></li>
-                <li class=""></li>
-                <li class=""></li>
             </ul>
         </nav>
     </header>
