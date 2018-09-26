@@ -22,6 +22,21 @@ header.accueil{
     background-color: #ffffff;
 }
 
+h1{
+    font-size:2em;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+article.accueil{
+    background-image: url("../media/mucem.jpg");
+    background-size: cover;
+    background-position: center center;
+    width:100%;
+    height:100%;
+    min-height: 1000px;
+}
+
 footer{
     background-color: #f8f8f8;
 }

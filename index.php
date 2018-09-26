@@ -15,9 +15,9 @@
         </ul>
     </nav>
 </header>
-<article class=""><!-- Full width -->
+<article class="accueil"><!-- Full width -->
     <section><!-- Background animé à définir -->
-        <h1 class=""><span class=""></span></h1>
+        <h1 class="">Découvrez en direct les merveilles de Marseille<span class="hashtag">#Panier</span></h1>
         <p class=""></p>
     </section>
     <section><!-- Bas de page visible page home avec fond transparent-->
