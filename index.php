@@ -62,8 +62,16 @@
         </div>
     </section>
 
+<<<<<<< HEAD
     <aside class=""></aside><!-- Block flottant à droite -->
     <?php include_once "html/inc/footer.php"; ?>
+=======
+</article>
+
+<aside class=""></aside><!-- Block flottant à droite -->
+<?php include_once "html/inc/footer.php"; ?>
+
+>>>>>>> c7b7124c31e5b7bd52944b2599d12be85bc49c39
 </body>
 
 </html>
