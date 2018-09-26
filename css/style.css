@@ -12,6 +12,10 @@ header{
     background-color: #b82c35;
 }
 
+header.accueil{
+    background-color: #ffffff;
+}
+
 footer{
     background-color: #f8f8f8;
 }
