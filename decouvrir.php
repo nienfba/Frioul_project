@@ -2,8 +2,10 @@
 <html lang="fr">
 <?php include_once "html/inc/head.php"; ?>
 
-<body class="">
+
+<body class="decouvrir">
     <header class="">
+        <img src="media/c4m.png" alt="" class="logo" />
         <div class="logo"></div>
         <nav class="">
             <!-- Navigation -->
@@ -16,9 +18,12 @@
     <article class="">
         <!-- Full width -->
         <section>
-            <!-- 2 Colonnes / Voir pour limiter le nombre de photos -->
-            <div class=""></div><!-- Photo en background -->
-            <h3 class=""></h3><!-- Titre -->
+
+            <!-- 1 Colonnes / Voir pour limiter le nombre de photos -->
+            <div class="">
+            <img src="http://placehold.it/580x410" alt="">
+            </div><!-- Photo en background -->
+            <h3 class="">BALADE DANS LE PANIER</h3><!-- Titre -->
             <p class="">
                 <!-- Description avec picto / Gras -->
                 <!-- Durée et distance avec picto -->
