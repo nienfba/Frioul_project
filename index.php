@@ -43,7 +43,6 @@
             </section>
         </div>
     </article>
-    
     <section id="infos">
         <!-- Bas de page contenu à définir -->
         <h1>Vous pouvez dès à présent publier vos photos avec Instagram</h1>
@@ -60,8 +59,9 @@
         </div>
     </section>
 
-    <aside class=""></aside><!-- Block flottant à droite -->
-    <?php include_once "html/inc/footer.php"; ?>
+<aside class=""><?php include_once "html/inc/social.php"; ?></aside><!-- Block flottant à droite -->
+<?php include_once "html/inc/footer.php"; ?>
+
 </body>
 
 </html>

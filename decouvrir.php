@@ -2,6 +2,7 @@
 <html lang="fr">
 <?php include_once "html/inc/head.php"; ?>
 
+
 <body class="decouvrir">
     <header class="">
         <img src="media/c4m.png" alt="" class="logo" />
