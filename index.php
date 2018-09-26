@@ -2,7 +2,7 @@
 <html lang="fr">
 <?php include_once "html/inc/head.php"; ?>
 <body class="accueil">
-<header class="">    
+<header class="">
     <img src="media/c4m.png" alt="" class="logo" />
     <nav class=""><!-- Navigation -->
         <ul class="hidden">
@@ -17,7 +17,7 @@
 </header>
 
 <article class=""><!-- Full width -->
-    
+
     <section id="intro" class="text-center"><!-- Background animé à définir -->
         <h1 class="">Découvrez en direct les merveilles de Marseille. <span class="hashtag">#Panier</span></h1>
         <p class="">Une ville contemporaine qui abrite des petits villages de pêcheurs et des quartiers alternatifs.</p>
@@ -32,8 +32,8 @@
                     <div class="dropdown-item">Allauch</div>
                     <div class="dropdown-item">Aix en Provence</div>
                 </div>
-            </button> 
-</span>       
+            </button>
+</span>
         <a href="" title=""><button class="btn-medium bouton">Choisissez une activité</button></a>
         <a href="bons_plans.php" title=""><button class="btn-medium bouton">Découvrir les bons plans</button></a>
         <a href="autour.php" title=""><button class="btn-medium bouton">Autour de moi</button></a>
