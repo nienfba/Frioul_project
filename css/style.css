@@ -42,6 +42,7 @@ header{
 }
 
 .accueil article{
+    position:relative;
     display:block;
     background-image: url("../media/mucem.jpg");
     background-size: cover;
@@ -57,23 +58,29 @@ header{
     width:100%;
     display:block;
     background-color: transparent;
-
 }
 
 .accueil section#intro {
     display:block;
-    position:relative;    
+    position:relative;
     padding:30px;
     padding-top:30%;
 }
 
 .accueil section#bandeau {
     display:block;
+    position:absolute;  
     bottom:0px;
     padding:30px;
     text-align:center;
     background-color: rgba(0,0,0,0.5);
 }
+.accueil section#infos{
+    display:block;
+    position:relative;
+    text-align:center;
+}
+
 .accueil footer{
     background-color: #f8f8f8;
     height:100px;
@@ -88,14 +95,68 @@ header{
     left:0px;
 }
 
+.accueil a, button{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.accueil button, .accueil .bouton{
+    display:inline-block;
+    width:20%;
+    min-width: 250px;
+    margin: 10px auto;
+}
+
 .accueil .btn-medium {
     color: #999999;
     border: 1px solid #999999;
     padding: 10px 15px; 
     border-radius: 50px;
     font-weight: lighter;
-    opacity: 0.6;
+    opacity: 1;
    }
+
+.accueil .dropdown {
+    opacity: 1;
+} 
+
+.accueil .dropdown-menu{
+    border-radius:20px;
+    width:100%;
+    padding:5px;
+    z-index: 100;
+    background-color:transparent;
+}
+
+.accueil .dropdown-item{
+    display:block;
+    background-color: rgba(246,223,77,1);
+    border-radius:20px;
+    padding:10px 20px 10px 20px;
+    margin:1px;
+    z-index: 110;
+}
+
+.accueil .dropdown-item:hover{
+    display:block;
+    background-color: rgba(246,223,77,1);
+    border-radius:20px;
+    padding:10px;
+    margin:10px;
+    z-index: 110;
+    position:relative;
+    top:0px;
+    left:0px;
+}
+
+.accueil #infos h1{
+    color: #2b3376;
+    font-size:2em;
+    font-weight: 800;   
+    text-align:center; 
+    text-transform: none;
+    margin:20px;
+}
 
 .hidden{
     visibility:hidden;
@@ -121,7 +182,10 @@ header{
         text-transform: uppercase;
         font-weight: 700;
     }
-    
+    .accueil #infos h1{
+        font-size:1.5em;
+    }
+
     .accueil #intro p{
         font-size: 0.9em;
         color: #ffffff;
@@ -137,7 +201,7 @@ header{
         border-bottom: 1px solid rgba(255,255,255,0.2);
     }
 
-    .accueil button{
+    .accueil button, .accueil .bouton{
         display:block;
         width:90%;
         margin: 10px auto;
