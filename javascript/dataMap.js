@@ -1,35 +1,53 @@
-// URL API AJAX
+// Import all category name in the dropdown-menu
 var urlApiCat = 'https://myprovence.code4marseille.fr/api/categories';
 fetch(urlApiCat)
   .then(function(data) {
-    // DEBUG
     //console.log(data);
-    // ON VEUT RECEVOIR UN OBJET JAVASCRIPT
     return data.json();
   })
   .then(function(x) {
     //console.log(x);
-    // CA Y'EST J'AI UN OBJET JS AVEC TOUTES INFOS PLANQUEES DEDANS...
-    // IL FAUT ALLER RECUPERER LES INFOS QUI NOUS INTERESSENT
     var arrayCat = x["hydra:member"];
-    // objet.propriete OU objet["propriete"]
-    // BOUCLE POUR PARCOURIR LES INFOS UNE PAR UNE
     for (var i = 0; i < arrayCat.length; i++) {
       var listeCat = arrayCat[i];
       //console.log(listeCat);
       var categoryName = listeCat.name;
 
       var baliseUl = document.querySelector("ul.dropdown-menu");
-      // DOM Document Object Model
-      // AJOUTER UNE BALISE li
       var codeHtmlLi =
         '<li class="text-center">' +
-        '<h3>' + categoryName + '</h3>' +
+        '<p><a href="#" onclick=redirection(); class="' + categoryName + '">' + categoryName + '</a></p>' +
         '</li>';
-
-      // AJOUTER NOTRE CODE POUR LA BALISE li DANS LA BALISE ul
       baliseUl.innerHTML += codeHtmlLi;
-
     }
+  });
 
-  })
+function redirection() {
+  alert('Poop');
+  //Import the obeject of infos array
+  var urlApiAjax = 'https://myprovence.code4marseille.fr/api/infos';
+  fetch(urlApiAjax)
+    .then(function(data) {
+      //console.log(data);
+      return data.json();
+    })
+    .then(function(objetJS) {
+      var tableauInfo = objetJS["hydra:member"];
+      for (var i = 0; i < tableauInfo.length; i++) {
+        var ByCat = tableauInfo[i];
+        //console.log(ByCat);
+
+        var title = ByCat.title;
+        var latitude = ByCat.latitude;
+        var longitude = ByCat.longitude;
+        var description = ByCat.description;
+        var media = ByCat.media;
+        var memberName = ByCat.member.username;
+        for (var i = 0; i < ByCat.categories.length; i++) {
+          var arrayCat = ByCat.categories[i];
+          var categoryName = arrayCat.name;
+          var categoryDesc = arrayCat.description;
+        }
+      }
+    })
+}

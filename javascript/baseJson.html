@@ -42,8 +42,14 @@ fetch(urlApiAjax)
         var publicationDate = infoCourante.publicationDate;
         var media = infoCourante.media;
         var memberName = infoCourante.member.username;
-        var categoryName = infoCourante.categories.name;
-        var categoryDesc = infoCourante.categories.description
+
+        for (var i = 0; i < infoCourante.categories.length; i++) {
+          var arrayCat = infoCourante.categories[i];
+
+          var categoryName = arrayCat.name;
+          var categoryDesc = arrayCat.description;
+            console.log(categoryName);
+        }
 
         var baliseUl = document.querySelector("ul.listeInfo");
         // DOM Document Object Model
