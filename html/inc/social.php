@@ -10,11 +10,7 @@ ul.listeInfo {
 ul.listeInfo li {
     width:100%;
 }
-ul.listeInfo img {
-    object-fit:cover;
-    width:8vw;
-    height:8vw;
-}
+
 </style>
 
 <div class="container">
@@ -37,7 +33,7 @@ var appelAjax = function(urlApiAjax, callbackJson)
         // ON VEUT RECEVOIR UN OBJET JAVASCRIPT
         return data.json();
     })
-    .then(callbackJson)    
+    .then(callbackJson)
 }
 
 // URL API AJAX
@@ -47,7 +43,7 @@ var ajouterImage = function(objetJS)
     console.log(objetJS);
     // CA Y'EST J'AI UN OBJET JS AVEC TOUTES INFOS PLANQUEES DEDANS...
     // IL FAUT ALLER RECUPERER LES INFOS QUI NOUS INTERESSENT
-    var tableauInfo = objetJS["hydra:member"]; 
+    var tableauInfo = objetJS["hydra:member"];
     // objet.propriete OU objet["propriete"]
     // BOUCLE POUR PARCOURIR LES INFOS UNE PAR UNE
     for(var index=0; index < tableauInfo.length; index++) {
@@ -61,7 +57,7 @@ var ajouterImage = function(objetJS)
             var baliseUl = document.querySelector("ul.listeInfo");
             // DOM Document Object Model
             // AJOUTER UNE BALISE li
-            var codeHtmlLi =      '<li class="col-sm-2">'
+            var codeHtmlLi =      '<li class="col-sm-2 col-xs-1">'
                                     + '<a href="' + link + '">'
                                     + '<img class="img-fluid" src="' + standardResolution + '">'
                                     + '</a>'
@@ -70,10 +66,10 @@ var ajouterImage = function(objetJS)
             baliseUl.innerHTML += codeHtmlLi;
         }
     }
-    
+
 }
-   
-   
-appelAjax(urlApiAjax, ajouterImage);    
+
+
+appelAjax(urlApiAjax, ajouterImage);
 
 </script>

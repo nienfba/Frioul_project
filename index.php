@@ -40,10 +40,21 @@
                     </button>
                 </span>
 
-                <a href="" title=""><button class="btn-medium bouton">Choisissez une activité</button></a>
+                <span class="dropdown">
+                    <button class="btn-medium" data-toggle="dropdown">Choisissez une activité
+                        <div class="dropdown-menu">
+                            <div class="dropdown-item">Faire du sport</div>
+                            <div class="dropdown-item">Bon plan en famille</div>
+                            <div class="dropdown-item">Aller au restaurant</div>
+                            <div class="dropdown-item">Un peu de culture :) </div>
+                        </div>
+                    </button>
+                </span>
+
+
                 <a href="bons_plans.php" title=""><button class="btn-medium bouton">Découvrir les bons plans</button></a>
                 <a href="autour.php" title=""><button class="btn-medium bouton">Autour de moi</button></a>
-                
+
             </section>
         </div>
     </article>

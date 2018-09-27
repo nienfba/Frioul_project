@@ -7,7 +7,7 @@
  
   <!----------------------------------- DEBUT  HEADER   --------------------------------------->
     <header class="">
-        <img src="media/c4m.png" alt="" class="logo" />
+        <a href="index.php"><img src="media/c4m.png" alt="" class="logo" /></a>
         <div class="logo"></div>
         <nav class="">
             <!-- Navigation -->
@@ -18,6 +18,7 @@
         </nav>
     </header>
   <!-----------------------------------  FIN  HEADER   ---------------------------------------->
+
 
 
   <!-----------------------------------  DEBUT  MAIN   ---------------------------------------->
