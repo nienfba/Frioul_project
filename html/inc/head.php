@@ -1,4 +1,5 @@
 <!-- Style.css -->
+<head>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700" rel="stylesheet">
 
 <!-- Required meta tags -->
@@ -13,7 +14,7 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
    crossorigin=""/>
-   
+
 <!-- Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -31,7 +32,7 @@
 <meta name="copyright" content="Provence Tourisme">
 <meta name="keywords" content="Provence Tourisme">
 
-<!-- Début Section OG 
+<!-- Début Section OG
 Définition du protocole Open Graph
 Le définition officielle du protocole Open Graph indique que c'est un protocole qui permet à une page web de devenir un objet "riche" dans un réseau social.
 Plus concrètement, le protocole Open Graph est un ensemble de balises qui permet à un webmaster de donner aux principaux réseaux sociaux (Facebook, Google +, Twitter, Linked in...) des informations précises sur ses pages. Ces informations permettront aux réseaux sociaux de mieux afficher un lien sur une ces pages qui aurait été placé par leur utilisateurs.
@@ -55,3 +56,4 @@ Le protocole Open Graph a été crée à l'origine par Facebook et est désormai
 <link rel="stylesheet" type="text/css" href="css/autour.css">
 
 <!-- Fin liens CSS -->
+</head>
