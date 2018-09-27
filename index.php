@@ -30,7 +30,7 @@
             <section id="bandeau">
                 <!-- Bas de page visible page home avec fond transparent-->
                 <span class="dropdown">
-                    <button class="dropdown btn-medium" data-toggle="dropdown">Choisissez une ville
+                    <button class="btn-medium" data-toggle="dropdown">Choisissez une ville
                         <div class="dropdown-menu">
                             <div class="dropdown-item">Marseille</div>
                             <div class="dropdown-item">Plan de Cuques</div>

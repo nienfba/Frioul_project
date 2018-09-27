@@ -120,7 +120,6 @@ header{
     left:0px;
 }
 
-
 .accueil .btn-medium {
     color: #111;
     border: 1px solid #999999;
@@ -131,45 +130,49 @@ header{
     min-width:200px;
    }
 
-.accueil button, div.dropdown-item:hover {
-    cursor:pointer;
+.accueil button {
+    
+    border-radius: 0px;
 }
 
 .accueil button:hover{
     background-color: rgba(246,223,77,1);
+    cursor:pointer;
+}
+
+.accueil .dropdown-item:hover{
+    display:block;
+    color: #333;
+    background-color: rgba(246,223,77,1);
+    z-index: 110;
+    position:relative;
+    top:0px;
+    left:0px;
+    cursor:pointer;
+    border-radius: 20px;
 }
 
 .accueil .dropdown {
     opacity: 1;
+    position:relative;
 }
 
 .accueil .dropdown-menu{
     border-radius:20px;
     width:100%;
-    padding:5px;
+    padding:0px;
     z-index: 100;
     background-color:transparent;
 }
 
 .accueil .dropdown-item{
     display:block;
-    background-color: rgba(246,223,77,1);
+    color: #fff;
+    background-color: rgb(43, 51, 110);
     border-radius:20px;
     padding:10px 20px 10px 20px;
-    margin:1px;
+    margin-bottom:2px;
     z-index: 110;
-}
-
-.accueil .dropdown-item:hover{
-    display:block;
-    background-color: #fff;;
-    border-radius:20px;
-    padding:10px;
-    margin:10px;
-    z-index: 110;
-    position:relative;
-    top:0px;
-    left:0px;
 }
 
 .accueil #infos h1{
