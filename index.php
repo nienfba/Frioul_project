@@ -37,12 +37,15 @@
                         </div>
                     </button>
                 </span>
+
                 <a href="" title=""><button class="btn-medium bouton">Choisissez une activité</button></a>
                 <a href="bons_plans.php" title=""><button class="btn-medium bouton">Découvrir les bons plans</button></a>
                 <a href="autour.php" title=""><button class="btn-medium bouton">Autour de moi</button></a>
+                
             </section>
         </div>
     </article>
+
     <section id="infos">
         <!-- Bas de page contenu à définir -->
         <h1>Vous pouvez dès à présent publier vos photos avec Instagram</h1>

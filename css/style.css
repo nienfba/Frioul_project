@@ -130,7 +130,7 @@ header{
     min-width:200px;
    }
 
-.accueil button{
+.accueil button, div.dropdown-item:hover {
     cursor:pointer;
 }
 
