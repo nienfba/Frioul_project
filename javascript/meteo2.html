@@ -42,16 +42,6 @@ fetch(urlApiAjax)
     // IL FAUT ALLER RECUPERER LES INFOS QUI NOUS INTERESSENT
     // objet.propriete OU objet["propriete"]
     // BOUCLE POUR PARCOURIR LES INFOS UNE PAR UNE
-    var today = new Date();
-    var day = today.getDate();
-    var month = today.getMonth()+1;
-    var year = today.getFullYear();
-    if(day<10)
-      {day='0'+day;}
-    if(month<10)
-      {month='0'+month;}
-      today = month+'/'+day+'/'+year;
-
     var tableauWeather = objetJS['list'];
     for(var index=0; index < tableauWeather.length; index++) {
       var infoWeather = tableauWeather[index];
@@ -62,23 +52,29 @@ fetch(urlApiAjax)
         var windDeg = infoWeather.wind.deg;
         var icon = infoWeather.weather[0].icon;
 
-        var time = infoWeather.dt_txt;
-        var dateInfo = time.split(" ");
-        var hour = dateInfo[1]
-          var date = dateInfo[0];
-            var dateSplite = date.split("-")
-            var dateEu = "/" + dateSplite[1] + "/" + dateSplite[0];
+        // DATE DU JOUR
+        var dateToday = new Date();
+        var dateTodayParse = Date.parse(dateToday)
+          console.log(dateToday)
+        //RECUP DATE DE L'API
+        var dateApiString = infoWeather.dt_txt;
+        var timestamp = Date.parse(dateApi)
+        var dateApi = new Date(timestamp);
 
-      var midi = hour[4]
+        var weatherToday = []
+        if (dateToday.getDate() == dateApi.getDate()){
+          weatherToday == dateApi.slice()
+        }
+
       var baliseUl = document.querySelector("ul.listeInfo");
       // DOM Document Object Model
       // AJOUTER UNE BALISE li
-      if (midi){
+
       var codeHtmlLi =  '<div class = "row" >'
-                          + '<div class="col-md-3">' + dateSplite[2] + dateEu + '</div>'
-                          + '<div class="col-md-3">' + (dateSplite[2] *1 + 1) + dateEu + '</div>'
-                          + '<div class="col-md-3">'  + (dateSplite[2]*1 + 2) + dateEu + '</div>'
-                          + '<div class="col-md-3">' + (dateSplite[2]*1 + 3) + dateEu + '</div>'
+                          + '<div class="col-md-3">' + weatherToday + '</div>'
+                          + '<div class="col-md-3">' + dateToday + '</div>'
+                          + '<div class="col-md-3">' + dateToday + '</div>'
+                          + '<div class="col-md-3">' + dateToday + '</div>'
                         + '</div>' +
                         '<div class = "row" >'
                         + '<div class="col-md-3">' + '<img src="https://openweathermap.org/img/w/'+ icon + '.png">' + '</div>'
@@ -104,8 +100,6 @@ fetch(urlApiAjax)
                           + '<div class="col-md-3">' + ' vent : '+ Math.round((windSpeed * 3.6)) + ' ' + 'km/h' +  '</div>'
                           + '<div class="col-md-3">' + ' vent : '+ Math.round((windSpeed * 3.6)) + ' ' + 'km/h' +  '</div>'
                         + '</div>';
-                        }
-
 
 // AJOUTER NOTRE CODE POUR LA BALISE li DANS LA BALISE ul
       baliseUl.innerHTML += codeHtmlLi;
