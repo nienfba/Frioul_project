@@ -2,7 +2,7 @@
 <html lang="fr">
 <?php include_once "html/inc/head.php"; ?>
 <body class="autour">
-<header class="">    
+<header class="">
     <a href="index.php"><img src="media/c4m.png" alt="" class="logo" /></a>
     <nav class=""><!-- Navigation -->
         <ul class="hidden">
@@ -44,10 +44,10 @@
         <button type="submit" class="btn btn-primary mb-2">Valider</button>
       </div>
   </div>
-</form>                
+</form>
             </div>
         </div>
-    </section>    
+    </section>
 
     <section class="container">
         <div class="row">
@@ -59,7 +59,7 @@
             <div class="col-sm-6">
                 <div id="map">
                 </div>
-                
+
                 <!-- leafletjs: etape1 -->
                 <script>
 var map = L.map('map').setView([43.3, 5.4], 10);
@@ -68,15 +68,15 @@ this.tileLayer = L.tileLayer(
                     maxZoom: 18,
                     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>',
                 }
-            );                
+            );
             this.tileLayer.addTo(map);
-            
+
             </script>
-            
+
             <!-- leafletjs: geolocalisation -->
             <script>
 map.locate({setView: true, maxZoom: 16});
-function onLocationFound(e) 
+function onLocationFound(e)
 {
     var radius = e.accuracy / 2;
 
@@ -100,7 +100,7 @@ var appelAjax = function(urlApiAjax, callbackJson)
         // ON VEUT RECEVOIR UN OBJET JAVASCRIPT
         return data.json();
     })
-    .then(callbackJson)    
+    .then(callbackJson)
 }
 
 // URL API AJAX
@@ -110,7 +110,7 @@ var ajouterImage = function(objetJS)
     console.log(objetJS);
     // CA Y'EST J'AI UN OBJET JS AVEC TOUTES INFOS PLANQUEES DEDANS...
     // IL FAUT ALLER RECUPERER LES INFOS QUI NOUS INTERESSENT
-    var tableauInfo = objetJS["hydra:member"]; 
+    var tableauInfo = objetJS["hydra:member"];
     // objet.propriete OU objet["propriete"]
     // BOUCLE POUR PARCOURIR LES INFOS UNE PAR UNE
     for(var index=0; index < tableauInfo.length; index++) {
@@ -131,17 +131,21 @@ var ajouterImage = function(objetJS)
                                     + '</a>'
                                     + '</div>'
                                     + '<div class="col-sm-8">'
+                                    + '<div> <a href="https://www.google.fr/maps/dir/' + "43.3,5.4" + "/" +  "43.35,5.45" + "/" +'" > Comment y aller '
+                                    + '</a>'
+                                    + '</div>'
                                        + '<span>' + caption + '</span>'
                                     + '</div>';
+
             // AJOUTER NOTRE CODE POUR LA BALISE li DANS LA BALISE ul
             baliseUl.innerHTML += codeHtmlLi;
         }
     }
-    
+
 }
-   
-   
-appelAjax(urlApiAjax, ajouterImage);    
+
+
+appelAjax(urlApiAjax, ajouterImage);
 
 </script>
 

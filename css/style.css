@@ -19,7 +19,7 @@ body.accueil{
 }
 
 header{
-    background-color: #b82c35;
+    background-color: #ffffff;
     display:block;
     height:80px;
     padding:10px;
@@ -131,7 +131,7 @@ header{
    }
 
 .accueil button {
-    
+
     border-radius: 0px;
 }
 
@@ -201,7 +201,15 @@ header{
     align-items: center;
   }
 
-  @media (max-width: 600px) {
+  ul.listeInfo img {
+        object-fit: cover;
+        width: 160px;
+        height: 160px;
+    }
+
+@media (max-width: 600px) {
+
+
     .accueil h1{
         font-size:1.5em;
         color: #ffffff;
@@ -237,3 +245,31 @@ header{
         margin: 10px auto;
     }
   }
+
+  .btn-medium {
+  color: #999999;
+  border: 1px solid #999999;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+}
+.btn-medium:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #999999;
+}
+.btn-treehouse {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: #6AD58B;
+  transition: background 0.3s ease;
+}
+.btn-treehouse:hover {
+  opacity: 1;
+  background: #3ac162;
+  text-decoration: none;
+  color: white;
+}
