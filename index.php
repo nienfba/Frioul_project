@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
 <?php include_once "html/inc/head.php"; ?>
-
 <body class="accueil">
     <header class="">
         <img src="media/c4m.png" alt="" class="logo" />
         <nav class="">
             <!-- Navigation -->
             <ul class="hidden">
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
                 <li class=""></li>
                 <li class=""></li>
                 <li class=""></li>
@@ -66,5 +68,4 @@
 <?php include_once "html/inc/footer.php"; ?>
 
 </body>
-
 </html>
