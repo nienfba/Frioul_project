@@ -36,7 +36,6 @@ function redirection() {
       for (var i = 0; i < tableauInfo.length; i++) {
         var ByCat = tableauInfo[i];
         //console.log(ByCat);
-
         var title = ByCat.title;
         var latitude = ByCat.latitude;
         var longitude = ByCat.longitude;
