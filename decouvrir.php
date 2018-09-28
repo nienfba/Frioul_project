@@ -31,7 +31,7 @@
 
               <!-- Affichage d'une publication (Photos + commentaires) -->
               <img  class="img-fluid col-lg-12" src="img/panier.jpg" alt="">
-              <h1 class="col-lg-12">BALADE DANS LE PANIER</h1>
+              <h1 class="col-lg-12">BALADE DANS LE PANnIER</h1>
               <p class="col-lg-12">idéal pour la famille</p> <!-- pictogrammes -->
               <p class="col-lg-12">#marseille #panier</p>    <!---- Hachtag ---->
               <p class="col-lg-12">
