@@ -130,26 +130,18 @@ header{
     min-width:200px;
    }
 
-.accueil button {
-
-    border-radius: 0px;
-}
-
-.accueil button:hover{
-    background-color: rgba(246,223,77,1);
+.accueil button:hover, .accueil .dropdown-item:hover{
+    color: #fff;
+    background-color: rgb(43, 51, 110);
     cursor:pointer;
 }
 
 .accueil .dropdown-item:hover{
     display:block;
-    color: #333;
-    background-color: rgba(246,223,77,1);
     z-index: 110;
     position:relative;
     top:0px;
     left:0px;
-    cursor:pointer;
-    border-radius: 20px;
 }
 
 .accueil .dropdown {
@@ -158,7 +150,6 @@ header{
 }
 
 .accueil .dropdown-menu{
-    border-radius:20px;
     width:100%;
     padding:0px;
     z-index: 100;
