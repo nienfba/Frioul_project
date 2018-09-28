@@ -53,38 +53,40 @@
       <div class="row">
         <div class="col-6">
           <div class="card my-3">
-            <div class="card-img-top" style="height:200px; background: url('media/panier.jpg'); background-size: cover; background-position: center;" > </div>
-              <div class="card-body">
-              <h4 class="text-danger font-weight-bold">Ballade dans le panier</h4>
-              <p class= mr-2 style= "line-height: 5px;"><i class="fas fa-walking align-items mr-2"></i>idéal pour une famille<br><i class="fas fa-stopwatch mr-2"></i>2 à 4 heures <br>800m</p>
-              <p>#Marseille #panier</p>
+            <div class="card-img-top" style="height:150px; background: url('media/panier.jpg'); background-size: cover; background-position: center;" > </div>
+              <div class="card-body" style="height:150px; overflow: hidden;">
+              <h5 class="text-danger font-weight-bold">Ballade dans le panier</h5>
+              <p class= "mr-2"><i class="fas fa-walking align-items mr-2"></i>idéal pour une famille<br><i class="fas fa-stopwatch mr-2"></i>2 à 4 heures <br>1km<br>#Marseille #panier</p>
               </div>
           </div>
         </div>
           <div class="col-6">
-            <div class="card my-3" >
-              <div class="card-img-top" style="height:200px; background: url('media/calanques.jpg'); background-size: cover; background-position: center;" > </div>
-                <div class="card-body pxy-0">
-                <h4 class="text-danger font-weight-bold">Les Calanques</h4><p><i class="fas fa-tree align-items mr-2"></i>Randonnée</p><p><i class="fas fa-stopwatch mr-2"></i>2 à 4 heures <br>800m</p>
-                <p>#Marseille #panier</p>
+            <div class="card my-2" >
+              <div class="card-img-top" style="height:150px; background: url('media/calanques.jpg'); background-size: cover; background-position: center;" > </div>
+                <div class="card-body" style="height:150px; overflow: hidden;">
+                <h5 class="text-danger font-weight-bold">Les Calanques</h5><p><i class="fas fa-tree align-items mr-2"></i>Randonnées<br><i class="fas fa-stopwatch mr-2"></i><br>2 à 4 heures<br>800m<br>
+                #Marseille #panier</p>
               </div>
             </div>
           </div>
           <div class="col-6">
-            <div class="card my-3">
-              <div class="card-img-top" style="height:200px; background: url('media/vieux-port.jpg'); background-size: cover; background-position: center;" > </div>
-                <div class="card-body">
-                <h4 class="text-danger font-weight-bold">Le vieux-port</h4>
-                <p class= "mr-2"><i class="fas fa-walking align-items mr-2"></i>ideal pour une famille</p>
+            <div class="card my-2">
+              <div class="card-img-top" style="height:150px; background: url('media/vieuxport.jpg'); background-size: cover; background-position: center;" > </div>
+                <div class="card-body" style="height:150px; overflow: hidden;">
+                <h5 class="text-danger font-weight-bold">Le vieux-port</h5>
+                <p class= "mr-2"><i class="fas fa-walking align-items mr-2"></i>ideal pour une famille <br><i class="fas fa-stopwatch mr-2"></i>1à 2heures <br>
+                #vieuxport</p>
+
               </div>
             </div>
           </div>
           <div class="col-6">
-            <div class="card my-3" >
-              <div class="card-img-top" style="height:200px; background: url('media/bonne_mere.jpg'); background-size: cover; background-position: center;" > </div>
-                <div class="card-body">
-                <h4 class="text-danger font-weight-bold">Visite de la bonne mère</h4>
-                <p class= "mr-2"><i class="fas fa-walking align-items mr-2"></i>ideal pour une famille</p>
+            <div class="card my-2" >
+              <div class="card-img-top" style="height:150px; background: url('media/bonnemere.jpg'); background-size: cover; background-position: center;"></div>
+              <div class="card-body" style="height:150px; overflow: hidden;">
+              <h5 class="text-danger font-weight-bold">Visite de la bonne mère</h5>
+              <p class= "mr-2 "><i class="fas fa-walking align-items mr-2"></i>ideal pour une famille<br>
+              <i class="fas fa-stopwatch mr-2"></i>30 minutes<br>#notredamedelagarde</p>
               </div>
             </div>
           </div>
