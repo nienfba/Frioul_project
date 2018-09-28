@@ -85,7 +85,7 @@
             }
         });
 
-        /*var UrlApi = "http://localhost/hackaton/myprovence/public/api/instas";
+        var UrlApi = "http://myprovence.code4marseille.fr/api/instas";
 
         fetch(UrlApi)
                 .then(function (reponse) {
@@ -126,6 +126,6 @@
                                     }
                                 });
                     }
-                });*/
+                });
     </script>
 </html>

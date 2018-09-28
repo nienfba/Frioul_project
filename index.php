@@ -71,7 +71,7 @@
     </section>
 
     <section id="lacarte">
-        <?php //include_once "html/inc/map.php"; ?>
+        <?php include_once "html/inc/map.php"; ?>
     </section>   
 
     <section id="thewall">

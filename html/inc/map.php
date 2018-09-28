@@ -1,24 +1,19 @@
-<div class='second'>
-    <div class="WallOfPictures">
-        <div class="row">
-            <br><br><br><br>
-            <center>
-                <img id="ImgWall" src="https://i.ytimg.com/vi/wSTt04rOwa8/maxresdefault.jpg" width="300" height="200" />
-            </center>
-        </div>
-    </div>
+<div class='mapheader'>
     <div class="map">
         <div id="mapHome"></div>
     </div>
+    <div class="WallOfPictures">
+        <img id="ImgWall" src="https://i.ytimg.com/vi/wSTt04rOwa8/maxresdefault.jpg" width="100"  />
+    </div>
+
 </div>
-<?php include('navright.html'); ?>
+
+<?php include('html/inc/navright.html'); ?>
+
 <div id="navBottom"><button id="showRight">NavRight</button><button id="showOverlay">Overlay</button></div>
 <div class="overlay-box">
-    <center>
-        <h3>Jusqu'à quelle heure dure cet évenement ?</h3>
-
-        <textarea></textarea>
-    </center>
+    <h3>Jusqu'à quelle heure dure cet évenement ?</h3>
+    <textarea></textarea>
 </div>
 
 
@@ -31,20 +26,6 @@
             id: 'mapbox.streets'
         }).addTo(mymap);
 
-    window.addEventListener('wheel', function (e) {
-        if (e.deltaY < 10) {
-            //scroll up
-        }
-        if (e.deltaY > 10) {
-            //scroll down
-            if ($(".header").is(":visible")) {
-                $(".header").slideUp("slow");
-            } else {
-                $(".WallOfPictures").slideUp("slow");
-                $("#navBottom").slideDown("slow");
-            }
-        }
-    });
 
     $("#showOverlay").click(function () {
         if ($(".overlay-box").is(":visible")) {
@@ -53,6 +34,7 @@
             $(".overlay-box").slideDown("slow");
         }
     });
+
     $("#showRight").click(function () {
         if ($("#navRight").is(":visible")) {
             $("#navRight").slideUp("slow");
