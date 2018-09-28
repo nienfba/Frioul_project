@@ -58,7 +58,9 @@
             </section>
         </div>
     </article>
-
+    <section id="lacarte">
+    <?php include_once "html/inc/map.php"; ?>
+    </section>    
     <section id="infos">
         <!-- Bas de page contenu à définir -->
         <h1>Vous pouvez dès à présent publier vos photos avec Instagram</h1>
@@ -74,7 +76,9 @@
             </div>
         </div>
     </section>
-
+    <section id="thewall">
+        <?php include_once "html/inc/wall.php"; ?>
+    </section>
 <aside class=""><?php include_once "html/inc/social.php"; ?></aside><!-- Block flottant à droite -->
 
 <?php include_once "html/inc/footer.php"; ?>
