@@ -76,6 +76,7 @@
     </section>
 
 <aside class=""><?php include_once "html/inc/social.php"; ?></aside><!-- Block flottant à droite -->
+
 <?php include_once "html/inc/footer.php"; ?>
 
 </body>
