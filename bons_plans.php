@@ -20,45 +20,76 @@
     <section class="container">
         <div class="row">
             <div class="col-12">
-<form>
-  <div class="form-group row">
-      <div class="col-sm-4">
-        <select class="form-control" id="ville" placeholder="ville">
-          <option value="">choisissez une ville</option>
-          <option>marseille</option>
-          <option>aix</option>
-          <option>aubagne</option>
-          <option>cassis</option>
+<div class="container">
+    <div class="row justify-content-center mb-5">
+      <form action="" class="">
+        <select class=" btn-medium  ">
+          <option>Marseille</option>
+          <option>Arles </option>
+          <option>Cassis </option>
+          <option>La Ciotat </option>
+          <option>Aix en Provence </option>
         </select>
-      </div>
-      <div class="col-sm-4">
-        <select class="form-control" id="activite" placeholder="activité">
-          <option value="">choisissez une activité</option>
-          <option>Espace Naturel</option>
-          <option>Mer</option>
-          <option>Montagne</option>
-          <option>Urbain</option>
+        <select class="btn-medium " >
+          <option>Les Calanques</option>
+          <option>Le panier</option>
+          <option>Le Vieux port </option>
+          <option>La Bonne mère</option>
+          <option>L'estaque</option>
         </select>
-      </div>
-      <div class="col-sm-4">
-        <button type="submit" class="btn btn-primary mb-2">Valider</button>
-      </div>
+        <button type="submit" class="btn-medium ">Submit</button>
+      </form>
+    </div>
   </div>
-</form>
+</section>
+<div class="container border-top" >
+  <div class="row ">
+    <div class= "col-6 ">
+      <div class="row">
+        <div class="col-6">
+          <div class="card my-3">
+            <div class="card-img-top" style="height:200px; background: url('./media/panier.jpg'); background-size: cover; background-position: center;" > </div>
+              <div class="card-body">
+              <h4 class="text-danger font-weight-bold">Ballade dans le panier</h4>
+              <p class= mr-2><i class="fas fa-walking align-items mr-2"></i>idéal pour une famille<br><i class="fas fa-stopwatch mr-2"></i>2 à 4 heures <br>800m</p>
+              <p>#Marseille #panier</p>
+              </div>
             </div>
-        </div>
-    </section>
+          </div>
+          <div class="col-6">
+            <div class="card my-3" >
+              <div class="card-img-top" style="height:200px; background: url('./media/calanques.jpg'); background-size: cover; background-position: center;" > </div>
+                <div class="card-body pxy-0">
+                <h4 class="text-danger font-weight-bold">Les Calanques</h4>
+                <p><i class="fas fa-tree align-items mr-2"></i>Randonnée</p><i class="fas fa-stopwatch mr-2"></i>2 à 4 heures <br>800m</p>
+                <p>#Marseille #panier</p>
 
-    <section class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="listeInfo row">
-                <!-- ICI ON VA CREER UNE BALISE li PAR INFO RECUPERE -->
-                </div>
+              </div>
             </div>
-            <div class="col-sm-6">
-                <div id="map">
-                </div>
+          </div>
+          <div class="col-6">
+            <div class="card my-3" >
+              <div class="card-img-top" style="height:200px; background: url('./media/vieuxport.jpg'); background-size: cover; background-position: center;" > </div>
+                <div class="card-body">
+                <h4 class="text-danger font-weight-bold">Le vieux-port</h4>
+                <p class= mr-2><i class="fas fa-walking align-items mr-2"></i>ideal pour une famille</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card my-3" >
+              <div class="card-img-top" style="height:200px; background: url('./media/bonne_mere.jpg'); background-size: cover; background-position: center;" > </div>
+                <div class="card-body">
+                <h4 class="text-danger font-weight-bold">Visite de la bonne mère</h4>
+                <p class= mr-2><i class="fas fa-walking align-items mr-2"></i>ideal pour une famille</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+</div>
+<div class= "col-6 map">
+  <div class="">
 
                 <!-- leafletjs: etape1 -->
                 <script>
