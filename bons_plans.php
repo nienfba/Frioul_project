@@ -52,7 +52,7 @@
       <!-- demie page sur la gauche : cards" -->
       <div class="row">
         <div class="col-6">
-          <div class="card my-3">
+          <div class="card my-2">
             <div class="card-img-top" style="height:150px; background: url('media/panier.jpg'); background-size: cover; background-position: center;" > </div>
               <div class="card-body" style="height:150px; overflow: hidden;">
               <h5 class="text-danger font-weight-bold">Ballade dans le panier</h5>
@@ -61,7 +61,7 @@
           </div>
         </div>
           <div class="col-6">
-            <div class="card my-2" >
+            <div class="card my-2">
               <div class="card-img-top" style="height:150px; background: url('media/calanques.jpg'); background-size: cover; background-position: center;" > </div>
                 <div class="card-body" style="height:150px; overflow: hidden;">
                 <h5 class="text-danger font-weight-bold">Les Calanques</h5><p><i class="fas fa-tree align-items mr-2"></i>Randonnées<br><i class="fas fa-stopwatch mr-2"></i><br>2 à 4 heures<br>800m<br>
