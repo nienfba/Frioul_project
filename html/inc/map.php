@@ -16,7 +16,6 @@
     <textarea></textarea>
 </div>
 
-
 <script>
     var mymap = L.map('mapHome').setView([43.3, 5.4], 13);
 
