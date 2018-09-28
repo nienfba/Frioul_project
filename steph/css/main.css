@@ -41,7 +41,7 @@ html, body {
     display: none;
     position: fixed;
     z-index: 10;
-    height: calc(100vh - 25px);
+    height: calc(100vh - 100px);
     width: 200px;
     right: 0;
     top: 0;
@@ -56,6 +56,9 @@ html, body {
 }
 
 .overlay-box {
+    
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px;
     background-color: rgba(11,11,11, 0.6);
     border: 1px solid #000;
     color: white;
@@ -76,7 +79,7 @@ html, body {
     position: fixed;
     display: none;
     z-index: 10;
-    height: 25px;
+    height: 100px;
     width: 100%;
     left: 0;
     bottom: 0;
