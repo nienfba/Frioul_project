@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <?php include_once "html/inc/head.php"; ?>
 
 
 <body class="decouvrir">
  
   <!----------------------------------- DEBUT  HEADER   --------------------------------------->
-    <header class="">
+    <header class="decouvrir">
         <a href="index.php"><img src="media/c4m.png" alt="" class="logo" /></a>
         <div class="logo"></div>
         <nav class="">

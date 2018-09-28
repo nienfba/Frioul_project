@@ -19,6 +19,7 @@ body.accueil{
 }
 
 header{
+    background-color: #b82c35;
     background-color: #ffffff;
     display:block;
     height:80px;
@@ -200,7 +201,6 @@ header{
 
 @media (max-width: 600px) {
 
-
     .accueil h1{
         font-size:1.5em;
         color: #ffffff;
@@ -256,7 +256,7 @@ header{
   border-radius: 4px;
   font-weight: bold;
   background: #6AD58B;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 .btn-treehouse:hover {
   opacity: 1;

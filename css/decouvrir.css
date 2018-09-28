@@ -2,6 +2,9 @@ body header{
     margin-bottom: 70px;
 }
 
+header{
+    background-color: #b82c35;
+}
 
 /* .colonneg{
     padding-right: 5rem;
