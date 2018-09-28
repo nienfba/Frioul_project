@@ -1,124 +1,127 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-html,body {
+html,
+body {
     height: 100%;
-    margin:0;
-    padding:0;
-  }
+    margin: 0;
+    padding: 0;
+}
 
-body.accueil{
+body.accueil {
     background-color: #fff;
-    margin:0;
-    padding:0;
-    display:block;
-    width:100%;
-    overflow-x:hidden;
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    overflow-x: hidden;
     font-size: 18px;
 }
 
-header{
+header {
     background-color: #b82c35;
     background-color: #ffffff;
-    display:block;
-    height:80px;
-    padding:10px;
-    margin:0px;
-    overflow:hidden;
+    display: block;
+    height: 80px;
+    padding: 10px;
+    margin: 0px;
+    overflow: hidden;
 }
 
-.accueil header{
+.accueil header {
     background-color: #ffffff;
-    height:80px;
-    padding:10px;
-    margin:0px;
-    overflow:hidden;
+    height: 80px;
+    padding: 10px;
+    margin: 0px;
+    overflow: hidden;
 }
 
-.accueil h1{
-    font-size:3em;
+.accueil h1 {
+    font-size: 3em;
     color: #ffffff;
     text-transform: uppercase;
     font-weight: 700;
 }
 
-.accueil #intro p{
-    font-size:1em;
+.accueil #intro p {
+    font-size: 1em;
     color: #ffffff;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
-.accueil article{
-    display:block;
+.accueil article {
+    display: block;
     background-image: url("../media/mucem.jpg");
     background-size: cover;
     background-position: center center;
-    width:100%;
+    width: 100%;
     height: calc(100% - 80px);
-    min-height:800px;
+    min-height: 800px;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
     margin: 0;
-    padding:0;
+    padding: 0;
 }
 
 .accueil section {
-    width:100%;
-    display:block;
+    width: 100%;
+    display: block;
     background-color: transparent;
     margin: 0;
 }
 
 .accueil section#intro {
-    display:block;
-    position:relative;
-    padding:30px;
-    padding-top:30%;
+    display: block;
+    position: relative;
+    padding: 30px;
+    padding-top: 30%;
     margin: 0;
 }
 
 .accueil section#bandeau {
-    display:block;
-    position:absolute;
-    bottom:0px;
-    left:0px;
-    padding:30px;
-    text-align:center;
-    background-color: rgba(0,0,0,0.5);
-    margin: 0;
-}
-.accueil section#infos{
-    display:block;
-    position:relative;
-    text-align:center;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding: 30px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
     margin: 0;
 }
 
-.accueil footer{
+.accueil section#infos {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: 0;
+}
+
+.accueil footer {
     font-size: 1em;
-    display:block;
+    display: block;
     color: #333;
     background-color: #eeeeee;
     padding: 20px;
     text-decoration: none;
 }
 
-.accueil footer p, .accueil footer a {
+.accueil footer p,
+.accueil footer a {
     font-size: 1em;
     text-decoration: none;
     color: #333;
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
 }
 
-.logo{
+.logo {
     height: 60px;
     margin: 0;
-    padding:0;
-    position:relative;
-    top:0px;
-    left:0px;
+    padding: 0;
+    position: relative;
+    top: 0px;
+    left: 0px;
 }
 
 .accueil .btn-medium {
@@ -128,139 +131,150 @@ header{
     border-radius: 50px;
     font-weight: lighter;
     opacity: 1;
-    min-width:200px;
-   }
-
-.accueil button:hover, .accueil .dropdown-item:hover{
-    color: #fff;
-    background-color: rgb(43, 51, 110);
-    cursor:pointer;
+    min-width: 200px;
 }
 
-.accueil .dropdown-item:hover{
-    display:block;
+.accueil button:hover,
+.accueil .dropdown-item:hover {
+    color: #fff;
+    background-color: rgb(43, 51, 110);
+    cursor: pointer;
+}
+
+.accueil .dropdown-item:hover {
+    display: block;
     z-index: 110;
-    position:relative;
-    top:0px;
-    left:0px;
+    position: relative;
+    top: 0px;
+    left: 0px;
 }
 
 .accueil .dropdown {
     opacity: 1;
-    position:relative;
+    position: relative;
 }
 
-.accueil .dropdown-menu{
-    width:100%;
-    padding:0px;
+.accueil .dropdown-menu {
+    width: 100%;
+    padding: 0px;
     z-index: 100;
-    background-color:transparent;
+    background-color: transparent;
 }
 
-.accueil .dropdown-item{
-    display:block;
+.accueil .dropdown-item {
+    display: block;
     color: #fff;
     background-color: rgb(43, 51, 110);
-    border-radius:20px;
-    padding:10px 20px 10px 20px;
-    margin-bottom:2px;
+    border-radius: 20px;
+    padding: 10px 20px 10px 20px;
+    margin-bottom: 2px;
     z-index: 110;
 }
 
-.accueil #infos h1{
+.accueil #infos h1 {
     color: #2b3376;
-    font-size:2em;
+    font-size: 2em;
     font-weight: 800;
-    text-align:center;
+    text-align: center;
     text-transform: none;
-    margin:20px;
+    margin: 20px;
 }
 
-.hidden{
-    visibility:hidden;
-    display:none;
+.hidden {
+    visibility: hidden;
+    display: none;
 }
 
-.hashtag{
-    color:#f6df4d;
+.hashtag {
+    color: #f6df4d;
 }
 
 .vertical-center {
-    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-    min-height: 100vh; /* These two lines are counted as one :-)       */
+    min-height: 100%;
+    /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh;
+    /* These two lines are counted as one :-)       */
 
     display: flex;
     align-items: center;
-  }
+}
 
-  ul.listeInfo img {
-        object-fit: cover;
-        width: 160px;
-        height: 160px;
-    }
+ul.listeInfo img {
+    object-fit: cover;
+    width: 160px;
+    height: 160px;
+}
+
+.marge {
+    margin: 10px;
+}
 
 @media (max-width: 600px) {
 
-    .accueil h1{
-        font-size:1.5em;
+    .accueil h1 {
+        font-size: 1.5em;
         color: #ffffff;
         text-transform: uppercase;
         font-weight: 700;
     }
 
-    .accueil #infos h1{
-        font-size:1.5em;
+    .accueil #infos h1 {
+        font-size: 1.5em;
     }
 
 
-    .accueil #intro p{
+    .accueil #intro p {
         font-size: 0.9em;
         color: #ffffff;
     }
 
     .accueil section#intro {
-        padding-top:15%;
+        padding-top: 15%;
     }
 
     .accueil section#bandeau {
-        padding:10px;
-        border-top: 1px solid rgba(255,255,255,0.2);
-        border-bottom: 1px solid rgba(255,255,255,0.2);
+        padding: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
 
 
-    .accueil button, .accueil .bouton{
+    .accueil button,
+    .accueil .bouton {
 
-        display:block;
-        width:90%;
+        display: block;
+        width: 90%;
         margin: 10px auto;
     }
-  }
+}
 
-  .btn-medium {
-  color: #999999;
-  border: 1px solid #999999;
-  padding: 10px 15px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
+.btn-medium {
+    color: #999999;
+    border: 1px solid #999999;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-weight: lighter;
+    opacity: 0.6;
 }
+
 .btn-medium:hover {
-  opacity: 1;
-  text-decoration: none;
-  color: #999999;
+    opacity: 1;
+    text-decoration: none;
+    color: #999999;
 }
+
 .btn-treehouse {
-  color: white;
-  padding: 10px 15px;
-  border-radius: 4px;
-  font-weight: bold;
-  background: #6AD58B;
-  transition: background-color 0.3s ease;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    background: #6AD58B;
+    transition: background-color 0.3s ease;
 }
+
 .btn-treehouse:hover {
-  opacity: 1;
-  background: #3ac162;
-  text-decoration: none;
-  color: white;
+    opacity: 1;
+    background: #3ac162;
+    text-decoration: none;
+    color: white;
 }
