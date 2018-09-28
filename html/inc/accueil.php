@@ -1,15 +1,15 @@
 <div class="accueil">
     <article class="">
-        <header class="">
+        <!--<header class="">
             <img src="media/c4m.png" alt="" class="logo" />
             <nav class="hidden">
                 <!-- Navigation -->
-                <ul class="">
+                <!--<ul class="">
                     <li class=""></li>
                     <li class=""></li>
                 </ul>
             </nav>
-        </header>
+        </header>-->
         <!-- Full width -->
         <div class="row">
             <section id="intro" class="text-center">
@@ -48,9 +48,9 @@
         </div>
     </article>
 
-    <section id="infos">
+    <!--<section id="infos">
         <!-- Bas de page contenu à définir -->
-        <h1>Vous pouvez dès à présent publier vos photos avec Instagram</h1>
+        <!--<h1>Vous pouvez dès à présent publier vos photos avec Instagram</h1>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mx-auto marge">                
                 <img src="media/icons/placeholder_a.png" alt="" height="128" vspace="10"/><br /><strong>Choisissez votre lieu</strong>
@@ -62,5 +62,5 @@
                 <img src="media/icons/photo-camera_a.png" alt="" height="128" vspace="10"/><br /><strong>Publiez votre photo</strong>
             </div>
         </div>
-    </section>
+    </section>-->
 </div>
