@@ -4,7 +4,8 @@
 
 html,
 body {
-    height: 100%;
+    
+    width: 100vw;
     margin: 0;
     padding: 0;
 }
@@ -55,9 +56,10 @@ header {
     background-image: url("../media/mucem.jpg");
     background-size: cover;
     background-position: center center;
-    width: 100%;
-    height: calc(100% - 80px);
-    min-height: 800px;
+    width: 100vw;
+    height: calc(100vh - 80px);
+    min-height: 100vh;
+    /* min-height: 800px; */
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
     margin: 0;
@@ -237,7 +239,6 @@ ul.listeInfo img {
         border-top: 1px solid rgba(255, 255, 255, 0.2);
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
-
 
     .accueil button,
     .accueil .bouton {

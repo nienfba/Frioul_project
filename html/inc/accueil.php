@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="fr">
-<?php include_once "html/inc/head.php"; ?>
-<body class="accueil">
+<div class="accueil">
     <article class="">
         <header class="">
             <img src="media/c4m.png" alt="" class="logo" />
-            <nav class="">
+            <nav class="hidden">
                 <!-- Navigation -->
-                <ul class="hidden">
-                    <li class=""></li>
-                    <li class=""></li>
-                    <li class=""></li>
-                    <li class=""></li>
+                <ul class="">
                     <li class=""></li>
                     <li class=""></li>
                 </ul>
@@ -38,6 +31,7 @@
                         </div>
                     </button>
                 </span>
+
                 <span class="dropdown">
                     <button class="btn-medium" data-toggle="dropdown">Choisissez une activité
                         <div class="dropdown-menu">
@@ -69,17 +63,4 @@
             </div>
         </div>
     </section>
-
-    <section id="lacarte">
-        <?php //include_once "html/inc/map.php"; ?>
-    </section>   
-
-    <section id="thewall">
-        <?php //include_once "html/inc/wall.php"; ?>
-    </section>
-
-<aside class=""><?php include_once "html/inc/social.php"; ?></aside><!-- Block flottant à définir-->
-
-<?php include_once "html/inc/footer.php"; ?>
-</body>
-</html>
+</div>
