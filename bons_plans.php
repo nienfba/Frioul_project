@@ -21,10 +21,10 @@
     </nav>
 </header>
 <section class="">
-  <div class="logo"></div>
+  <!-- <div class="logo"></div> -->
     <!-- Partie qui contient les photos sur la moitié de page gauche et la carte sur la partie de moitié de page droite" -->
   <div class="container">
-    <div class="row justify-content-center mb-5">
+    <div class="row justify-content-center mb-1 mt-1">
       <form action="" class="">
         <select class=" btn-medium  ">
           <option>Marseille</option>
