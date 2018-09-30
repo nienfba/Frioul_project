@@ -64,43 +64,43 @@
       <div class="row">
         <div class="col-6">
           <!-- CARD NUMERO 1 -->
-          <div class="card my-2">
-            <div class="card-img-top" style="height:140px; background: url('media/panier.jpg'); background-size: cover; background-position: center;" > </div>
-            <div class="card-body" style="height:130px; overflow: hidden;">
+          <div class="card my-4">
+            <div class="card-img-top" style="height:180px; background: url('media/panier.jpg'); background-size: cover; background-position: center;" > </div>
+            <div class="card-body" style="height:160px; overflow: hidden;">
               <a href="decouvrir.php" style="text-decoration: none;"><h6 class="text-danger font-weight-bold">Ballade dans le panier</h6></a>
-              <p class= "mr-2 "><i class="fas fa-walking align-items mr-2"></i><strong>idéal pour une famille</strong><br><i class="fas fa-stopwatch mr-2"></i>2 à 4 heures|1km<br><strong style="color:rgb(18, 25, 145);">#Marseille #les Calanques</strong ></p>
+              <p><i class="fas fa-walking align-items mr-2 "> </i><strong>idéal pour une famille</strong><br><img src="media/yingyang.png" class="mr-2">2 à 4 heures | <img src="media/cible.png" class="mr-2" >1km<br><strong style="color:rgb(18, 25, 145);">#Marseille #les Calanques</strong ></p>
             </div>
           </div>
         </div>
         <div class="col-6">
           <!-- ------CARD NUMERO 2 -->
-          <div class="card my-2">
-            <div class="card-img-top" style="height:140px; background: url('media/calanques.jpg'); background-size: cover; background-position: center;" > </div>
-            <div class="card-body" style="height:130px; overflow: hidden;">
-              <h6 class="text-danger font-weight-bold">Les Calanques</h6><p><i class="fas fa-tree align-items mr-2"></i><strong>Randonnées</strong><br><i class="fas fa-stopwatch mr-2"></i>2 à 4 heures|800m<br><strong style="color:rgb(18, 25, 145);">
+          <div class="card my-4">
+            <div class="card-img-top" style="height:180px; background: url('media/calanques.jpg'); background-size: cover; background-position: center;" > </div>
+            <div class="card-body" style="height:160px; overflow: hidden;">
+              <h6 class="text-danger font-weight-bold">Les Calanques</h6><p><img src="media/trees-1.png" class="mr-2"><strong>Randonnées</strong><br><img src="media/yingyang.png" class="mr-2">2 à 4 heures | <img src="media/cible.png" class="mr-2">800m<br><strong style="color:rgb(18, 25, 145);">
               #Marseille #panier</strong></p>
             </div>
           </div>
         </div>
         <div class="col-6">
          <!-- ------CARD NUMERO 3 -->
-         <div class="card my-2">
-          <div class="card-img-top" style="height:140px; background: url('media/vieuxport.jpg'); background-size: cover; background-position: center;" ></div>
-          <div class="card-body" style="height:130px; overflow: hidden;">
+         <div class="card mb-4">
+          <div class="card-img-top" style="height:180px; background: url('media/vieuxport.jpg'); background-size: cover; background-position: center;" ></div>
+          <div class="card-body" style="height:160px; overflow: hidden;">
             <h6 class="text-danger font-weight-bold">Le vieux-port</h6>
-            <p class= "mr-2"><i class="fas fa-walking align-items mr-2"></i><strong>ideal pour une famille</strong><br><i class="fas fa-stopwatch mr-2"></i>1à 2heures <br>
+            <p class= "mr-2"><i class="fas fa-walking align-items mr-2"></i><strong>ideal pour une famille</strong><br><img src="media/cible.png" class="mr-2">1 à 2heures <br>
               <strong style="color:rgb(18, 25, 145);">#vieuxport</strong></p>
             </div>
           </div>
         </div>
         <div class="col-6">
          <!-- ------CARD NUMERO 4 -->
-         <div class="card my-2" >
-          <div class="card-img-top" style="height:140px; background: url('media/bonnemere.jpg'); background-size: cover; background-position: center;"></div>
-          <div class="card-body" style="height:130px; overflow: hidden;">
-            <h6 class="text-danger font-weight-bold">Visite de la bonne mère</h6>
-            <p class= "mr-2 "><i class="fas fa-walking align-items mr-2"></i><strong>ideal pour une famille</strong><br>
-              <i class="fas fa-stopwatch mr-2"></i>30 minutes<br><strong style="color:rgb(18, 25, 145);">#notredamedelagarde</strong></p>
+         <div class="card mb-4" >
+          <div class="card-img-top" style="height:180px; background: url('media/bonnemere.jpg'); background-size: cover; background-position: center;"></div>
+          <div class="card-body" style="height:160px; overflow: hidden;">
+            <h6 class="text-danger font-weight-bold mr-2">Visite de la bonne mère</h6>
+            <p><i class="fas fa-walking align-items mr-2"></i><strong>ideal pour une famille</strong><br>
+              <img src="media/cible.png" class="mr-2">30 minutes<br><strong style="color:rgb(18, 25, 145);">#notredamedelagarde</strong></p>
             </div>
           </div>
         </div>
@@ -109,6 +109,7 @@
     <!-- ------PARTIE DROITE -->
     <div class= "col-6 map">
       <div class="">
+        <img src="media/maps.png">
         <!-- Carte -->
         <?php include_once "html/inc/bons-plans-carte.php"; ?>
       </div>
@@ -121,3 +122,5 @@
 <?php include_once "html/inc/footer.php"; ?>
 <!-- FIN DU FOOTER -->
 </html>
+
+
