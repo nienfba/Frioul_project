@@ -24,24 +24,30 @@
   <!-- <div class="logo"></div> -->
     <!-- Partie qui contient les photos sur la moitié de page gauche et la carte sur la partie de moitié de page droite" -->
   <div class="container">
-    <div class="row justify-content-center mb-1 mt-1">
-      <form action="" class="">
-        <select class=" btn-medium  ">
-          <option>Marseille</option>
-          <option>Arles </option>
-          <option>Cassis </option>
-          <option>La Ciotat </option>
-          <option>Aix en Provence </option>
-        </select>
-        <select class="btn-medium " >
-          <option>Les Calanques</option>
-          <option>Le panier</option>
-          <option>Le Vieux port </option>
-          <option>La Bonne mère</option>
-          <option>L'estaque</option>
-        </select>
-        <button type="submit" class="btn-medium ">Submit</button>
-      </form>
+    <div class="row  mb-1 mt-1">
+   <span class="dropdown dropdown-menu-left d-flex align-items-start">
+    <button class="btn-medium border-0" data-toggle="dropdown">Choisissez une ville
+        <div class="dropdown-menu" style= "border-0;">
+            <div class="dropdown-item">Marseille</div>
+            <div class="dropdown-item">Arles</div>
+            <div class="dropdown-item">Cassis</div>
+            <div class="dropdown-item">LaCiotat</div>
+            <div class="dropdown-item">Aix en Provence</div>
+        </div>
+    </button>
+  </span>
+  <span class="dropdown">
+    <button class="btn-medium" data-toggle="dropdown">Espace naturel
+        <div class="dropdown-menu">
+            <div class="dropdown-item">Le Panier </div>
+            <div class="dropdown-item">Les Calanques</div>
+            <div class="dropdown-item">Le Vieux port </div>
+            <div class="dropdown-item">La Bonne Mère</div>
+        </div>
+    </button>
+  </span>
+  <button type="submit" class="btn-medium  sub">Valider</button>
+
     </div>
   </div>
 </section>
@@ -55,8 +61,8 @@
           <div class="card my-2">
             <div class="card-img-top" style="height:150px; background: url('media/panier.jpg'); background-size: cover; background-position: center;" > </div>
               <div class="card-body" style="height:150px; overflow: hidden;">
-              <h5 class="text-danger font-weight-bold">Ballade dans le panier</h5>
-              <p class= "mr-2"><i class="fas fa-walking align-items mr-2"></i>idéal pour une famille<br><i class="fas fa-stopwatch mr-2"></i>2 à 4 heures <br>1km<br>#Marseille #panier</p>
+              <h6 class="text-danger font-weight-bold">Ballade dans le panier</h6>
+              <p class= "mr-2 "><i class="fas fa-walking align-items mr-2"></i><strong>idéal pour une famille</strong><br><i class="fas fa-stopwatch mr-2"></i>2 à 4 heures|1km<br><strong style="color:rgb(18, 25, 145);">#Marseille #les Calanques</strong ></p>
               </div>
           </div>
         </div>
@@ -64,18 +70,18 @@
             <div class="card my-2">
               <div class="card-img-top" style="height:150px; background: url('media/calanques.jpg'); background-size: cover; background-position: center;" > </div>
                 <div class="card-body" style="height:150px; overflow: hidden;">
-                <h5 class="text-danger font-weight-bold">Les Calanques</h5><p><i class="fas fa-tree align-items mr-2"></i>Randonnées<br><i class="fas fa-stopwatch mr-2"></i><br>2 à 4 heures<br>800m<br>
-                #Marseille #panier</p>
+                <h6 class="text-danger font-weight-bold">Les Calanques</h6><p><i class="fas fa-tree align-items mr-2"></i><strong>Randonnées</strong><br><i class="fas fa-stopwatch mr-2"></i>2 à 4 heures|800m<br><strong style="color:rgb(18, 25, 145);">
+                #Marseille #panier</strong></p>
               </div>
             </div>
           </div>
           <div class="col-6">
             <div class="card my-2">
-              <div class="card-img-top" style="height:150px; background: url('media/vieuxport.jpg'); background-size: cover; background-position: center;" > </div>
+              <div class="card-img-top" style="height:150px; background: url('media/vieuxport.jpg'); background-size: cover; background-position: center;" ></div>
                 <div class="card-body" style="height:150px; overflow: hidden;">
-                <h5 class="text-danger font-weight-bold">Le vieux-port</h5>
-                <p class= "mr-2"><i class="fas fa-walking align-items mr-2"></i>ideal pour une famille <br><i class="fas fa-stopwatch mr-2"></i>1à 2heures <br>
-                #vieuxport</p>
+                <h6 class="text-danger font-weight-bold">Le vieux-port</h6>
+                <p class= "mr-2"><i class="fas fa-walking align-items mr-2"></i><strong>ideal pour une famille</strong><br><i class="fas fa-stopwatch mr-2"></i>1à 2heures <br>
+                <strong style="color:rgb(18, 25, 145);">#vieuxport</strong></p>
 
               </div>
             </div>
@@ -84,9 +90,9 @@
             <div class="card my-2" >
               <div class="card-img-top" style="height:150px; background: url('media/bonnemere.jpg'); background-size: cover; background-position: center;"></div>
               <div class="card-body" style="height:150px; overflow: hidden;">
-              <h5 class="text-danger font-weight-bold">Visite de la bonne mère</h5>
-              <p class= "mr-2 "><i class="fas fa-walking align-items mr-2"></i>ideal pour une famille<br>
-              <i class="fas fa-stopwatch mr-2"></i>30 minutes<br>#notredamedelagarde</p>
+              <h6 class="text-danger font-weight-bold">Visite de la bonne mère</h6>
+              <p class= "mr-2 "><i class="fas fa-walking align-items mr-2"></i><strong>ideal pour une famille</strong><br>
+              <i class="fas fa-stopwatch mr-2"></i>30 minutes<br><strong style="color:rgb(18, 25, 145);">#notredamedelagarde</strong></p>
               </div>
             </div>
           </div>

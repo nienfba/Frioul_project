@@ -10,4 +10,34 @@ header{
 }
 .code4{
   padding-top: 20px ;
+
+}
+.card-body{
+  font-size: 0.8rem;
+  padding:0.80rem;
+}
+.btn-medium {
+  color: white;
+  background-color:rgb(170, 55, 60);
+  border: 1px solid #999999;
+  padding: 6px 15px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 1;
+  outline:none;
+
+}
+.btn-medium:hover {
+  opacity: 0.6;
+  text-decoration: none;
+  color: #999999;
+  outline:none;
+}
+.sub{
+  background-color:white;
+  color:rgb(170, 55, 60);
+  outline:none;
+}
+.dropdown-menu{
+outline:none;
 }
