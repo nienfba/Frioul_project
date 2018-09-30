@@ -64,7 +64,7 @@
       <div class="row">
         <div class="col-6">
           <!-- CARD NUMERO 1 -->
-          <div class="card my-4">
+          <div class="card mt-5 mb-4">
             <div class="card-img-top" style="height:180px; background: url('media/panier.jpg'); background-size: cover; background-position: center;" > </div>
             <div class="card-body" style="height:160px; overflow: hidden;">
               <a href="decouvrir.php" style="text-decoration: none;"><h6 class="text-danger font-weight-bold">Ballade dans le panier</h6></a>
@@ -74,7 +74,7 @@
         </div>
         <div class="col-6">
           <!-- ------CARD NUMERO 2 -->
-          <div class="card my-4">
+          <div class="card mt-5 mb-4">
             <div class="card-img-top" style="height:180px; background: url('media/calanques.jpg'); background-size: cover; background-position: center;" > </div>
             <div class="card-body" style="height:160px; overflow: hidden;">
               <h6 class="text-danger font-weight-bold">Les Calanques</h6><p><img src="media/trees-1.png" class="mr-2"><strong>Randonnées</strong><br><img src="media/yingyang.png" class="mr-2">2 à 4 heures | <img src="media/cible.png" class="mr-2">800m<br><strong style="color:rgb(18, 25, 145);">
