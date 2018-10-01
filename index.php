@@ -55,10 +55,10 @@
         </div>
     </article>
 
-    <section id="infos" class="">
+    <section id="infos" class="row">
         <!-- Bas de page contenu à définir -->
         <h1>Vous pouvez dès à présent publier vos photos avec Instagram</h1>
-        <div class="row">
+        <div class="">
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mx-auto marge">
                 <img src="media/icons/placeholder_a.png" alt="" height="128" vspace="10" /><br /><strong>Choisissez
                     votre lieu</strong>
@@ -74,24 +74,9 @@
         </div>
     </section>
 
-    <section class="row">
-        <!-- Block flottant à définir-->
-        <?php //include_once "html/inc/.php"; ?>
-    </section>
-
-    <section class="row">
-        <!-- Block flottant à définir-->
+    <section id="social" class="row"><!-- Block du flux insta -->     
         <?php include_once "html/inc/social.php"; ?>
     </section>
-
-    <div class="row hidden">
-        <section id="lacarte" class="">
-            <?php //include_once "html/inc/map.php"; ?>
-        </section>
-        <section id="thewall" class="">
-            <?php //include_once "html/inc/wall.php"; ?>
-        </section>
-    </div>
 
     <?php include_once "html/inc/footer.php"; ?>
 
@@ -107,15 +92,16 @@
             
             $.getJSON('html/inc/accueil.json', function (data) {
                 $.each(data, function (index, d) {
-                    $('#lieux').delay(3000, function () {
+                    $('#lieux').delay(5000, function () {
+
                         $('#lieux').html(d.hashtag);
                         $('article').css('background-image', 'url(' + d.image + ')');
 
                         var alternate = anime({
                             targets: '#alternate .el',
-                            translateX: 250,
+                            translateX: -250,
                             direction: 'alternate'
-                        });
+                        });                        
 
                     });
                 });

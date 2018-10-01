@@ -1,25 +1,19 @@
 
 <style>
-ul.listeInfo {
-    padding-left:0;
-    display:flex;
-    flex-wrap:wrap;
-    list-style:none;
-    width:100%;
+div.liste {
+    display:block;
+    height: auto;
+    padding-bottom:100vw;
 }
-ul.listeInfo li {
-    width:100%;
+div.listeInfo {
+    display:inline-block;
 }
 
 </style>
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <ul class="listeInfo row">
-            <!-- ICI ON VA CREER UNE BALISE li PAR INFO RECUPERE -->
-            </ul>
-        </div>
+<div class="row">
+    <div class="liste">
+        <!-- ICI ON VA CREER UNE BALISE div PAR INFO RECUPERE -->
     </div>
 </div>
 <script>
@@ -29,7 +23,7 @@ var appelAjax = function(urlApiAjax, callbackJson)
     fetch(urlApiAjax)
     .then(function(data){
         // DEBUG
-        console.log(data);
+        //console.log(data);
         // ON VEUT RECEVOIR UN OBJET JAVASCRIPT
         return data.json();
     })
@@ -40,7 +34,7 @@ var appelAjax = function(urlApiAjax, callbackJson)
 var urlApiAjax = 'https://myprovence.code4marseille.fr/api/instas?itemsPerPage=24';
 var ajouterImage = function(objetJS)
 {
-    console.log(objetJS);
+    //console.log(objetJS);
     // CA Y'EST J'AI UN OBJET JS AVEC TOUTES INFOS PLANQUEES DEDANS...
     // IL FAUT ALLER RECUPERER LES INFOS QUI NOUS INTERESSENT
     var tableauInfo = objetJS["hydra:member"];
@@ -48,20 +42,20 @@ var ajouterImage = function(objetJS)
     // BOUCLE POUR PARCOURIR LES INFOS UNE PAR UNE
     for(var index=0; index < tableauInfo.length; index++) {
         var infoCourante = tableauInfo[index];
-        console.log(infoCourante);
+        //console.log(infoCourante);
         var link = infoCourante.link;
         var thumbnail = infoCourante.thumbnail;
         var lowResolution = infoCourante.lowResolution;
         var standardResolution = infoCourante.standardResolution;
         if (link) {
-            var baliseUl = document.querySelector("ul.listeInfo");
+            var baliseUl = document.querySelector("div.liste");
             // DOM Document Object Model
             // AJOUTER UNE BALISE li
-            var codeHtmlLi =      '<li class="col-sm-2 col-xs-1">'
+            var codeHtmlLi =      '<div class="listeInfo">'
                                     + '<a href="' + link + '">'
                                     + '<img class="img-fluid" src="' + standardResolution + '">'
                                     + '</a>'
-                                + '</li>';
+                                + '</div>';
             // AJOUTER NOTRE CODE POUR LA BALISE li DANS LA BALISE ul
             baliseUl.innerHTML += codeHtmlLi;
         }
