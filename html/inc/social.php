@@ -1,16 +1,3 @@
-
-<style>
-div.liste {
-    display:block;
-    height: auto;
-    padding-bottom:100vw;
-}
-div.listeInfo {
-    display:inline-block;
-}
-
-</style>
-
 <div class="row">
     <div class="liste">
         <!-- ICI ON VA CREER UNE BALISE div PAR INFO RECUPERE -->
@@ -51,11 +38,7 @@ var ajouterImage = function(objetJS)
             var baliseUl = document.querySelector("div.liste");
             // DOM Document Object Model
             // AJOUTER UNE BALISE li
-            var codeHtmlLi =      '<div class="listeInfo">'
-                                    + '<a href="' + link + '">'
-                                    + '<img class="img-fluid" src="' + standardResolution + '">'
-                                    + '</a>'
-                                + '</div>';
+            var codeHtmlLi =      '<a href="' + link + '"><div class="listeInfo" style="background-image:url('+ standardResolution + ');background-size:cover;background-position:center center";></div></a>';
             // AJOUTER NOTRE CODE POUR LA BALISE li DANS LA BALISE ul
             baliseUl.innerHTML += codeHtmlLi;
         }

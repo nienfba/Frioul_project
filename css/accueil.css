@@ -263,11 +263,19 @@ ul.listeInfo img {
     text-decoration: none;
     color: white;
 }
+div.liste {
+    display:block;
+    position:relative;
+    padding-bottom:100vw;
+    text-align:center;
+}
 
-.accueil div.vignette{
+div.listeInfo {
     display:inline-block;
-    height:auto;
-    padding:0;
+    position:relative;
+    width:20vw;
+    height:20vw;
+    margin:1vw;
 }
 
 @media (max-width: 1000px) {
@@ -340,6 +348,19 @@ ul.listeInfo img {
         position: relative;
         height: auto;
         z-index:0;
+    }
+
+    div.liste {
+        display:block;
+        position:relative;
+        padding-bottom:100vw;
+    }
+    
+    div.listeInfo {
+        display:inline-block;
+        position:relative;
+        width:50vw;
+        height:50vw;
     }
 }
 
