@@ -12,10 +12,13 @@
         </header>-->
         <!-- Full width -->
         <div class="row">
-            <section id="intro" class="text-center">
-                <!-- Background animé à définir -->
-                <h1 class="">Découvrez en direct les merveilles du département. <span id="hashtag" class="hashtag">#Panier</span></h1>
-                <p class="">Un département qui abrite des petits villages de pêcheurs et des quartiers
+            <section id="intro" class="text-center" style="padding-top: 10%">
+                <!-- Background animé avec jquery et hashtag -->
+                <h1 id="titre" class="animated bounce">Découvrez en direct les merveilles du département.</h1>
+                <div id="alternate">
+                    <h2 id="lieux" class="hashtag square el"></h2>
+                </div>
+                <p class="">Des villes contemporaines qui abritent des petits villages de pêcheurs et des quartiers
                     alternatifs.</p>
             </section>
 

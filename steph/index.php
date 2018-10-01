@@ -26,6 +26,7 @@
         <script src="js/leaflet.markercluster.js"></script>
         <script src="js/Leaflet.Photo.js"></script>
         <script src="js/anime.js"></script>
+       
     </head>
     <body>
         <div class='header'>
@@ -33,10 +34,10 @@
         </div>
         <div class='second'>
             <div class="WallOfPictures">
-                    <br><br><br><br>
-                    <center>
-                        <img id="ImgWall" src="https://i.ytimg.com/vi/wSTt04rOwa8/maxresdefault.jpg" width="300" height="200"/>
-                    </center>
+                <br><br><br><br>
+                <center>
+                    <img id="ImgWall" src="https://i.ytimg.com/vi/wSTt04rOwa8/maxresdefault.jpg" width="300" height="200"/>
+                </center>
             </div>
             <div class="map">
                 <div id="mapHome"></div>
@@ -124,31 +125,31 @@
                                 });
                     }
                 });
-         
+
         var page = 1;
-         
+
         window.addEventListener('wheel', function (e) {
             if (e.deltaY < 10) {
                 //scroll up
             }
             if (e.deltaY > 10) {
                 //scroll down
-                if(page == 1)  {
+                if (page == 1) {
                     anime({
                         targets: '.header',
                         translateY: (document.body.clientWidth)
-                      });
-                      page = 2;
-                } else if(page == 2)  {
+                    });
+                    page = 2;
+                } else if (page == 2) {
                     anime({
                         targets: '.WallOfPictures',
                         translateY: (document.body.clientWidth)
-                      });
+                    });
                     anime({
                         targets: '#navBottom',
                         translateY: -50
-                      });
-                      page = 3;
+                    });
+                    page = 3;
                     //$("#navBottom").slideDown(1000);
                 }
                 //$("#UpPage").show();
@@ -182,6 +183,34 @@
                 $(".WallOfPictures").slideDown("slow");
                 $("#navBottom").slideUp("slow");
             }
+        });
+
+
+        //SCRIPT DANIEL ACCUEIL.PHP
+        $(document).ready(function () {
+            $.fn.delay = function (time, callback) {
+                jQuery.fx.step.delay = function () {};
+                return this.animate({
+                    delay: 1
+                }, time, callback);
+            }
+
+            $.getJSON('../html/inc/accueil.json', function (data) {
+                $.each(data, function (index, d) {
+                    $('#lieux').delay(3000, function () {
+                        $('#lieux').html(d.hashtag);
+                        //$('article').css('background-image', 'url(' + d.image + ')');
+
+                        var alternate = anime({
+                            targets: '#alternate .el',
+                            translateX: 250,
+                            direction: 'alternate'
+                        });
+
+                    });
+                });
+            });
+
         });
     </script>
 </html>
