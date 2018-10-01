@@ -80,8 +80,6 @@
         <?php include_once "html/inc/social.php"; ?>
     </section>
     <div class="container"><br /></div>
-    <?php include_once "html/inc/footer.php"; ?>
-
     <!-- Affichage des hashtags et du fond depuis le fichier accueil.json -->
     <script>
         $(document).ready(function () {
@@ -111,6 +109,8 @@
 
         });
     </script>
+    <div class="container"><br /></div>
+    <?php include_once "html/inc/footer.php"; ?>
 </body>
 
 </html>
