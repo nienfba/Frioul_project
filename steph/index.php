@@ -18,7 +18,8 @@
         <link rel="stylesheet" href="css/Leaflet.Photo.css">
         <link rel="stylesheet" href="css/map.css">
         <link rel="stylesheet" href="css/main.css">
-
+        <link rel="stylesheet" href="css/animate.css">
+              
         <script src="js/reqwest.min.js"></script>
         <script src="js/leaflet.js"></script>
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -67,7 +68,7 @@
         </div>
         <?php include('includes/navright.html'); ?>
         <div id="navBottom"><button id="showRight">NavRight</button><button id="showOverlay">Overlay</button></div>
-        <div class="overlay-box">
+        <div class="overlay-box bounceIn animated">
             <center>
                 <h3>Jusqu'à quelle heure dure cet évenement ?</h3>
 
@@ -161,6 +162,7 @@
                         targets: '.header',
                         translateY: (document.body.clientWidth)
                     });
+                    appelAjax(urlApiAjax, ajouterImage);
                     $("#UpPage").show();
                     page = 2;
                 } else if (page == 2) {
@@ -181,17 +183,17 @@
 
         $("#showOverlay").click(function () {
             if ($(".overlay-box").is(":visible")) {
-                $(".overlay-box").slideUp("slow");
+                $(".overlay-box").hide();
             } else {
-                $(".overlay-box").slideDown("slow");
+                $(".overlay-box").show();
             }
         });
 
         $("#showRight").click(function () {
             if ($("#navRight").is(":visible")) {
-                $("#navRight").slideUp(1000);
+                $("#navRight").hide();
             } else {
-                $("#navRight").slideDown(1000);
+                $("#navRight").show();
             }
         });
 
@@ -279,14 +281,14 @@
                             + '</a>'
                             + '</li>';
                     // AJOUTER NOTRE CODE POUR LA BALISE li DANS LA BALISE ul
-                    baliseUl.innerHTML += codeHtmlLi;
+                    //baliseUl.innerHTML += codeHtmlLi;
+                    setTimeout(function() {
+                        baliseUl.innerHTML += codeHtmlLi;
+                    }, 1000*index);
                 }
             }
 
         }
-
-
-        appelAjax(urlApiAjax, ajouterImage);
 
     </script>
 </html>
