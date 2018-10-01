@@ -104,7 +104,7 @@
                     delay: 1
                 }, time, callback);
             }
-            
+
             $.getJSON('html/inc/accueil.json', function (data) {
                 $.each(data, function (index, d) {
                     $('#lieux').delay(3000, function () {
@@ -115,6 +115,7 @@
                             targets: '#alternate .el',
                             translateX: 250,
                             direction: 'alternate'
+
                         });
 
                     });
