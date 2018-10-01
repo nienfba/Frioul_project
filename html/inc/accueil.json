@@ -1,26 +1,27 @@
 [
 {
     "hashtag"   : "#Marseille",
-    "lien"      : "#"
+    "lien"      : "#",
+    "image"     : "media/mucem.jpg"
 },
 {
     "hashtag"   : "#Panier",
-    "lien"      : "#"
+    "lien"      : "#",
+    "image"     : "media/panier.jpg"
 },
 {
-    "hashtag"   : "#1",
-    "lien"      : "#"
+    "hashtag"   : "#Vieux port",
+    "lien"      : "#",
+    "image"     : "media/vieuxport.jpg"
 },
 {
-    "hashtag"   : "#2",
-    "lien"      : "#"
+    "hashtag"   : "#Calanques",
+    "lien"      : "#",
+    "image"     : "media/calanques.jpg"
 },
 {
-    "hashtag"   : "#3",
-    "lien"      : "#"
-},
-{
-    "hashtag"   : "#4",
-    "lien"      : "#"
+    "hashtag"   : "#Marseille",
+    "lien"      : "#",
+    "image"     : "media/mucem.jpg"
 }
 ]

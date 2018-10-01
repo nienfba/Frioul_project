@@ -100,6 +100,8 @@
                 $.each(data, function (index, d) {                    
                     $('#lieux').delay(3000, function () {  
                         $('#lieux').html(d.hashtag); 
+                        $('article').css('background-image','url(' + d.image + ')');
+                        /*background-image: url("../media/mucem.jpg");*/ 
                     });
                     /*$('#titre').removeClass("animated bounce"); */
                 });
