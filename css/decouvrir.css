@@ -23,8 +23,8 @@ header{
 }
 
 .colonned > div{
-    /* box-sizing: content-box; */
-    /* max-width: 850px; */
+    box-sizing: content-box;
+    max-width: 850px;
 }
 
 

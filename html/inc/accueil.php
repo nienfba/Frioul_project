@@ -4,7 +4,7 @@
             <img src="media/c4m.png" alt="" class="logo" />
             <nav class="hidden">
                 <!-- Navigation -->
-                <!--<ul class="">
+        <!--<ul class="">
                     <li class=""></li>
                     <li class=""></li>
                 </ul>
@@ -14,7 +14,7 @@
         <div class="row">
             <section id="intro" class="text-center">
                 <!-- Background animé à définir -->
-                <h1 class="">Découvrez en direct les merveilles du département. <span class="hashtag">#Panier</span></h1>
+                <h1 class="">Découvrez en direct les merveilles du département. <span id="hashtag" class="hashtag">#Panier</span></h1>
                 <p class="">Un département qui abrite des petits villages de pêcheurs et des quartiers
                     alternatifs.</p>
             </section>
@@ -50,7 +50,7 @@
 
     <!--<section id="infos">
         <!-- Bas de page contenu à définir -->
-        <!--<h1>Vous pouvez dès à présent publier vos photos avec Instagram</h1>
+    <!--<h1>Vous pouvez dès à présent publier vos photos avec Instagram</h1>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mx-auto marge">                
                 <img src="media/icons/placeholder_a.png" alt="" height="128" vspace="10"/><br /><strong>Choisissez votre lieu</strong>
@@ -64,3 +64,4 @@
         </div>
     </section>-->
 </div>
+
