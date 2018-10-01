@@ -1,8 +1,10 @@
+
 <div class="row">
-    <div class="liste">
+    <div class="liste col-sm-12">
         <!-- ICI ON VA CREER UNE BALISE div PAR INFO RECUPERE -->
     </div>
 </div>
+
 <script>
 var appelAjax = function(urlApiAjax, callbackJson)
 {
