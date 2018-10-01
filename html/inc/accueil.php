@@ -12,7 +12,7 @@
         </header>-->
         <!-- Full width -->
         <div class="row">
-            <section id="intro" class="text-center" style="padding-top: 10%">
+            <section id="intro" class="text-center" style="padding-top: 20%">
                 <!-- Background animé avec jquery et hashtag -->
                 <h1 id="titre" class="animated bounce">Découvrez en direct les merveilles du département.</h1>
                 <div id="alternate">
