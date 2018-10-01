@@ -17,7 +17,7 @@
         <!-- Full width -->
         <div class="row">
             <section id="intro" class="text-center">
-                <!-- Background animé à définir -->
+                <!-- Background animé avec jquery et hashtag -->
                 <h1 id="titre" class="animated bounce">Découvrez en direct les merveilles du département.</h1>
                 <h2 id="lieux" class="hashtag"></h2>
                 <p class="">Des villes contemporaines qui abritent des petits villages de pêcheurs et des quartiers
@@ -49,10 +49,11 @@
                 <a href="bons_plans.php" title=""><button class="btn-medium bouton">Bons plans</button></a>
                 <a href="autour.php" title=""><button class="btn-medium bouton">Autour de moi</button></a>
             </section>
+
         </div>
     </article>
 
-    <section id="infos">
+    <section id="infos" class="">
         <!-- Bas de page contenu à définir -->
         <h1>Vous pouvez dès à présent publier vos photos avec Instagram</h1>
         <div class="row">
@@ -71,12 +72,17 @@
         </div>
     </section>
 
-    <section class="">
+    <section class="row">
+        <!-- Block flottant à définir-->
+        <?php //include_once "html/inc/.php"; ?>
+    </section>
+
+    <section class="row">
         <!-- Block flottant à définir-->
         <?php include_once "html/inc/social.php"; ?>
     </section>
 
-    <div class="hidden">
+    <div class="row hidden">
         <section id="lacarte" class="">
             <?php //include_once "html/inc/map.php"; ?>
         </section>
@@ -86,26 +92,23 @@
     </div>
 
     <?php include_once "html/inc/footer.php"; ?>
-
-    <script>
+    
+    <!-- Affichage des hashtags et du fond depuis le fichier accueil.json -->
+    <script> 
         $(document).ready(function () {
             $.fn.delay = function (time, callback) {
                 jQuery.fx.step.delay = function () {};
                 return this.animate({
                     delay: 1
                 }, time, callback);
-            }            
-
+            }
             $.getJSON('html/inc/accueil.json', function (data) {
                 $.each(data, function (index, d) {                    
                     $('#lieux').delay(3000, function () {  
                         $('#lieux').html(d.hashtag); 
                         $('article').css('background-image','url(' + d.image + ')');
-                        /*background-image: url("../media/mucem.jpg");*/ 
                     });
-                    /*$('#titre').removeClass("animated bounce"); */
                 });
-                
             });
         });
     </script>
