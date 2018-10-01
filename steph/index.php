@@ -10,19 +10,25 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="../css/accueil.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/MarkerCluster.css">
+        <link rel="stylesheet" href="css/Leaflet.Photo.css">
+        <link rel="stylesheet" href="css/map.css">
 
-        <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+        <script src="js/reqwest.min.js"></script>
+        <script src="js/leaflet.js"></script>
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="js/leaflet.markercluster.js"></script>
+        <script src="js/Leaflet.Photo.js"></script>
     </head>
     <body>
         <div class='header'>
-            <?php include('..\html\inc\accueil.php'); ?>
+            <?php include('../html/inc/accueil.php'); ?>
         </div>
         <div class='second'>
             <div class="WallOfPictures">
@@ -48,12 +54,55 @@
         </div>
     </body>
     <script>
-        var mymap = L.map('mapHome').setView([43.3, 5.4], 13);
 
-        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-            maxZoom: 18,
-            id: 'mapbox.streets'
-        }).addTo(mymap);
+        var map = L.map('mapHome', {
+            maxZoom: 17
+        });
+
+        L.tileLayer('http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart&zoom={z}&x={x}&y={y}', {
+            attribution: '&copy; <a href="http://kartverket.no/">Kartverket</a>'
+        }).addTo(map);
+
+        var photoLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.2}).on('click', function (evt) {
+            evt.layer.bindPopup(L.Util.template('<img src="{url}"/></a><p>{caption}</p>', evt.layer.photo), {
+                className: 'leaflet-popup-photo',
+                minWidth: 400
+            }).openPopup();
+        });
+
+        reqwest({
+            url: 'http://kulturnett2.delving.org/api/search?query=*%3A*&format=jsonp&rows=100&pt=59.936%2C10.76&d=1&qf=abm_contentProvider_text%3ADigitaltMuseum',
+            type: 'jsonp',
+            success: function (data) {
+                var photos = [];
+                data = data.result.items;
+
+                for (var i = 0; i < data.length; i++) {
+                    var photo = data[i].item.fields;
+                    if (photo.abm_latLong) {
+                        var pos = photo.abm_latLong[0].split(',');
+                        photos.push({
+                            lat: pos[0],
+                            lng: pos[1],
+                            url: photo.delving_thumbnail[0],
+                            caption: (photo.delving_description ? photo.delving_description[0] : '') + ' - Kilde: <a href="' + photo.delving_landingPage + '">' + photo.delving_collection + '</a>',
+                            thumbnail: photo.delving_thumbnail[0]
+                        });
+                    }
+                }
+
+                photoLayer.add(photos).addTo(map);
+                map.fitBounds(photoLayer.getBounds());
+            }
+        });
+
+
+        /*var mymap = L.map('mapHome').setView([43.3, 5.4], 13);
+         
+         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+         maxZoom: 18,
+         id: 'mapbox.streets'
+         }).addTo(mymap);*/
 
         window.addEventListener('wheel', function (e) {
             if (e.deltaY < 10) {
@@ -61,9 +110,9 @@
             }
             if (e.deltaY > 10) {
                 //scroll down
-                if($(".header").is(":visible")) {
+                if ($(".header").is(":visible")) {
                     $(".header").slideUp("slow");
-                }   else {
+                } else {
                     $(".WallOfPictures").slideUp("slow");
                     $("#navBottom").slideDown("slow");
                 }
@@ -85,47 +134,47 @@
             }
         });
 
-        var UrlApi = "http://myprovence.code4marseille.fr/api/instas";
-
-        fetch(UrlApi)
-                .then(function (reponse) {
-                    return reponse.json();
-                })
-                .then(function (objetJson) {
-                    //Nombres de pages à charger
-                    var LastPage = objetJson['hydra:totalItems'] / 100;
-                    var NbPages = Math.ceil(LastPage);
-
-                    for (var page = 1; page < NbPages + 1; page++) {
-                        var url = UrlApi + '?page=' + page;
-                        fetch(url)
-                                .then(function (response) {
-                                    // SI ON VEUT GERER DU JSON
-                                    // ON VA TRANSFORMER LE RESULTAT EN OBJET JSON
-                                    return response.json();
-                                })
-                                .then(function (objetJson) {
-                                    var tableauInfo = objetJson["hydra:member"];
-                                    // BOUCLE POUR PARCOURIR LES INFOS UNE PAR UNE
-                                    for (var index = 0; index < tableauInfo.length; index++) {
-
-                                        var infoCourante = tableauInfo[index];
-
-                                        var title = infoCourante.title;
-                                        var latitude = infoCourante.latitude;
-                                        var longitude = infoCourante.longitude;
-                                        var description = infoCourante.description;
-                                        var publicationDate = infoCourante.publicationDate;
-                                        var image = infoCourante.lowResolution;
-                                        if (image)
-                                        {
-
-                                            var marker = L.marker([latitude, longitude]).addTo(mymap)
-                                                    .bindPopup('<img class="img-fluid" src="' + image + '" />');
-                                        }
-                                    }
-                                });
-                    }
-                });
+        /*var UrlApi = "http://myprovence.code4marseille.fr/api/instas";
+         
+         fetch(UrlApi)
+         .then(function (reponse) {
+         return reponse.json();
+         })
+         .then(function (objetJson) {
+         //Nombres de pages à charger
+         var LastPage = objetJson['hydra:totalItems'] / 100;
+         var NbPages = Math.ceil(LastPage);
+         
+         for (var page = 1; page < NbPages + 1; page++) {
+         var url = UrlApi + '?page=' + page;
+         fetch(url)
+         .then(function (response) {
+         // SI ON VEUT GERER DU JSON
+         // ON VA TRANSFORMER LE RESULTAT EN OBJET JSON
+         return response.json();
+         })
+         .then(function (objetJson) {
+         var tableauInfo = objetJson["hydra:member"];
+         // BOUCLE POUR PARCOURIR LES INFOS UNE PAR UNE
+         for (var index = 0; index < tableauInfo.length; index++) {
+         
+         var infoCourante = tableauInfo[index];
+         
+         var title = infoCourante.title;
+         var latitude = infoCourante.latitude;
+         var longitude = infoCourante.longitude;
+         var description = infoCourante.description;
+         var publicationDate = infoCourante.publicationDate;
+         var image = infoCourante.lowResolution;
+         if (image)
+         {
+         
+         var marker = L.marker([latitude, longitude]).addTo(mymap)
+         .bindPopup('<img class="img-fluid" src="' + image + '" />');
+         }
+         }
+         });
+         }
+         });*/
     </script>
 </html>
