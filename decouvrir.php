@@ -5,7 +5,7 @@
 
 
 <body class="decouvrir">
- 
+
   <!----------------------------------- DEBUT  HEADER   --------------------------------------->
     <header class="decouvrir">
         <a href="index.php"><img src="media/c4m.png" alt="" class="logo" /></a>
@@ -24,7 +24,7 @@
 
   <!-----------------------------------  DEBUT  MAIN   ---------------------------------------->
     <main>
-      <div class="container-fluid">     
+      <div class="container-fluid">
         <div class="row colonneg">
 
           <!-- Debut Colonne de gauche -->
@@ -32,23 +32,23 @@
 
               <!-- Affichage d'une publication (Photos + commentaires) -->
               <img  class="img-fluid col-lg-12" src="img/panier.jpg" alt="">
-              <h1 class="col-lg-12">BALADE DANS LE PANnIER</h1>
+              <h1 class="col-lg-12">BALADE DANS LE PANIER</h1>
               <p class="col-lg-12">idéal pour la famille</p> <!-- pictogrammes -->
               <p class="col-lg-12">#marseille #panier</p>    <!---- Hachtag ---->
               <p class="col-lg-12">
-                On est dimanche matin et il vous manque le petit bouquet d'aromates 
+                On est dimanche matin et il vous manque le petit bouquet d'aromates
                 pour terminer votrebonne daube provençale dont tout le monde raffole?!
-                Lemarché de la place Richelme vous attendavec tout les produits du 
-                terroir, aromates, olives, l'huile d'olive, les tomates séchées, 
-                les fruits et légumes, les poissons, les bons petits fromages de 
+                Lemarché de la place Richelme vous attendavec tout les produits du
+                terroir, aromates, olives, l'huile d'olive, les tomates séchées,
+                les fruits et légumes, les poissons, les bons petits fromages de
                 chèvre, le miel, la tapenade ou le caviar d'aubergine pour l'apéro...
               </p>
               <div class="imgport">
                 <img  class="img-fluid col-lg-8" src="img/port.jpg" alt="">
               </div>
               <p class="col-lg-12">
-                Sentez-moi ces parfums ! Et à deux pas de là, 
-                Place des prêcheurs, vous pourrez même acheter un joli bouquet 
+                Sentez-moi ces parfums ! Et à deux pas de là,
+                Place des prêcheurs, vous pourrez même acheter un joli bouquet
                 de fleurs pour décorer votre table dominicale
               </p>
 
@@ -59,7 +59,7 @@
                 <span class="fa-facebook"></span>
                 <span class="fa-twitter"></span>
                 <span class="fa-pinterest"></span>
-              </section>             
+              </section>
             </div>
           <!-- Fin Colonne de gauche -->
 
