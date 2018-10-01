@@ -13,11 +13,12 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="../css/accueil.css">
-        <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/leaflet.css">
         <link rel="stylesheet" href="css/MarkerCluster.css">
         <link rel="stylesheet" href="css/Leaflet.Photo.css">
         <link rel="stylesheet" href="css/map.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/animate.css">
 
         <script src="js/reqwest.min.js"></script>
         <script src="js/leaflet.js"></script>
@@ -52,25 +53,39 @@
                 <textarea></textarea>
             </center>
         </div>
+        <div id="UpPage"><img src="img/hautdepage.png" width="40" height="40"></div>
     </body>
     <script>
+
+        $("#UpPage").click(function () {
+            if ($(".WallOfPictures").is(":visible")) {
+                if (!$(".header").is(":visible")) {
+                    $(".header").slideDown("slow");
+                    $("#UpPage").hide();
+                }
+            }
+            if (!$(".WallOfPictures").is(":visible")) {
+                $(".WallOfPictures").slideDown("slow");
+                $("#navBottom").slideUp("slow");
+            }
+        });
 
         var map = L.map('mapHome').setView([43.3, 5.4], 13);
 
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-         maxZoom: 18,
-         id: 'mapbox.streets'
-         }).addTo(map);
+            maxZoom: 18,
+            id: 'mapbox.streets'
+        }).addTo(map);
 
-        var photoLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.2}).on('click', function (evt) {
-            evt.layer.bindPopup(L.Util.template('<img src="{url}"/></a><p>{caption}</p>', evt.layer.photo), {
+        var photoLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click', function (evt) {
+            evt.layer.bindPopup(L.Util.template('<img src="{url}"/></a><img id="imgLike" src="img/instaLike.png" style="float: left;"/><span style="line-height:25px;"><b>{likes}</b></span><p>{caption}</p>', evt.layer.photo), {
                 className: 'leaflet-popup-photo',
                 minWidth: 400
             }).openPopup();
         });
 
         var UrlApi = "http://myprovence.code4marseille.fr/api/instas";
-        
+
         fetch(UrlApi)
                 .then(function (reponse) {
                     return reponse.json();
@@ -81,7 +96,7 @@
                     var NbPages = Math.ceil(LastPage);
 
                     for (var page = 1; page < NbPages + 1; page++) {
-        
+
                         var url = UrlApi + '?page=' + page;
                         fetch(url)
                                 .then(function (response) {
@@ -94,14 +109,16 @@
                                     var photos = [];
                                     // BOUCLE POUR PARCOURIR LES INFOS UNE PAR UNE
                                     for (var index = 0; index < tableauInfo.length; index++) {
-                                        
+
 
                                         var infoCourante = tableauInfo[index];
 
                                         var title = infoCourante.title;
+                                        var likes = infoCourante.likes;
+                                        var link = infoCourante.link;
                                         var latitude = infoCourante.latitude;
                                         var longitude = infoCourante.longitude;
-                                        var description = infoCourante.description;
+                                        var description = infoCourante.caption;
                                         var publicationDate = infoCourante.publicationDate;
                                         var image = infoCourante.lowResolution;
                                         if (image)
@@ -111,8 +128,9 @@
                                                 lat: String(latitude),
                                                 lng: String(longitude),
                                                 url: image,
-                                                caption: "<a href='index.php'>test</a>",
-                                                thumbnail: image
+                                                caption: "<a href='" + link + "'>" + description + "</a>",
+                                                thumbnail: image,
+                                                likes: likes
                                             });
                                         }
                                     }
@@ -135,6 +153,8 @@
                     $(".WallOfPictures").slideUp("slow");
                     $("#navBottom").slideDown("slow");
                 }
+                $("#UpPage").show();
+                $("#UpPage").addClass("tada animated");
             }
         });
 
