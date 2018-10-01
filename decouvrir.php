@@ -8,15 +8,14 @@
 
   <!----------------------------------- DEBUT  HEADER   --------------------------------------->
     <header class="decouvrir">
-        <a href="index.php"><img src="media/c4m.png" alt="" class="logo" /></a>
-        <div class="logo"></div>
-        <nav class="">
-            <!-- Navigation -->
+        <div class="logo"> <a href="index.php"><img src="media/CODE4MARSEILLE_WHITE.png" alt="" class="logo" /></a></div>
+        <!-- <nav class="">
+            
             <ul class="">
                 <li class=""></li>
 
             </ul>
-        </nav>
+        </nav> -->
     </header>
   <!-----------------------------------  FIN  HEADER   ---------------------------------------->
 
@@ -65,26 +64,31 @@
 
           <!-- Debut Colonne de Droite -->
             <div class="col-lg-6 colonneg">
-              <h5 class="img-fluid col-lg-12">Météo des 4 prochains jours (SOURCE:Meteo Blue)</h5>
               <?php include_once "html/inc/meteo.php"; ?>
               <p>
                 <img class="img-fluid col-lg-12" src="img/stats.jpg" alt="">
               </p>
-              <!-- Vignettes des meilleur publications -->
+              <!-- Vignettes des meilleurs publications -->
               <div class="container-fluid">
                 <h5>Meilleures Publications</h5>
                 <div class="row colonned">
-                  <div class="col-lg-4 colonnrdimg1"></div>
-                  <div class="col-lg-4 colonnrdimg2"></div>
-                  <div class="col-lg-4 colonnrdimg3"></div>
-                  <div class="col-lg-4 colonnrdimg4"></div>
-                  <div class="col-lg-4 colonnrdimg5"></div>
-                  <div class="col-lg-4 colonnrdimg6"></div>
-                  <div class="col-lg-4 colonnrdimg7"></div>
-                  <div class="col-lg-4 colonnrdimg8"></div>
-                  <div class="col-lg-4 colonnrdimg9"></div>
+                  <div class="col-lg-3 colonnrdimg1"></div>
+                  <div class="col-lg-3 colonnrdimg2"></div>
+                  <div class="col-lg-3 colonnrdimg3"></div>
+                  <div class="col-lg-3 colonnrdimg4"></div>
+                  <div class="col-lg-3 colonnrdimg5"></div>
+                  <div class="col-lg-3 colonnrdimg6"></div>
+                  <div class="col-lg-3 colonnrdimg7"></div>
+                  <div class="col-lg-3 colonnrdimg8"></div>
+                  <div class="col-lg-3 colonnrdimg9"></div>
                 </div>
               </div>
+              <p class="col-lg-12">
+                Si vous souhaitez avoir une de vos imagessur le site, 
+                inscrivez-vous sur Instagrame si ce n'est aps déjà 
+                fait et publiez une photo en mettantles hastags 
+                suivants :<strong> #marseille #panier</strong>
+              </p>
             </div>
           <!-- Fin Colonne de Droite -->
 
