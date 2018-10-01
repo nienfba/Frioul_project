@@ -101,7 +101,7 @@
                 $.each(data, function (index, d) {
 
                     $('#hashtag').delay(5000, function () {
-                        $('#hashtag').html(' ' + d.hashtag + ' ');
+                        $('#hashtag').html('<br />' + d.hashtag + ' ');
                     });
                 });
             });
