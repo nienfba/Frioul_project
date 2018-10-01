@@ -1,165 +1,126 @@
 <!DOCTYPE html>
 <html lang="fr">
 <?php include_once "html/inc/head.php"; ?>
-<body class="autour">
-<header class="">
-    <a href="index.php"><img src="media/c4m.png" alt="" class="logo" /></a>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+<body class="">
+  <!-- HEADER---------------------------------------------------->
+  <header class="">
+    <img src="media/c4m.png" alt="" class="logo" />
     <nav class=""><!-- Navigation -->
-        <ul class="hidden">
-            <li class=""></li>
-            <li class=""></li>
-            <li class=""></li>
-            <li class=""></li>
-            <li class=""></li>
-            <li class=""></li>
-        </ul>
+      <ul class="hidden">
+        <li class=""></li>
+        <li class=""></li>
+        <li class=""></li>
+        <li class=""></li>
+        <li class=""></li>
+        <li class=""></li>
+      </ul>
     </nav>
-</header>
-<article class=""><!-- Full width -->
-
-    <section class="container">
-        <div class="row">
-            <div class="col-12">
-<form>
-  <div class="form-group row">
-      <div class="col-sm-4">
-        <select class="form-control" id="ville" placeholder="ville">
-          <option value="">choisissez une ville</option>
-          <option>marseille</option>
-          <option>aix</option>
-          <option>aubagne</option>
-          <option>cassis</option>
-        </select>
-      </div>
-      <div class="col-sm-4">
-        <select class="form-control" id="activite" placeholder="activité">
-          <option value="">choisissez une activité</option>
-          <option>Espace Naturel</option>
-          <option>Mer</option>
-          <option>Montagne</option>
-          <option>Urbain</option>
-        </select>
-      </div>
-      <div class="col-sm-4">
-        <button type="submit" class="btn btn-primary mb-2">Valider</button>
-      </div>
+  </header>
+  <!-- FIN DU HEADER--------------------------------------------->
+  <!-- DEBUT DE SECTION------------------------------------------->
+  <section>
+    <!-- Trois boutons--->
+    <!-- BOUTON 1=MENU DEROULANT -->
+    <div class="container">
+      <div class="row  mb-3 mt-3">
+       <span class="dropdown dropdown-menu-left d-flex align-items-start">
+        <button class="btn-medium border-0 mr-3" data-toggle="dropdown">Choisissez une ville
+          <div class="dropdown-menu" style= "border-0;">
+            <div class="dropdown-item">Marseille</div>
+            <div class="dropdown-item">Arles</div>
+            <div class="dropdown-item">Cassis</div>
+            <div class="dropdown-item">LaCiotat</div>
+            <div class="dropdown-item">Aix en Provence</div>
+          </div>
+        </button>
+      </span>
+      <!-- BOUTON 2=MENU DEROULANT -->
+      <span class="dropdown">
+        <button class="btn-medium mr-3" data-toggle="dropdown">Espace naturel
+          <div class="dropdown-menu">
+            <div class="dropdown-item">Le Panier </div>
+            <div class="dropdown-item">Les Calanques</div>
+            <div class="dropdown-item">Le Vieux port </div>
+            <div class="dropdown-item">La Bonne Mère</div>
+          </div>
+        </button>
+      </span>
+      <!-- BOUTON 3=VALIDATION -->
+      <button type="submit" class="btn-medium  sub px-4">Valider</button>
+    </div>
   </div>
-</form>
+</section>
+<!-- FIN DE SECTION----------------------------------------------->
+<!-- PAGE DIVISEE EN DEUX : GAUCHE PHOTOS/DROITE CARTE------------>
+<div class="container border-top">
+  <div class="row">
+    <div class= "col-6">
+      <!-- ------PARTIE GAUCHE -->
+      <div class="row">
+        <div class="col-6">
+          <!-- CARD NUMERO 1 -->
+          <div class="card mt-5 mb-4">
+            <div class="card-img-top" style="height:180px; background: url('media/panier.jpg'); background-size: cover; background-position: center;" > </div>
+            <div class="card-body" style="height:160px; overflow: hidden;">
+              <a href="decouvrir.php" style="text-decoration: none;"><h6 class="text-danger font-weight-bold">Ballade dans le panier</h6></a>
+              <p><i class="fas fa-walking align-items mr-2 "> </i><strong>idéal pour une famille</strong><br><img src="media/yingyang.png" class="mr-2">2 à 4 heures | <img src="media/cible.png" class="mr-2" >1km<br><strong style="color:rgb(18, 25, 145);">#Marseille #les Calanques</strong ></p>
             </div>
+          </div>
         </div>
-    </section>
-
-    <section class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="listeInfo row">
-                <!-- ICI ON VA CREER UNE BALISE li PAR INFO RECUPERE -->
-                </div>
+        <div class="col-6">
+          <!-- ------CARD NUMERO 2 -->
+          <div class="card mt-5 mb-4">
+            <div class="card-img-top" style="height:180px; background: url('media/calanques.jpg'); background-size: cover; background-position: center;" > </div>
+            <div class="card-body" style="height:160px; overflow: hidden;">
+              <h6 class="text-danger font-weight-bold">Les Calanques</h6><p><img src="media/trees-1.png" class="mr-2"><strong>Randonnées</strong><br><img src="media/yingyang.png" class="mr-2">2 à 4 heures | <img src="media/cible.png" class="mr-2">800m<br><strong style="color:rgb(18, 25, 145);">
+              #Marseille #panier</strong></p>
             </div>
-            <div class="col-sm-6">
-                <div id="map">
-                </div>
-
-                <!-- leafletjs: etape1 -->
-                <script>
-var map = L.map('map').setView([43.3, 5.4], 10);
-this.tileLayer = L.tileLayer(
-                'https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png', {
-                    maxZoom: 18,
-                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>',
-                }
-            );
-            this.tileLayer.addTo(map);
-
-            </script>
-
-            <!-- leafletjs: geolocalisation -->
-            <script>
-map.locate({setView: true, maxZoom: 16});
-function onLocationFound(e)
-{
-    var radius = e.accuracy / 2;
-
-    L.marker(e.latlng, { draggable: true }).addTo(map)
-        .bindPopup("Vous êtes à " + radius + "m de ce point ?").openPopup();
-
-    L.circle(e.latlng, radius).addTo(map);
-}
-
-map.on('locationfound', onLocationFound);
-
-            </script>
-<script>
-var appelAjax = function(urlApiAjax, callbackJson)
-{
-    // https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch
-    fetch(urlApiAjax)
-    .then(function(data){
-        // DEBUG
-        console.log(data);
-        // ON VEUT RECEVOIR UN OBJET JAVASCRIPT
-        return data.json();
-    })
-    .then(callbackJson)
-}
-
-// URL API AJAX
-var urlApiAjax = 'https://myprovence.code4marseille.fr/api/instas?itemsPerPage=24';
-var ajouterImage = function(objetJS)
-{
-    console.log(objetJS);
-    // CA Y'EST J'AI UN OBJET JS AVEC TOUTES INFOS PLANQUEES DEDANS...
-    // IL FAUT ALLER RECUPERER LES INFOS QUI NOUS INTERESSENT
-    var tableauInfo = objetJS["hydra:member"];
-    // objet.propriete OU objet["propriete"]
-    // BOUCLE POUR PARCOURIR LES INFOS UNE PAR UNE
-    for(var index=0; index < tableauInfo.length; index++) {
-        var infoCourante = tableauInfo[index];
-        console.log(infoCourante);
-        var link = infoCourante.link;
-        var caption = infoCourante.caption;
-        var thumbnail = infoCourante.thumbnail;
-        var lowResolution = infoCourante.lowResolution;
-        var standardResolution = infoCourante.standardResolution;
-        if (link) {
-            var baliseUl = document.querySelector(".listeInfo");
-            // DOM Document Object Model
-            // AJOUTER UNE BALISE li
-            var codeHtmlLi =      '<div class="col-sm-4">'
-                                    + '<a href="' + link + '">'
-                                        + '<img class="img-fluid" src="' + thumbnail + '">'
-                                    + '</a>'
-                                    + '</div>'
-                                    + '<div class="col-sm-8">'
-
-                                     + '<div>'
-                                    + '<a href="decouvrir.php" class="btn btn-primary">' + "Découvrir" + '</a>'
-
-                                    + '<a class="btn btn-medium" href="https://www.google.fr/maps/dir/' + "43.3,5.4" + "/" +  "43.35,5.45" + "/" +'" > Comment y aller '
-                                    + '</a>'
-                                    + '</div>'
-                                       + '<span>' + caption + '</span>'
-                                    + '</div>';
-            // AJOUTER NOTRE CODE POUR LA BALISE li DANS LA BALISE ul
-            baliseUl.innerHTML += codeHtmlLi;
-        }
-    }
-
-}
-
-
-appelAjax(urlApiAjax, ajouterImage);
-
-</script>
-
-            </div>
+          </div>
         </div>
-    </section>
-    <section>
-        <!-- Bas de page contenu à définir -->
-    </section>
-</article>
-<aside class=""></aside><!-- Block flottant à droite -->
-<?php include_once "html/inc/footer.php"; ?>
+        <div class="col-6">
+         <!-- ------CARD NUMERO 3 -->
+         <div class="card mb-4">
+          <div class="card-img-top" style="height:180px; background: url('media/vieuxport.jpg'); background-size: cover; background-position: center;" ></div>
+          <div class="card-body" style="height:160px; overflow: hidden;">
+            <h6 class="text-danger font-weight-bold">Le vieux-port</h6>
+            <p class= "mr-2"><i class="fas fa-walking align-items mr-2"></i><strong>ideal pour une famille</strong><br><img src="media/cible.png" class="mr-2">1 à 2heures <br>
+              <strong style="color:rgb(18, 25, 145);">#vieuxport</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+         <!-- ------CARD NUMERO 4 -->
+         <div class="card mb-4" >
+          <div class="card-img-top" style="height:180px; background: url('media/bonnemere.jpg'); background-size: cover; background-position: center;"></div>
+          <div class="card-body" style="height:160px; overflow: hidden;">
+            <h6 class="text-danger font-weight-bold mr-2">Visite de la bonne mère</h6>
+            <p><i class="fas fa-walking align-items mr-2"></i><strong>ideal pour une famille</strong><br>
+              <img src="media/cible.png" class="mr-2">30 minutes<br><strong style="color:rgb(18, 25, 145);">#notredamedelagarde</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ------PARTIE DROITE -->
+    <div class= "col-6 map">
+      <div class="">
+        <img src="media/maps.png">
+        <!-- Carte -->
+        <?php include_once "html/inc/bons-plans-carte.php"; ?>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
+<!-- FIN DU BODY -->
+<!-- FOOTER -->
+<?php include_once "html/inc/footer.php"; ?>
+<!-- FIN DU FOOTER -->
 </html>
+
+
