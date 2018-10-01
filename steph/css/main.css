@@ -77,12 +77,11 @@ html, body {
 
 #navBottom {
     position: fixed;
-    display: none;
     z-index: 10;
     height: 50px;
     width: 100%;
     left: 0;
-    bottom: 0;
+    bottom: -50px;
     background-color: rgba(11,11,11, 0.6);
 }
 

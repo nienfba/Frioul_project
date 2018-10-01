@@ -69,7 +69,7 @@
             }).openPopup();
         });
 
-        var UrlApi = "http://myprovence.code4marseille.fr/api/instas";
+        var UrlApi = "http://myprovence.code4marseille.fr/api/instas?tags=code4marseille";
 
         fetch(UrlApi)
                 .then(function (reponse) {
@@ -82,7 +82,7 @@
 
                     for (var page = 1; page < NbPages + 1; page++) {
 
-                        var url = UrlApi + '?page=' + page;
+                        var url = UrlApi + '&page=' + page;
                         fetch(url)
                                 .then(function (response) {
                                     // SI ON VEUT GERER DU JSON
@@ -143,6 +143,10 @@
                     anime({
                         targets: '.WallOfPictures',
                         translateY: (document.body.clientWidth)
+                      });
+                    anime({
+                        targets: '#navBottom',
+                        translateY: -50
                       });
                       page = 3;
                     //$("#navBottom").slideDown(1000);
