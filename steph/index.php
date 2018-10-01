@@ -139,11 +139,12 @@
                         targets: '.header',
                         translateY: (document.body.clientWidth)
                     });
+                    $("#UpPage").show();
                     page = 2;
                 } else if (page == 2) {
                     anime({
                         targets: '.WallOfPictures',
-                        translateY: (document.body.clientWidth)
+                        translateY: -(document.body.clientWidth)
                     });
                     anime({
                         targets: '#navBottom',
@@ -171,17 +172,20 @@
                 $("#navRight").slideDown(1000);
             }
         });
-
+        
+        var hauteur = (document.body.clientWidth);
+        
         $("#UpPage").click(function () {
-            if ($(".WallOfPictures").is(":visible")) {
-                if (!$(".header").is(":visible")) {
-                    $(".header").slideDown("slow");
-                    $("#UpPage").hide();
-                }
-            }
-            if (!$(".WallOfPictures").is(":visible")) {
-                $(".WallOfPictures").slideDown("slow");
-                $("#navBottom").slideUp("slow");
+            if(page = 3)    {
+                anime({
+                        targets: '.WallOfPictures',
+                        translateY: 2500
+                    });
+                    anime({
+                        targets: '#navBottom',
+                        translateY: 50
+                    });
+                    page = 2;
             }
         });
 
