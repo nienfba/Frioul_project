@@ -107,15 +107,16 @@
             
             $.getJSON('html/inc/accueil.json', function (data) {
                 $.each(data, function (index, d) {
-                    $('#lieux').delay(3000, function () {
+                    $('#lieux').delay(5000, function () {
+
                         $('#lieux').html(d.hashtag);
                         $('article').css('background-image', 'url(' + d.image + ')');
 
                         var alternate = anime({
                             targets: '#alternate .el',
-                            translateX: 250,
+                            translateX: -250,
                             direction: 'alternate'
-                        });
+                        });                        
 
                     });
                 });
