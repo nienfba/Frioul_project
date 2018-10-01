@@ -1,10 +1,11 @@
 .code4 {
-  border-top: :1px solid rgba(0, 0, 0, 0.3);
+  border-top:1px solid rgba(0, 0, 0, 0.3);
   color: rgba(0, 0, 0, 1);
   background: #F4F4F4;
-  display: flex;
-  align-items: center;
+  display: block;
+  position:relative;
   height: 150px;
+  z-index:0;
 }
 
 .logocg {

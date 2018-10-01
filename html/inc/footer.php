@@ -1,7 +1,7 @@
 <?php
 
 ?>
-<footer class="code4 border-top mt-3">
+<footer class="code4">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 mx-auto text-center">
