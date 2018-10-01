@@ -9,6 +9,7 @@ body {
     width: 100vw;
     margin: 0;
     padding: 0;
+    padding-bottom: 200px;
 }
 
 body.accueil {
@@ -107,6 +108,7 @@ header {
     font-size: 1em;
     display: block;
     position:relative;
+    width:100vw;
     color: #333;
     background-color: #eeeeee;
     padding: 20px;
@@ -266,8 +268,8 @@ ul.listeInfo img {
 div.liste {
     display:block;
     position:relative;
-    padding-bottom:100vw;
     text-align:center;
+    padding-bottom:200px;
 }
 
 div.listeInfo {
@@ -346,8 +348,7 @@ div.listeInfo {
     .accueil footer {
         display: block;
         position: relative;
-        height: auto;
-        z-index:0;
+
     }
 
     div.liste {
