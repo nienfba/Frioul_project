@@ -54,11 +54,13 @@
 
         </div>
     </article>
+    
+    <div class="container"><br /></div>
 
     <section id="infos" class="">
         <!-- Bas de page contenu à définir -->
         <h1>Vous pouvez dès à présent publier vos photos avec Instagram</h1>
-        <div class="row centre">
+        <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mx-auto "">
                 <img src="media/icons/placeholder_a.png" alt="" height="128" vspace="10" /><br /><strong>Choisissez
                     votre lieu</strong>
@@ -73,11 +75,11 @@
             </div>
         </div>
     </section>
-
+    <div class="container"><br /></div>
     <section id="social" class="row"><!-- Block du flux insta -->     
         <?php include_once "html/inc/social.php"; ?>
     </section>
-
+    <div class="container"><br /></div>
     <?php include_once "html/inc/footer.php"; ?>
 
     <!-- Affichage des hashtags et du fond depuis le fichier accueil.json -->
