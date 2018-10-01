@@ -27,7 +27,7 @@
 
 
 <!-- Anime Js -->
-<script src="javascript/anime-min.js"></script>
+<script src="javascript/anime.min.js"></script>
 
 
 <title>Code4Marseille - Provence Tourisme</title>

@@ -19,7 +19,9 @@
             <section id="intro" class="text-center">
                 <!-- Background animé avec jquery et hashtag -->
                 <h1 id="titre" class="animated bounce">Découvrez en direct les merveilles du département.</h1>
-                <h2 id="lieux" class="hashtag"></h2>
+                <div id="alternate">
+                    <h2 id="lieux" class="hashtag square el"></h2>
+                </div>
                 <p class="">Des villes contemporaines qui abritent des petits villages de pêcheurs et des quartiers
                     alternatifs.</p>
             </section>
@@ -92,9 +94,9 @@
     </div>
 
     <?php include_once "html/inc/footer.php"; ?>
-    
+
     <!-- Affichage des hashtags et du fond depuis le fichier accueil.json -->
-    <script> 
+    <script>
         $(document).ready(function () {
             $.fn.delay = function (time, callback) {
                 jQuery.fx.step.delay = function () {};
@@ -102,14 +104,23 @@
                     delay: 1
                 }, time, callback);
             }
+            
             $.getJSON('html/inc/accueil.json', function (data) {
-                $.each(data, function (index, d) {                    
-                    $('#lieux').delay(3000, function () {  
-                        $('#lieux').html(d.hashtag); 
-                        $('article').css('background-image','url(' + d.image + ')');
+                $.each(data, function (index, d) {
+                    $('#lieux').delay(3000, function () {
+                        $('#lieux').html(d.hashtag);
+                        $('article').css('background-image', 'url(' + d.image + ')');
+
+                        var alternate = anime({
+                            targets: '#alternate .el',
+                            translateX: 250,
+                            direction: 'alternate'
+                        });
+
                     });
                 });
             });
+
         });
     </script>
 </body>
