@@ -18,7 +18,7 @@
         <div class="row">
             <section id="intro" class="text-center">
                 <!-- Background animé à définir -->
-                <h1 class="">Découvrez en direct les merveilles du département. <span id="hashtag" class="hashtag">#Panier</span></h1>
+                <h1 class="">Découvrez en direct les merveilles du département. <span id="hashtag" class="hashtag"><br />#Panier</span></h1>
                 <p class="">Des villes contemporaines qui abrite des petits villages de pêcheurs et des quartiers
                     alternatifs.</p>
             </section>
