@@ -55,19 +55,19 @@
         </div>
     </article>
 
-    <section id="infos" class="row">
+    <section id="infos" class="">
         <!-- Bas de page contenu à définir -->
         <h1>Vous pouvez dès à présent publier vos photos avec Instagram</h1>
-        <div class="">
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mx-auto marge">
+        <div class="row centre">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mx-auto "">
                 <img src="media/icons/placeholder_a.png" alt="" height="128" vspace="10" /><br /><strong>Choisissez
                     votre lieu</strong>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mx-auto marge">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mx-auto ">
                 <img src="media/icons/hashtag_a.png" alt="" height="128" vspace="10" /><br /><strong>Regardez les
                     hastags du bon plan</strong>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mx-auto marge">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mx-auto ">
                 <img src="media/icons/photo-camera_a.png" alt="" height="128" vspace="10" /><br /><strong>Publiez votre
                     photo</strong>
             </div>
