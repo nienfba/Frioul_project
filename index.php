@@ -18,7 +18,8 @@
         <div class="row">
             <section id="intro" class="text-center">
                 <!-- Background animé à définir -->
-                <h1 id="titre" class="animated bounce">Découvrez en direct les merveilles du département.<span id="hashtag" class="hashtag"></span></h1>
+                <h1 id="titre" class="animated bounce">Découvrez en direct les merveilles du département.</h1>
+                <h2 id="lieux" class="hashtag"></h2>
                 <p class="">Des villes contemporaines qui abritent des petits villages de pêcheurs et des quartiers
                     alternatifs.</p>
             </section>
@@ -93,19 +94,16 @@
                 return this.animate({
                     delay: 1
                 }, time, callback);
-            }
-            
+            }            
 
             $.getJSON('html/inc/accueil.json', function (data) {
-                $.each(data, function (index, d) {
-
-
-                    $('#hashtag').delay(3000, function () {                        
-                        $('.hashtag').html('<br /><span class="animated bounce">' + d.hashtag + '</span>');
-                       
+                $.each(data, function (index, d) {                    
+                    $('#lieux').delay(3000, function () {  
+                        $('#lieux').html(d.hashtag); 
                     });
-                    $('#titre').removeClass("animated bounce");
+                    /*$('#titre').removeClass("animated bounce"); */
                 });
+                
             });
         });
     </script>
