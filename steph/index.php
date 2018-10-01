@@ -134,7 +134,6 @@
                                             });
                                         }
                                     }
-                                    console.log(photos);
                                     photoLayer.add(photos).addTo(map);
                                     map.fitBounds(photoLayer.getBounds());
                                 });
