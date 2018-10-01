@@ -24,10 +24,14 @@
 <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
    integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
    crossorigin=""></script>
+
+
+<!-- Anime Js -->
+<script src="javascript/anime.min.js"></script>
+
+
 <title>Code4Marseille - Provence Tourisme</title>
-
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-
 <meta name="author" content="Provence Tourisme">
 <meta name="copyright" content="Provence Tourisme">
 <meta name="keywords" content="Provence Tourisme">
@@ -49,6 +53,8 @@ Le protocole Open Graph a été crée à l'origine par Facebook et est désormai
 <!-- Fin Section OG -->
 
 <!-- Début liens CSS -->
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+
 <link rel="stylesheet" type="text/css" href="css/accueil.css">
 <link rel="stylesheet" type="text/css" href="css/bonsplans.css">
 <link rel="stylesheet" type="text/css" href="css/decouvrir.css">

@@ -8,6 +8,7 @@ header{
   margin-bottom:0px !important;
 
 }
+
 .code4{
   padding-top: 20px ;
 
@@ -16,6 +17,7 @@ header{
   font-size: 0.8rem;
   padding:0.80rem;
 }
+
 .btn-medium {
   color: white;
   background-color:rgb(170, 55, 60);
@@ -34,7 +36,12 @@ header{
 .sub{
   background-color:white;
   color:rgb(170, 55, 60);
-
 }
 
+.card{
+   border:none;
+ }
+ .photocard{
+  margin: 30px;
+ }
 

@@ -41,7 +41,7 @@ html, body {
     display: none;
     position: fixed;
     z-index: 10;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 50px);
     width: 200px;
     right: 0;
     top: 0;
@@ -79,11 +79,27 @@ html, body {
     position: fixed;
     display: none;
     z-index: 10;
-    height: 100px;
+    height: 50px;
     width: 100%;
     left: 0;
     bottom: 0;
     background-color: rgba(11,11,11, 0.6);
+}
+
+#UpPage {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    margin-left: 50px;
+    margin-bottom: 80px;
+    left: 0;
+    bottom: 0;
+    opacity: 0.7;
+}
+
+#imgLike {
+    width: 30px;
+    height: 30px;
 }
 
 #mapHome {
