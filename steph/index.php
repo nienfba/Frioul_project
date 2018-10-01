@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html lang=""> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -18,7 +18,6 @@
         <link rel="stylesheet" href="css/Leaflet.Photo.css">
         <link rel="stylesheet" href="css/map.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/animate.css">
 
         <script src="js/reqwest.min.js"></script>
         <script src="js/leaflet.js"></script>
@@ -26,6 +25,7 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="js/leaflet.markercluster.js"></script>
         <script src="js/Leaflet.Photo.js"></script>
+        <script src="js/anime.js"></script>
     </head>
     <body>
         <div class='header'>
@@ -33,12 +33,10 @@
         </div>
         <div class='second'>
             <div class="WallOfPictures">
-                <div class="row">
                     <br><br><br><br>
                     <center>
                         <img id="ImgWall" src="https://i.ytimg.com/vi/wSTt04rOwa8/maxresdefault.jpg" width="300" height="200"/>
                     </center>
-                </div>
             </div>
             <div class="map">
                 <div id="mapHome"></div>
@@ -56,19 +54,6 @@
         <div id="UpPage"><img src="img/hautdepage.png" width="40" height="40"></div>
     </body>
     <script>
-
-        $("#UpPage").click(function () {
-            if ($(".WallOfPictures").is(":visible")) {
-                if (!$(".header").is(":visible")) {
-                    $(".header").slideDown("slow");
-                    $("#UpPage").hide();
-                }
-            }
-            if (!$(".WallOfPictures").is(":visible")) {
-                $(".WallOfPictures").slideDown("slow");
-                $("#navBottom").slideUp("slow");
-            }
-        });
 
         var map = L.map('mapHome').setView([43.3, 5.4], 13);
 
@@ -139,21 +124,30 @@
                                 });
                     }
                 });
-
+         
+        var page = 1;
+         
         window.addEventListener('wheel', function (e) {
             if (e.deltaY < 10) {
                 //scroll up
             }
             if (e.deltaY > 10) {
                 //scroll down
-                if ($(".header").is(":visible")) {
-                    $(".header").slideUp("slow");
-                } else {
-                    $(".WallOfPictures").slideUp("slow");
-                    $("#navBottom").slideDown("slow");
+                if(page == 1)  {
+                    anime({
+                        targets: '.header',
+                        translateY: (document.body.clientWidth)
+                      });
+                      page = 2;
+                } else if(page == 2)  {
+                    anime({
+                        targets: '.WallOfPictures',
+                        translateY: (document.body.clientWidth)
+                      });
+                      page = 3;
+                    //$("#navBottom").slideDown(1000);
                 }
-                $("#UpPage").show();
-                $("#UpPage").addClass("tada animated");
+                //$("#UpPage").show();
             }
         });
 
@@ -164,11 +158,25 @@
                 $(".overlay-box").slideDown("slow");
             }
         });
+
         $("#showRight").click(function () {
             if ($("#navRight").is(":visible")) {
-                $("#navRight").slideUp("slow");
+                $("#navRight").slideUp(1000);
             } else {
-                $("#navRight").slideDown("slow");
+                $("#navRight").slideDown(1000);
+            }
+        });
+
+        $("#UpPage").click(function () {
+            if ($(".WallOfPictures").is(":visible")) {
+                if (!$(".header").is(":visible")) {
+                    $(".header").slideDown("slow");
+                    $("#UpPage").hide();
+                }
+            }
+            if (!$(".WallOfPictures").is(":visible")) {
+                $(".WallOfPictures").slideDown("slow");
+                $("#navBottom").slideUp("slow");
             }
         });
     </script>
