@@ -131,12 +131,14 @@ header {
 
 .accueil .btn-medium {
     color: #111;
+    background-color: #fff;
     border: 1px solid #999999;
     padding: 10px 15px;
     border-radius: 50px;
     font-weight: lighter;
     opacity: 1;
-    min-width: 200px;
+    min-width: 150px;
+    font-weight:600;
 }
 
 .accueil button:hover,
