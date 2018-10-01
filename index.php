@@ -84,6 +84,10 @@
         <?php include_once "html/inc/social.php"; ?>
     </section>
 
+        <section id="lacarte" class="">
+            <?php include_once "html/inc/map.php"; ?>
+        </section>
+
     <div class="row hidden">
         <section id="lacarte" class="">
             <?php //include_once "html/inc/map.php"; ?>
