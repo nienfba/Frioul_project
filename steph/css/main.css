@@ -45,7 +45,7 @@ html, body {
     width: 200px;
     right: 0;
     top: 0;
-    background-color: rgba(11,11,11, 0.7);
+    background-color: rgba(11,11,11, 0.6);
     padding-bottom: 50px;
     overflow: auto;
 }
@@ -77,12 +77,11 @@ html, body {
 
 #navBottom {
     position: fixed;
-    display: none;
     z-index: 10;
     height: 50px;
     width: 100%;
     left: 0;
-    bottom: 0;
+    bottom: -50px;
     background-color: rgba(11,11,11, 0.6);
 }
 
@@ -118,7 +117,15 @@ html, body {
     background-color: white;
 }
 
+.leaflet-marker-photo {
+    height: 60px !important;
+    width: 60px !important;
+    border: 0px !important;
+}
 
+.leaflet-marker-photo div{
+    border-radius: 30px !important;
+}
 
 
 

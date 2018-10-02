@@ -6,7 +6,7 @@
 
 
 <body class="">
-  <!-- HEADER---------------------------------------------------->
+  <!-- HEADER-------------------------------------------------------------------------------->
   <header class="">
     <img src="media/c4m.png" alt="" class="logo" />
     <nav class=""><!-- Navigation -->
@@ -20,11 +20,11 @@
       </ul>
     </nav>
   </header>
-  <!-- FIN DU HEADER--------------------------------------------->
-  <!-- DEBUT DE SECTION------------------------------------------->
+  <!-- FIN DU HEADER------------------------------------------------------------------------>
+  <!-- DEBUT DE SECTION--------------------------------------------------------------------->
   <section>
-    <!-- Trois boutons--->
-    <!-- BOUTON 1=MENU DEROULANT -->
+    <!-- Trois boutons---------------------------------------------------------------------->
+    <!-- BOUTON 1=MENU DEROULANT ----------------------------------------------------------->
     <div class="container">
       <div class="row  mb-3 mt-3">
        <span class="dropdown dropdown-menu-left d-flex align-items-start">
@@ -38,7 +38,7 @@
           </div>
         </button>
       </span>
-      <!-- BOUTON 2=MENU DEROULANT -->
+      <!-- BOUTON 2=MENU DEROULANT --------------------------------------------------------->
       <span class="dropdown">
         <button class="btn-medium mr-3" data-toggle="dropdown">Espace naturel
           <div class="dropdown-menu">
@@ -49,7 +49,7 @@
           </div>
         </button>
       </span>
-      <!-- BOUTON 3=VALIDATION -->
+      <!-- BOUTON 3=VALIDATION -------------------------------------------------->
       <button type="submit" class="btn-medium  sub px-4">Valider</button>
     </div>
   </div>
