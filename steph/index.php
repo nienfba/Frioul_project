@@ -89,68 +89,80 @@
             id: 'mapbox.streets'
         }).addTo(map);
 
-        var photoLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click', function (evt) {
-            evt.layer.bindPopup(L.Util.template('<img src="{url}"/></a><img id="imgLike" src="img/instaLike.png" style="float: left;"/><span style="line-height:25px;"><b>{likes}</b></span><p>{caption}</p>', evt.layer.photo), {
-                className: 'leaflet-popup-photo',
-                minWidth: 400
-            }).openPopup();
-        });
-
-        var UrlApi = "http://myprovence.code4marseille.fr/api/instas?tags=code4marseille";
-
-        fetch(UrlApi)
-                .then(function (reponse) {
-                    return reponse.json();
-                })
-                .then(function (objetJson) {
-                    //Nombres de pages à charger
-                    var LastPage = objetJson['hydra:totalItems'] / 100;
-                    var NbPages = Math.ceil(LastPage);
-
-                    for (var page = 1; page < NbPages + 1; page++) {
-
-                        var url = UrlApi + '&page=' + page;
-                        fetch(url)
-                                .then(function (response) {
-                                    // SI ON VEUT GERER DU JSON
-                                    // ON VA TRANSFORMER LE RESULTAT EN OBJET JSON
-                                    return response.json();
-                                })
-                                .then(function (objetJson) {
-                                    var tableauInfo = objetJson["hydra:member"];
-                                    var photos = [];
-                                    // BOUCLE POUR PARCOURIR LES INFOS UNE PAR UNE
-                                    for (var index = 0; index < tableauInfo.length; index++) {
 
 
-                                        var infoCourante = tableauInfo[index];
+        function ajaxMap() {
+            
+            if(photoLayer)  {
+                map.removeLayer(photoLayer);
+            }
 
-                                        var title = infoCourante.title;
-                                        var likes = infoCourante.likes;
-                                        var link = infoCourante.link;
-                                        var latitude = infoCourante.latitude;
-                                        var longitude = infoCourante.longitude;
-                                        var description = infoCourante.caption;
-                                        var publicationDate = infoCourante.publicationDate;
-                                        var image = infoCourante.lowResolution;
-                                        if (image)
-                                        {
+            var photoLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click', function (evt) {
+                evt.layer.bindPopup(L.Util.template('<img src="{url}"/></a><img id="imgLike" src="img/instaLike.png" style="float: left;"/><span style="line-height:25px;"><b>{likes}</b></span><p>{caption}</p>', evt.layer.photo), {
+                    className: 'leaflet-popup-photo',
+                    minWidth: 400
+                }).openPopup();
+            });
 
-                                            photos.push({
-                                                lat: String(latitude),
-                                                lng: String(longitude),
-                                                url: image,
-                                                caption: "<a href='" + link + "'>" + description + "</a>",
-                                                thumbnail: image,
-                                                likes: likes
-                                            });
+            var UrlApi = "http://myprovence.code4marseille.fr/api/instas?tags=code4marseille";
+
+            fetch(UrlApi)
+                    .then(function (reponse) {
+                        return reponse.json();
+                    })
+                    .then(function (objetJson) {
+                        //Nombres de pages à charger
+                        var LastPage = objetJson['hydra:totalItems'] / 100;
+                        var NbPages = Math.ceil(LastPage);
+
+                        for (var page = 1; page < NbPages + 1; page++) {
+
+                            var url = UrlApi + '&page=' + page;
+                            fetch(url)
+                                    .then(function (response) {
+                                        // SI ON VEUT GERER DU JSON
+                                        // ON VA TRANSFORMER LE RESULTAT EN OBJET JSON
+                                        return response.json();
+                                    })
+                                    .then(function (objetJson) {
+                                        var tableauInfo = objetJson["hydra:member"];
+                                        var photos = [];
+                                        // BOUCLE POUR PARCOURIR LES INFOS UNE PAR UNE
+                                        for (var index = 0; index < tableauInfo.length; index++) {
+
+
+                                            var infoCourante = tableauInfo[index];
+
+                                            var title = infoCourante.title;
+                                            var likes = infoCourante.likes;
+                                            var link = infoCourante.link;
+                                            var latitude = infoCourante.latitude;
+                                            var longitude = infoCourante.longitude;
+                                            var description = infoCourante.caption;
+                                            var publicationDate = infoCourante.publicationDate;
+                                            var image = infoCourante.lowResolution;
+                                            if (image)
+                                            {
+
+                                                photos.push({
+                                                    lat: String(latitude),
+                                                    lng: String(longitude),
+                                                    url: image,
+                                                    caption: "<a href='" + link + "'>" + description + "</a>",
+                                                    thumbnail: image,
+                                                    likes: likes
+                                                });
+                                            }
                                         }
-                                    }
-                                    photoLayer.add(photos).addTo(map);
-                                    map.fitBounds(photoLayer.getBounds());
-                                });
-                    }
-                });
+
+                                        photoLayer.add(photos).addTo(map);
+                                        map.fitBounds(photoLayer.getBounds());
+                                    });
+                        }
+                    });
+        }
+
+        setInterval(ajaxMap, 3000);
 
         var page = 1;
 
@@ -285,9 +297,9 @@
                             + '</li>';
                     // AJOUTER NOTRE CODE POUR LA BALISE li DANS LA BALISE ul
                     //baliseUl.innerHTML += codeHtmlLi;
-                    setTimeout(function() {
+                    setTimeout(function () {
                         baliseUl.innerHTML += codeHtmlLi;
-                    }, 1000*index);
+                    }, 1000 * index);
                 }
             }
 
