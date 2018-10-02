@@ -5,7 +5,7 @@ main{
     margin-top: 70px;
 }
 
-header{
+header.decouvrir{
     background-color: #B82B35;
 }
 /* ***********************************  FIN HEADER  ************************************* */
@@ -15,14 +15,21 @@ header{
 /* ****************************  MAIN : DEBUT COLONNE GAUCHE  *************************** */
 /* ************************************************************************************** */
 
-.colonneg{
+/* .colonneg{
     padding-right: 5rem;
     padding-left: 5rem;
-}
+} */
 
 .imgport{
     text-align: center;
 }
+
+.icons{
+    text-align: center;
+}
+
+
+
 
 /* ***************************  MAIN : FIN COLONNE GAUCHE  ****************************** */
 
@@ -47,90 +54,11 @@ header{
     max-width: 850px;
 }
 
-.colonnrdimg1{
-    /* width: 50%; */
-    height: 14rem;
-    background-image: url(../img/marseille/302EM-Moulin-panier_01.jpg);
-    background-size: cover;
-    border: solid 1rem white;
-    /* padding: 1px; */
-}
-
-.colonnrdimg2{
-    /* width: 50%; */
-    height: 14rem;
-    background-image: url(../img/marseille/Calanque_de_Sormiou.jpg);
-    background-size: cover;
-    border: solid 1rem white;
-    /* padding: 1px; */
-}
-
-.colonnrdimg3{
-    /* width: 50%; */
-    height: 14rem;
-    background-image: url(../img/marseille/calanque_marseille.jpg);
-    background-size: cover;
-    border: solid 1rem white;
-    /* padding: 1px; */
-}
-
-.colonnrdimg4{
-    /* width: 50%; */
-    height: 14rem;
-    background-image: url(../img/marseille/calanque_sugiton.jpg);
-    background-size: cover;
-    border: solid 1rem white;
-    /* padding: 1px; */
-}
-
-.colonnrdimg5{
-    /* width: 50%; */
-    height: 14rem;
-    background-image: url(../img/marseille/le-quartier-du-Panier.jpg);
-    background-size: cover;
-    border: solid 1rem white;
-    /* padding: 1px; */
-}
-
-.colonnrdimg6{
-    /* width: 50%; */
-    height: 14rem;
-    background-image: url(../img/marseille/marseille_pointerouge.jpg);
-    background-size: cover;
-    border: solid 1rem white;
-    /* padding: 1px; */
-}
-
-.colonnrdimg7{
-    /* width: 50%; */
-    height: 14rem;
-    background-image: url(../img/marseille/marseille-panier0490b.jpg);
-    background-size: cover;
-    border: solid 1rem white;
-    /* padding: 1px; */
-}
-
-.colonnrdimg8{
-    /* width: 50%; */
-    height: 14rem;
-    background-image: url(../img/marseille/mucem_nuit.jpg);
-    background-size: cover;
-    border: solid 1rem white;
-    /* padding: 1px; */
-}
-
-.colonnrdimg9{
-    /* width: 50%; */
-    height: 14rem;
-    background-image: url(../img/marseille/stade-velodrome-marseille.jpg);
-    background-size: cover;
-    border: solid 1rem white;
-    /* padding: 1px; */
+.image-decouvrir{
+    height: 12rem;
+    object-fit: cover;
 }
 
 /* ******************************  MAIN : FIN COLONNE GAUCHE  *************************** */
-
-
-
 
 
