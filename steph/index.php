@@ -89,9 +89,11 @@
             id: 'mapbox.streets'
         }).addTo(map);
 
-
+        var hashtag = "code4Marseille";
 
         function ajaxMap() { 
+            
+            
             
             if(photoLayer)  {
                 map.removeLayer(photoLayer);
@@ -104,7 +106,7 @@
                 });
             });
 
-            var UrlApi = "http://myprovence.code4marseille.fr/api/instas?tags=code4marseille";
+            var UrlApi = "https://myprovence.code4marseille.fr/api/instas?tags=code4marseille";
 
             fetch(UrlApi)
                     .then(function (reponse) {
@@ -161,8 +163,10 @@
                         }
                     });
         }
-
-        setInterval(ajaxMap, 20000);
+        
+        
+        ajaxMap();
+        setInterval(ajaxMap, 10000);
 
         var page = 1;
 
