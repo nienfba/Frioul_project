@@ -88,26 +88,26 @@
             maxZoom: 18,
             id: 'mapbox.streets'
         }).addTo(map);
+        
+        var photoLayer;
 
-        var hashtag = "code4Marseille";
-
-        function ajaxMap() { 
+        function ajaxMap(hashtag = "code4marseille") { 
             
-            
-            
-            if(photoLayer)  {
+            if(photoLayer != null)  {
                 map.removeLayer(photoLayer);
             }
 
-            var photoLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click', function (evt) {
+            photoLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click', function (evt) {
                 evt.layer.bindPopup(L.Util.template('<img src="{url}"/></a><img id="imgLike" src="img/instaLike.png" style="float: left;"/><span style="line-height:25px;"><b>{likes}</b></span><p>{caption}</p>', evt.layer.photo), {
                     className: 'leaflet-popup-photo',
                     minWidth: 400
                 });
             });
 
-            var UrlApi = "https://myprovence.code4marseille.fr/api/instas?tags=code4marseille";
-
+            var UrlApi = "https://myprovence.code4marseille.fr/api/instas?tags="+hashtag;
+            
+            console.log(UrlApi);
+            
             fetch(UrlApi)
                     .then(function (reponse) {
                         return reponse.json();
@@ -164,9 +164,24 @@
                     });
         }
         
+        var hashtag = "code4marseille";
         
         ajaxMap();
-        setInterval(ajaxMap, 10000);
+        
+        setInterval(function() {
+            ajaxMap(hashtag);
+        }, 10000);
+       
+
+        $("#hashtag").click(function() {
+            if($("#inputHashtag").val().length > 2)  {
+                hashtag = $("#inputHashtag").val();
+                 ajaxMap(hashtag);
+            }   else    {
+                hashtag = "code4marseille";
+                ajaxMap(hashtag);
+            }
+        });
 
         var page = 1;
 
