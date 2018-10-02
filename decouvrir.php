@@ -70,12 +70,10 @@
 
 					<!-- Debut Colonne de Droite -->
 						<div class="col-lg-6 colonneg">
-							<div class="container-fluid col-lg-12">
+							<div class="container-fluid">
 								<div class="row ">
-									<div class="col-12">
-										<div class="container-fluid">
-											<?php include_once "html/inc/meteo.php"; ?>
-										</div>
+									<div class="col-12 p-0">
+										<?php include_once "html/inc/meteo.php"; ?>
 									</div>
 								</div>
 
@@ -84,18 +82,16 @@
 
 								
 								<div class="row ">
-									<div class="col-12">
-										<h5 class="col-lg-12">Meilleures Publications</h5>
+									<div class="col-12 p-0">
+										<h5 >Meilleures Publications</h5>
 									</div>
 								</div>
 
 								<div class="row ">
-									<div class="col-12">
-										<div class="container-fluid ">
-											<div class="row ">
-												<?php include_once "html/inc/social.php"; ?>
-											</div>
-										</div>
+									<div class="col-12 p-0">
+
+										<?php include_once "html/inc/social2.php"; ?>
+										
 									</div>
 								</div>
 									<!-- <div class="col-lg-3 colonnrdimg1"></div>
@@ -110,8 +106,8 @@
 									
 								
 
-								<div class="row col-lg-12">
-									<p class="col-lg-12">
+								<div class="row">
+									<p class="col-lg-12 p-0">
 									Si vous souhaitez avoir une de vos images sur le site, 
 									inscrivez-vous sur Instagrame si ce n'est pas déjà 
 									fait et publiez une photo en mettant les hastags 
