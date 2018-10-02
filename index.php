@@ -34,6 +34,10 @@
             </div>
         </div>
 
+    <section id="social" class="row"><!-- Block du flux insta -->
+        <?php include_once "html/inc/social.php"; ?>
+    </section>
+
         <div class="container">
             <div class="row">
                     <section id="bandeau" class="col-xs-12">
@@ -62,6 +66,7 @@
                         <a href="autour.php" title=""><button class="btn-medium bouton">Autour de moi</button></a>
                     </section>
 
+
                     <!-- Affichage des hashtags et du fond depuis le fichier accueil.json -->
                     <script>
                         $(document).ready(function () {
@@ -72,13 +77,41 @@
                                 }, time, callback);
                             }
 
-                            $.getJSON('html/inc/accueil.json', function (data) {
+
+    <!-- Affichage des hashtags et du fond depuis le fichier accueil.json -->
+    <script>
+        $(document).ready(function () {
+            $.fn.delay = function (time, callback) {
+                jQuery.fx.step.delay = function () {};
+                return this.animate({
+                    delay: 1
+                }, time, callback);
+            }
+
+            $.getJSON('html/inc/accueil.json', function (data) {
+                $.each(data, function (index, d) {
+                    $('#lieux').delay(5000, function () {
+                  
+                      $.getJSON('html/inc/accueil.json', function (data) {
                                 $.each(data, function (index, d) {
                                     $('#lieux').delay(5000, function () {
+
 
                                         $('#lieux').html(d.hashtag);
                                         $('article').css('background-image', 'url(' + d
                                             .image + ')');
+
+
+                        var alternate = anime({
+                            targets: '#alternate .el',
+                            translateX: -250,
+                            direction: 'alternate'
+
+
+                        });
+
+                        });
+
 
                                         var alternate = anime({
                                             targets: '#alternate .el',
@@ -86,9 +119,17 @@
                                             direction: 'alternate'
                                         });
 
+
                                     });
                                 });
                             });
+
+
+        };
+    </script>
+</body>
+
+</html>
 
                         });
                     </script>
@@ -141,3 +182,4 @@
 
 </body>
 </html>
+
