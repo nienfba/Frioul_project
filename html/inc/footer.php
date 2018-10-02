@@ -1,6 +1,3 @@
-<?php
-
-?>
 <footer class="code4">
     <div class="container">
         <div class="row">
