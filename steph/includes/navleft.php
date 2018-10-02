@@ -1,7 +1,5 @@
-<!--NEED-->
+
 <style>
-
-
   #navBottom.col-md-4{
     width: 100%;
     height: 100%;
@@ -87,8 +85,6 @@
   </div>
 </div>
 
-
-<!--NEED-->
 <script type="text/javascript">
   jQuery(document).ready(function() {
 
@@ -111,4 +107,3 @@
 
   });
 </script>
-<!--NEED-->
