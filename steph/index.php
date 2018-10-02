@@ -91,7 +91,7 @@
 
 
 
-        function ajaxMap() {
+        function ajaxMap() { 
             
             if(photoLayer)  {
                 map.removeLayer(photoLayer);
