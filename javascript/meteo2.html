@@ -139,15 +139,14 @@ fetch(urlApiAjax)
   // AJOUTER UNE BALISE li
 
   var codeHtmlLi =  '<div class = "row" >'
-                      + '<div class="col-md-6">' + 'Marseille' + '</div>'
-                      + '<div class="col-md-6">' + ' vent '+ ' ' + windMaxScreen[0] + ' ' + 'km/h' + '</div>'
+                      + '<div class="col-md-4">' + 'Marseille' + '</div>'
+                      + '<div class="col-md-4">' + '<img src="https://openweathermap.org/img/w/'+ iconScreenDay[0][0] + '.png">'+ tempMaxScreen[0] + ' ' + '°C' + '</div>'
+                      + '<div class="col-md-4">' + ' vent '+ ' ' + windMaxScreen[0] + ' ' + 'km/h' + '</div>'
                     + '</div>' +
                     '<div class = "row" >'
-                      + '<div class="col-md-6">' + dayLet[dayNum] + ' ' +day + '</div>'
-                      + '<div class="col-md-6">' + 'humidité :' + humidity + '%' + '</div>'
-                    + '</div>' +
-                    '<div class = "row" >'
-                      + '<div class="col-md-6">' + '<img src="https://openweathermap.org/img/w/'+ iconScreenDay[0][0] + '.png">'+ tempMaxScreen[0] + ' ' + '°C' + '</div>'
+                      + '<div class="col-md-4">' + dayLet[dayNum] + ' ' +day + '</div>'
+                      + '<div class="col-md-4">' + ' ' + '</div>'
+                      + '<div class="col-md-4">' + 'humidité :' + humidity + '%' + '</div>'
                     + '</div>' +
                     //    '<div class = "row" >'
                     //   + '<div class="col-md-2">' +'<img src="https://openweathermap.org/img/w/'+ iconScreenHour[0] + '.png">' + '</div>'

@@ -1,10 +1,11 @@
 *{
-    box-sizing: border-box;
+    transition: all 1s ease-out;
 }
 
-html,body {
-    height: 100%;
+.contain {
+    object-fit: contain;
   }
+<<<<<<< HEAD
 
 body.accueil{
     background-color: #fff;
@@ -199,3 +200,9 @@ header{
         margin: 10px auto;
     }
   }
+=======
+  
+  .cover {
+    object-fit: cover;
+  }
+>>>>>>> 1ec4d6b8b387a30b8fb8ad77c2589d9647b0a288
