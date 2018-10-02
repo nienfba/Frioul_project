@@ -19,7 +19,9 @@
         <link rel="stylesheet" href="css/map.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/animate.css">
-              
+        <!-- FONT AWESOME CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <script src="js/reqwest.min.js"></script>
         <script src="js/leaflet.js"></script>
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -67,7 +69,7 @@
             </div>
         </div>
         <?php include('includes/navright.html'); ?>
-        <div id="navBottom"><button id="showRight">NavRight</button><button id="showOverlay">Overlay</button></div>
+        <?php include('includes/navleft.php'); ?>
         <div class="overlay-box bounceIn animated">
             <center>
                 <h3>Jusqu'à quelle heure dure cet évenement ?</h3>
