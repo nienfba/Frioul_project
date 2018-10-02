@@ -1,7 +1,7 @@
 
 <h3>Météo</h3>
-<ul class='listeInfo'></ul>
-<p class='listeInfo'></p>
+<ul class='listeInfoMeteo'></ul>
+<p class='listeInfoMeteo'></p>
 
         <script>
 
@@ -32,7 +32,7 @@ fetch(urlApiAjax)
         console.log(infoWeather.icon);
         var icon = infoWeather.icon;
 
-        var baliseUl = document.querySelector("ul.listeInfo");
+        var baliseUl = document.querySelector("ul.listeInfoMeteo");
         // DOM Document Object Model
         // AJOUTER UNE BALISE li
         var codeHtmlLi =

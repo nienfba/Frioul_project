@@ -37,6 +37,7 @@ fetch(urlApiAjax)
     return data.json();
 })
 .then(function(objetJS){
+
   // console.log(objetJS);
   // CA Y'EST J'AI UN OBJET JS AVEC TOUTES INFOS PLANQUEES DEDANS...
   // IL FAUT ALLER RECUPERER LES INFOS QUI NOUS INTERESSENT
@@ -202,7 +203,7 @@ fetch(urlApiAjax)
                     //   + '<div class="col-md-3">' + ' vent : '+ windMinScreen[2] + ' ' + 'km/h' +  '</div>'
                     //   + '<div class="col-md-3">' + ' vent : '+ windMinScreen[3] + ' ' + 'km/h' +  '</div>'
                     // + '</div>';
-
+  
 // AJOUTER NOTRE CODE POUR LA BALISE li DANS LA BALISE ul
   baliseUl.innerHTML += codeHtmlLi;
 
