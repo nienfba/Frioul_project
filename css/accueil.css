@@ -3,32 +3,26 @@
     transition: all 1s ease-out;
 }
 
-html,
-body {
+html body {
 
     width: 100vw;
     margin: 0;
     padding: 0;
 }
 
-body.accueil {
-    background-color: #fff;
-    margin: 0;
-    padding: 0;
+body {    
+    position:relative;
     display: block;
-    width: 100%;
-    overflow-x: hidden;
-    font-size: 18px;
-}
 
-header {
-    background-color: #b82c35;
-    background-color: #ffffff;
-    display: block;
-    height: 80px;
-    padding: 10px;
-    margin: 0px;
-    overflow: hidden;
+
+    margin: 0;
+    padding: 0 0 0 0;
+
+    width: 100vw;
+    min-height:100vh;
+
+    font-size: 18px;
+    background-color: #fff;
 }
 
 .accueil header {
@@ -37,22 +31,36 @@ header {
     padding: 10px;
     margin: 0px;
     overflow: hidden;
+    width:100%;
+    display:block;
 }
 
-.accueil h1 {
+nav{
+    display:block;
+    width:100%;
+}
+
+h1 {
     font-size: 3em;
     color: #ffffff;
     text-transform: uppercase;
     font-weight: 700;
+    display:block;
+    text-align:center;
+    width:100vw;
 }
 
-.accueil #intro p {
+ #intro p {
     font-size: 1em;
     color: #ffffff;
     margin-top: 20px;
+    display:block;
+    text-align:center;
+    width:100vw;    
 }
 
 .accueil article {
+    position: relative;
     display: block;
     background-image: url("../media/mucem.jpg");
     background-size: cover;
@@ -60,66 +68,39 @@ header {
     width: 100vw;
     height: calc(100vh - 80px);
     min-height: 100vh;
-    /* min-height: 800px; */
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
     margin: 0;
     padding: 0;
+    overflow:hidden;
 }
 
-.accueil section {
-    width: 100%;
+section {
     display: block;
     background-color: transparent;
-    margin: 0;
-    min-height:1px;
-    height:auto;
-    max-height:100vh;
 }
 
-.accueil section#intro {
+#intro {
     display: block;
     position: relative;
-    padding: 30px;
-    padding-top: 30%;
-    margin: 0;
+    text-align:center;
+    padding-top:50vh;
 }
 
-.accueil section#bandeau {
+#bandeau {
     display: block;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    padding: 30px;
+    width:100vw;
+    position: relative;
+    padding: 10px;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
-    margin: 0;
 }
 
-.accueil section#infos {
+#infos {
     display: block;
+    width:100vw;
     position: relative;
     text-align: center;
-    margin: 0;
-}
-
-.accueil footer {
-    font-size: 1em;
-    display: block;
-    position:relative;
-    color: #333;
-    background-color: #eeeeee;
-    padding: 20px;
-    text-decoration: none;
-    z-index:0;
-}
-
-.accueil footer p,
-.accueil footer a {
-    font-size: 1em;
-    text-decoration: none;
-    color: #333;
-    padding: 0;
     margin: 0;
 }
 
@@ -132,26 +113,28 @@ header {
     left: 0px;
 }
 
-.accueil .btn-medium {
-    color: #111;
+.btn-medium {
+    color: #000;
     background-color: #fff;
-    border: 1px solid #999999;
+    border: 1px solid #000;
     padding: 10px 15px;
     border-radius: 50px;
     font-weight: lighter;
     opacity: 1;
     min-width: 150px;
-    font-weight:600;
+    font-weight:700;
 }
-
-.accueil button:hover,
-.accueil .dropdown-item:hover {
+.btn-medium:hover {
+    color: #fff;
+}
+button:hover,
+.dropdown-item:hover {
     color: #fff;
     background-color: rgb(43, 51, 110);
     cursor: pointer;
 }
 
-.accueil .dropdown-item:hover {
+.dropdown-item:hover {
     display: block;
     z-index: 110;
     position: relative;
@@ -159,19 +142,19 @@ header {
     left: 0px;
 }
 
-.accueil .dropdown {
+.dropdown {
     opacity: 1;
     position: relative;
 }
 
-.accueil .dropdown-menu {
+.dropdown-menu {
     width: 100%;
     padding: 0px;
     z-index: 100;
     background-color: transparent;
 }
 
-.accueil .dropdown-item {
+.dropdown-item {
     display: block;
     color: #fff;
     background-color: rgb(43, 51, 110);
@@ -181,7 +164,7 @@ header {
     z-index: 110;
 }
 
-.accueil #infos h1 {
+#infos h1 {
     color: #2b3376;
     font-size: 2em;
     font-weight: 800;
@@ -190,7 +173,7 @@ header {
     margin: 20px;
 }
 
-.accueil #lacarte{
+#lacarte{
     width: 50vw;
     height: 50vh;
     overflow: hidden;
@@ -204,10 +187,13 @@ header {
 .hashtag {
     color: #f6df4d;
 
+
     text-shadow: 1px 2px black, -1px 2px black;
 
 
     text-shadow: 1px 2px rgba(0, 0, 0, 0.8)
+
+
 
 }
 
@@ -217,40 +203,8 @@ h2.hashtag{
     font-weight: 700;
 }
 
-.vertical-center {
-    min-height: 100%;
-    /* Fallback for browsers do NOT support vh unit */
-    min-height: 100vh;
-    /* These two lines are counted as one :-)       */
-
-    display: flex;
-    align-items: center;
-}
-
-ul.listeInfo img {
-    object-fit: cover;
-    width: 160px;
-    height: 160px;
-}
-
 .marge {
     margin: 10px;
-}
-
-
-.btn-medium {
-    color: #999999;
-    border: 1px solid #999999;
-    padding: 10px 15px;
-    border-radius: 50px;
-    font-weight: lighter;
-    opacity: 0.6;
-}
-
-.btn-medium:hover {
-    opacity: 1;
-    text-decoration: none;
-    color: #999999;
 }
 
 .btn-treehouse {
@@ -269,82 +223,122 @@ ul.listeInfo img {
     color: white;
 }
 
-.accueil div.vignette{
+div.liste {
+    display:block;
+    position:relative;
+    text-align:center;
+}
+
+div.listeInfo {
     display:inline-block;
-    height:auto;
-    padding:0;
+    position:relative;
+    width:10vw;
+    height:10vw;
+    margin:1vw;
+}
+
+.container{
+    display: block;
+    position:relative;
+    width: 100vw;
+    min-width:100vw;
+}
+
+footer {
+    display: block;
+    position:sticky;
+
+    bottom:0px;
+    left:0px;
+
+    font-size: 1em;
+    width:100vw;
+
+    color: #333;
+    background-color: #eeeeee;
+
+    padding: 20px;
+    text-decoration: none;
+}
+
+footer p,
+footer a {
+    font-size: 1em;
+    text-decoration: none;
+    color: #333;
+    padding: 0;
+    margin: 0;
 }
 
 @media (max-width: 1000px) {
-
-    .accueil article {
-        display: block;
-        width: 100vw;
-        height: auto;
-        border-top: 1px solid #000;
-        border-bottom: 1px solid #000;
-        margin: 0;
-        padding: 0;
-    }
-
-    .accueil h1 {
+    h1 {
         font-size: 1.5em;
         color: #ffffff;
         text-transform: uppercase;
         font-weight: 700;
     }
 
-    .accueil #infos h1 {
+    #infos h1 {
         font-size: 1.5em;
         display:block;
         position:relative;
     }
 
-
-    .accueil #intro p {
+    #intro p {
         font-size: 0.9em;
         color: #ffffff;
-        z-index: 0;
     }
 
-    .accueil section#intro {
-        padding-top: 5%;
-        display: block;
-        z-index: 0;
+    article{
+        display:block;
+        height:auto;
+        min-height:150vh;
+        overflow:hidden;
     }
 
-    .accueil section#bandeau {
+    #intro {
         display:block;
         position:relative;
-        z-index: 0;
-        padding: 10px;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        height:auto;   
     }
-    .accueil section#infos {
+
+    #bandeau{
         display:block;
         position:relative;
-        z-index: 0;
+        bottom:0;
+        height:auto;
     }
-
-    .accueil section#social{
+    #infos{
         display:block;
         position:relative;
 
+
+
+        height:auto;
+
+    }
+    #social{
+        display:block;
+        position:relative;
+        height:auto;
+    }
+    button, .bouton {
+        display: inline-block;
+        width: auto;
+        padding:5px;
+        margin:2px;
     }
 
-    .accueil button,
-    .accueil .bouton {
-        display: block;
-        width: 90%;
-        margin: 10px auto;
+    div.liste {
+        display:block;
+        position:relative;
     }
-
-    .accueil footer {
-        display: block;
-        position: relative;
-        height: auto;
-        z-index:0;
+    
+    div.listeInfo {
+        display:inline-block;
+        position:relative;
+        width:25vw;
+        height:25vw;
     }
 }
 

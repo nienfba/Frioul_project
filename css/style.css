@@ -1,3 +1,11 @@
 *{
     transition: all 1s ease-out;
 }
+
+.contain {
+    object-fit: contain;
+  }
+  
+  .cover {
+    object-fit: cover;
+  }
