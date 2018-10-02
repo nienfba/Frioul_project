@@ -18,7 +18,7 @@ body {
     background-color: #fff;
 }
 
-header {
+.accueil header {
     background-color: #ffffff;
     height: 80px;
     padding: 10px;
@@ -52,7 +52,7 @@ h1 {
     width:100vw;    
 }
 
-article {
+.accueil article {
     position: relative;
     display: block;
     background-image: url("../media/mucem.jpg");
