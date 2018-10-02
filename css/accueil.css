@@ -300,6 +300,7 @@ footer a {
         display:block;
         position:relative;
         height:auto;   
+        margin-top:5vh;
     }
 
     #bandeau{
