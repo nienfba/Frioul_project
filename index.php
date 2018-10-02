@@ -7,7 +7,7 @@
         <header class="">
             <a href="#"></a><img src="media/c4m.png" alt="" class="logo" /></a>
             <nav class="">
-                <!-- Navigation -->
+                <!-- Navigation Top -->
                 <ul class="hidden">
                     <li class=""></li>
                     <li class=""></li>
@@ -27,7 +27,7 @@
             </section>
 
             <section id="bandeau">
-                <!-- Bas de page visible page home avec fond transparent-->
+                <!-- Bas de page avec boutons visible sur page home avec fond transparent-->
                 <span class="dropdown">
                     <button class="btn-medium" data-toggle="dropdown">Ville
                         <div class="dropdown-menu">
@@ -51,18 +51,17 @@
                 <a href="bons_plans.php" title=""><button class="btn-medium bouton">Bons plans</button></a>
                 <a href="autour.php" title=""><button class="btn-medium bouton">Autour de moi</button></a>
             </section>
-
         </div>
     </article>
-    
-    <div class="container"><br /></div>
 
-    <section id="infos" class="">
-        <!-- Bas de page contenu à définir -->
-        <h1>Vous pouvez dès à présent publier vos photos avec Instagram</h1>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mx-auto "">
-                <img src="media/icons/placeholder_a.png" alt="" height="128" vspace="10" /><br /><strong>Choisissez
+    <div class="container">
+        <section id="infos" class="">
+            <!-- Bas de page avec liens icons -->
+            <h1>Vous pouvez dès à présent publier vos photos avec Instagram</h1>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mx-auto "">
+                <img src=" media/icons/placeholder_a.png"
+                    alt="" height="128" vspace="10" /><br /><strong>Choisissez
                     votre lieu</strong>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mx-auto ">
@@ -73,13 +72,20 @@
                 <img src="media/icons/photo-camera_a.png" alt="" height="128" vspace="10" /><br /><strong>Publiez votre
                     photo</strong>
             </div>
-        </div>
-    </section>
-    <div class="container"><br /></div>
-    <section id="social" class="row"><!-- Block du flux insta -->     
-        <?php include_once "html/inc/social.php"; ?>
-    </section>
-    <div class="container"><br /></div>
+        </section>
+    </div>
+
+    <div class="container">*
+        <section id="social" class="row">
+            <!-- Block du flux instagram -->
+            <?php include_once "html/inc/social.php"; ?>
+        </section>
+    </div>
+
+    <div class="container">
+        <?php include_once "html/inc/footer.php"; ?>
+    </div>
+
     <!-- Affichage des hashtags et du fond depuis le fichier accueil.json -->
     <script>
         $(document).ready(function () {
@@ -89,7 +95,7 @@
                     delay: 1
                 }, time, callback);
             }
-            
+
             $.getJSON('html/inc/accueil.json', function (data) {
                 $.each(data, function (index, d) {
                     $('#lieux').delay(5000, function () {
@@ -101,7 +107,7 @@
                             targets: '#alternate .el',
                             translateX: -250,
                             direction: 'alternate'
-                        });                        
+                        });
 
                     });
                 });
@@ -109,8 +115,6 @@
 
         });
     </script>
-    <div class="container"><br /></div>
-    <?php include_once "html/inc/footer.php"; ?>
 </body>
 
 </html>
