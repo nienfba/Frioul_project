@@ -11,7 +11,7 @@ body.accueil{
     margin:0;
     display:block;
     width:100%;
-    overflow-x:hidden;  
+    overflow-x:hidden;
     font-size: 18px;
 }
 
@@ -45,7 +45,7 @@ header{
     display:block;
     background-image: url("../media/mucem.jpg");
     background-size: cover;
-    background-position: center center;    
+    background-position: center center;
     width:100%;
     height: calc(100% - 80px);
     min-height:800px;
@@ -96,7 +96,7 @@ header{
 .accueil .btn-medium {
     color: #999999;
     border: 1px solid #999999;
-    padding: 10px 15px; 
+    padding: 10px 15px;
     border-radius: 50px;
     font-weight: lighter;
     opacity: 1;
@@ -105,7 +105,7 @@ header{
 
 .accueil .dropdown {
     opacity: 1;
-} 
+}
 
 .accueil .dropdown-menu{
     border-radius:20px;
@@ -140,8 +140,8 @@ header{
 .accueil #infos h1{
     color: #2b3376;
     font-size:2em;
-    font-weight: 800;   
-    text-align:center; 
+    font-weight: 800;
+    text-align:center;
     text-transform: none;
     margin:20px;
 }
@@ -160,7 +160,7 @@ header{
 .vertical-center {
     min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
     min-height: 100vh; /* These two lines are counted as one :-)       */
-  
+
     display: flex;
     align-items: center;
   }
@@ -184,7 +184,7 @@ header{
     .accueil section#intro {
         padding-top:15%;
     }
-    
+
     .accueil section#bandeau {
         padding:10px;
         border-top: 1px solid rgba(255,255,255,0.2);
