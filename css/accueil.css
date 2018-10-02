@@ -70,8 +70,6 @@ h1 {
     min-height: 100vh;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
-    margin: 0;
-    padding: 0;
     overflow:hidden;
 }
 
@@ -289,18 +287,18 @@ footer a {
         color: #ffffff;
     }
 
-    article{
+    .accueil article{
         display:block;
         height:auto;
-        min-height:150vh;
+        min-height:200vh;
         overflow:hidden;
     }
 
     #intro {
         display:block;
         position:relative;
-        height:auto;   
-        margin-top:5vh;
+        height:auto;  
+        padding-top:5vh; 
     }
 
     #bandeau{
