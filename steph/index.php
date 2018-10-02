@@ -91,7 +91,7 @@
 
 
 
-        function ajaxMap() {
+        function ajaxMap() { 
             
             if(photoLayer)  {
                 map.removeLayer(photoLayer);
@@ -101,7 +101,7 @@
                 evt.layer.bindPopup(L.Util.template('<img src="{url}"/></a><img id="imgLike" src="img/instaLike.png" style="float: left;"/><span style="line-height:25px;"><b>{likes}</b></span><p>{caption}</p>', evt.layer.photo), {
                     className: 'leaflet-popup-photo',
                     minWidth: 400
-                }).openPopup();
+                });
             });
 
             var UrlApi = "http://myprovence.code4marseille.fr/api/instas?tags=code4marseille";
@@ -162,7 +162,7 @@
                     });
         }
 
-        setInterval(ajaxMap, 3000);
+        setInterval(ajaxMap, 20000);
 
         var page = 1;
 
