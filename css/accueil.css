@@ -117,7 +117,9 @@ section {
     min-width: 150px;
     font-weight:700;
 }
-
+.btn-medium:hover {
+    color: #fff;
+}
 button:hover,
 .dropdown-item:hover {
     color: #fff;
