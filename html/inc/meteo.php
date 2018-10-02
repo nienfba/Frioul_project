@@ -37,6 +37,16 @@ fetch(urlApiAjax)
         // AJOUTER UNE BALISE li
         var codeHtmlLi =
               '<div class = "row" >'
+                + '<div class="col-md-3">' + 'aujour'+
+                '</div>'
+                + '<div class="col-md-3">' + 'demain' +
+                '</div>'
+                + '<div class="col-md-3">' + '29/09/2018' +
+                '</div>'
+                + '<div class="col-md-3">' + '30/09/2018' +
+                '</div>'
+              + '</div>' +
+              '<div class = "row" >'
                 + '<div class="col-md-3">' + '<img src="https://openweathermap.org/img/w/'+ icon + '.png">' +
                 '</div>'
                 + '<div class="col-md-3">' + '<img src="https://openweathermap.org/img/w/'+ icon + '.png">' +
