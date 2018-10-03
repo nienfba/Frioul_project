@@ -10,8 +10,6 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="../css/accueil.css">
         <link rel="stylesheet" href="css/leaflet.css">
         <link rel="stylesheet" href="css/MarkerCluster.css">
@@ -19,6 +17,7 @@
         <link rel="stylesheet" href="css/map.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
         <!-- FONT AWESOME CDN -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -53,21 +52,14 @@
         <div class='header'>
             <?php include('../html/inc/accueil.php'); ?>
         </div>
-        <div class='second'>
-            <div class="WallOfPictures">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <ul class="listeInfo row">
-                                <!-- ICI ON VA CREER UNE BALISE li PAR INFO RECUPERE -->
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+        <div class="WallOfPictures">
+            <div class="liste">
+                <!-- ICI ON VA CREER UNE BALISE div PAR INFO RECUPERE -->
             </div>
-            <div class="map">
-                <div id="mapHome"></div>
-            </div>
+
+        </div>
+        <div class="map">
+            <div id="mapHome"></div>
         </div>
         <?php include('includes/navright.html'); ?>
         <?php include('includes/navleft.php'); ?>
@@ -88,12 +80,12 @@
             maxZoom: 18,
             id: 'mapbox.streets'
         }).addTo(map);
-        
+
         var photoLayer;
 
-        function ajaxMap(hashtag = "code4marseille") { 
-            
-            if(photoLayer != null)  {
+        function ajaxMap(hashtag = "code4marseille") {
+
+            if (photoLayer != null) {
                 map.removeLayer(photoLayer);
             }
 
@@ -104,10 +96,10 @@
                 });
             });
 
-            var UrlApi = "https://myprovence.code4marseille.fr/api/instas?tags="+hashtag;
-            
+            var UrlApi = "https://myprovence.code4marseille.fr/api/instas?tags=" + hashtag;
+
             console.log(UrlApi);
-            
+
             fetch(UrlApi)
                     .then(function (reponse) {
                         return reponse.json();
@@ -163,21 +155,21 @@
                         }
                     });
         }
-        
-        var hashtag = "code4marseille";
-        
-        ajaxMap();
-        
-        setInterval(function() {
-            ajaxMap(hashtag);
-        }, 10000);
-       
 
-        $("#hashtag").click(function() {
-            if($("#inputHashtag").val().length > 2)  {
+        var hashtag = "code4marseille";
+
+        ajaxMap();
+
+        setInterval(function () {
+            ajaxMap(hashtag);
+        }, 60000);
+
+
+        $("#hashtag").click(function () {
+            if ($("#inputHashtag").val().length > 2) {
                 hashtag = $("#inputHashtag").val();
-                 ajaxMap(hashtag);
-            }   else    {
+                ajaxMap(hashtag);
+            } else {
                 hashtag = "code4marseille";
                 ajaxMap(hashtag);
             }
@@ -185,35 +177,35 @@
 
         var page = 1;
 
-        window.addEventListener('wheel', function (e) {
-            if (e.deltaY < 10) {
-                //scroll up
-            }
-            if (e.deltaY > 10) {
-                //scroll down
-                if (page == 1) {
-                    anime({
-                        targets: '.header',
-                        translateY: (document.body.clientWidth)
-                    });
-                    appelAjax(urlApiAjax, ajouterImage);
-                    $("#UpPage").show();
-                    page = 2;
-                } else if (page == 2) {
-                    anime({
-                        targets: '.WallOfPictures',
-                        translateY: -(document.body.clientWidth)
-                    });
-                    anime({
-                        targets: '#navBottom',
-                        translateY: -50
-                    });
-                    page = 3;
-                    //$("#navBottom").slideDown(1000);
-                }
-                //$("#UpPage").show();
-            }
-        });
+        /*window.addEventListener('wheel', function (e) {
+         if (e.deltaY < 10) {
+         //scroll up
+         }
+         if (e.deltaY > 10) {
+         //scroll down
+         if (page == 1) {
+         anime({
+         targets: '.header',
+         translateY: (document.body.clientWidth)
+         });
+         appelAjax(urlApiAjax, ajouterImage);
+         $("#UpPage").show();
+         page = 2;
+         } else if (page == 2) {
+         anime({
+         targets: '.WallOfPictures',
+         translateY: -(document.body.clientWidth)
+         });
+         anime({
+         targets: '#navBottom',
+         translateY: -50
+         });
+         page = 3;
+         //$("#navBottom").slideDown(1000);
+         }
+         //$("#UpPage").show();
+         }
+         });*/
 
         $("#showOverlay").click(function () {
             if ($(".overlay-box").is(":visible")) {
@@ -275,6 +267,8 @@
 
         });
 
+        var urlApiAjax = 'https://myprovence.code4marseille.fr/api/instas?itemsPerPage=24';
+
         var appelAjax = function (urlApiAjax, callbackJson)
         {
             // https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch
@@ -289,7 +283,6 @@
         }
 
 // URL API AJAX
-        var urlApiAjax = 'https://myprovence.code4marseille.fr/api/instas?itemsPerPage=24';
         var ajouterImage = function (objetJS)
         {
             console.log(objetJS);
@@ -306,23 +299,18 @@
                 var lowResolution = infoCourante.lowResolution;
                 var standardResolution = infoCourante.standardResolution;
                 if (link) {
-                    var baliseUl = document.querySelector("ul.listeInfo");
+                    var baliseUl = document.querySelector("div.liste");
                     // DOM Document Object Model
                     // AJOUTER UNE BALISE li
-                    var codeHtmlLi = '<li class="col-sm-2 col-xs-1">'
-                            + '<a href="' + link + '">'
-                            + '<img class="img-fluid" src="' + standardResolution + '">'
-                            + '</a>'
-                            + '</li>';
+                    var codeHtmlLi = '<a href="' + link + '"><div class="listeInfo" style="background-image:url(' + standardResolution + ');background-size:cover;background-position:center center";></div></a>';
                     // AJOUTER NOTRE CODE POUR LA BALISE li DANS LA BALISE ul
                     //baliseUl.innerHTML += codeHtmlLi;
-                    setTimeout(function () {
-                        baliseUl.innerHTML += codeHtmlLi;
-                    }, 1000 * index);
+                    baliseUl.innerHTML += codeHtmlLi;
                 }
             }
 
         }
+        appelAjax(urlApiAjax, ajouterImage);
 
     </script>
 </html>
