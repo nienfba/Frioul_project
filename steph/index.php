@@ -15,9 +15,9 @@
         <link rel="stylesheet" href="css/MarkerCluster.css">
         <link rel="stylesheet" href="css/Leaflet.Photo.css">
         <link rel="stylesheet" href="css/map.css">
-        <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
         <!-- FONT AWESOME CDN -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -135,22 +135,30 @@
                                             var description = infoCourante.caption;
                                             var publicationDate = infoCourante.publicationDate;
                                             var image = infoCourante.lowResolution;
-                                            if (image)
-                                            {
 
-                                                photos.push({
-                                                    lat: String(latitude),
-                                                    lng: String(longitude),
-                                                    url: image,
-                                                    caption: "<a href='" + link + "'>" + description + "</a>",
-                                                    thumbnail: image,
-                                                    likes: likes
-                                                });
+                                            //Verification si image existe encore 
+                                            var img = new Image();
+                                            img.myLat = String(latitude);
+                                            img.myLng = String(longitude);
+                                            img.myLink = link;
+                                            img.myDescription = description;
+                                            img.myLikes = likes
+                                            img.onload = function () {
+                                                var photo = [{
+                                                        lat: this.myLat,
+                                                        lng: this.myLng,
+                                                        url: this.src,
+                                                        caption: "<a href='" + this.myLink + "'>" + this.myDescription + "</a>",
+                                                        thumbnail: this.src,
+                                                        likes: this.myLikes
+                                                    }];
+                                                photoLayer.add(photo).addTo(map);
                                             }
+                                            img.src = infoCourante.lowResolution;
                                         }
 
-                                        photoLayer.add(photos).addTo(map);
-                                        map.fitBounds(photoLayer.getBounds());
+                                        //photoLayer.add(photos).addTo(map);
+                                        //map.fitBounds(photoLayer.getBounds());
                                     });
                         }
                     });
@@ -302,15 +310,44 @@
                     var baliseUl = document.querySelector("div.liste");
                     // DOM Document Object Model
                     // AJOUTER UNE BALISE li
-                    var codeHtmlLi = '<a href="' + link + '"><div class="listeInfo" style="background-image:url(' + standardResolution + ');background-size:cover;background-position:center center";></div></a>';
+                    var codeHtmlLi = '<a href="' + link + '"><div class="listeInfo img-thumbnail" style="background-image:url(' + standardResolution + ');background-size:cover;background-position:center center";></div></a>';
                     // AJOUTER NOTRE CODE POUR LA BALISE li DANS LA BALISE ul
                     //baliseUl.innerHTML += codeHtmlLi;
                     baliseUl.innerHTML += codeHtmlLi;
                 }
+                animWall();
             }
 
         }
         appelAjax(urlApiAjax, ajouterImage);
+
+        // ANIMATIONS DES PHOTOS DU WALLOFPICTURE
+
+        function animWall() {
+            let bars = document.querySelectorAll('.listeInfo')
+            const NUM_ELEMENTS = bars.length
+            const BAR_ANIM_DURATION = 2.65
+
+            bars.forEach((bar, index) => {
+                
+              
+                // Set 'animation-duration'
+                bar.style.animationDuration = `${BAR_ANIM_DURATION}s`
+
+                // Calculate Staggered Delay
+                let barDelay = index * (BAR_ANIM_DURATION / NUM_ELEMENTS) * 2
+
+                // Set Staggered Delay
+                bar.style.animationDelay = `${barDelay}s`
+                
+                bar.classList.add("animWall");
+            })
+        }
+        
+
+
+
+
 
     </script>
 </html>

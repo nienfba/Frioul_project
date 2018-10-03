@@ -64,7 +64,7 @@ if (L.MarkerClusterGroup) {
 			this._photos = options.featureGroup(null, options);
 		},
 
-		add: function (photos) {
+		add: function (photos) { //Possibilité de passer qu'une photo avec la syntaxe suivant : objet dans un tableau
 			this.addLayer(this._photos.addLayers(photos));
 			return this;
 		},

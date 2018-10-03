@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+
+
+            .bar {
+                animation: grow-bar forwards;
+                background: linear-gradient(to left, #004e92, #000428);
+                opacity: 0;
+            }
+
+            @keyframes grow-bar {
+                0% {
+
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+
+
+        <div
+            data-width="100"
+            class="bar mb2 h2 br4 flex items-center justify-between pr3">
+            <h2 class="steps mv0 fw4 f7 white-50">
+                test
+            </h2>
+        </div>
+        <div
+            data-width="100"
+            class="bar">
+            <h2 class="">
+                test
+            </h2>
+        </div>
+        <div
+            data-width="100"
+            class="bar">
+            <h2 class="">
+                test
+            </h2>
+        </div>
+        <div
+            data-width="100"
+            class="bar mb2 h2 br4 flex items-center justify-between pr3">
+            <h2 class="steps mv0 fw4 f7 white-50">
+                test
+            </h2>
+        </div>
+        <script>
+
+
+            let bars = document.querySelectorAll('.bar')
+            const NUM_ELEMENTS = bars.length
+            const BAR_ANIM_DURATION = .65
+
+            bars.forEach((bar, index) => {
+                // Read 'data-width' and set the bar's width
+                //bar.style.width = `${bar.getAttribute('data-width')}%`
+
+                // Set 'animation-duration'
+                bar.style.animationDuration = `${BAR_ANIM_DURATION}s`
+
+                // Calculate Staggered Delay
+                let barDelay = index * (BAR_ANIM_DURATION / NUM_ELEMENTS)
+
+                // Set Staggered Delay
+                bar.style.animationDelay = `${barDelay}s`
+            })
+
+
+        </script>
+
+    </body>
+</html>
