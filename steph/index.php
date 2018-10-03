@@ -60,9 +60,9 @@
         </div>
         <div class="map">
             <div id="mapHome"></div>
+            <?php include('includes/navleft.php'); ?>
         </div>
         <?php include('includes/navright.html'); ?>
-        <?php include('includes/navleft.php'); ?>
         <div class="overlay-box bounceIn animated">
             <center>
                 <h3>Jusqu'à quelle heure dure cet évenement ?</h3>
