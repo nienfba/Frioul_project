@@ -1,11 +1,13 @@
 *{
-    transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  font-family: Futura, sans-serif;
 }
 
 .contain {
-    object-fit: contain;
-  }
-  
-  .cover {
-    object-fit: cover;
-  }
+  object-fit: contain;
+}
+
+.cover {
+  object-fit: cover;
+}
+
