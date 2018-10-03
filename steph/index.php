@@ -21,7 +21,6 @@
         <!-- FONT AWESOME CDN -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <script src="js/reqwest.min.js"></script>
         <script src="js/leaflet.js"></script>
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -29,6 +28,7 @@
         <script src="js/leaflet.markercluster.js"></script>
         <script src="js/Leaflet.Photo.js"></script>
         <script src="js/anime.js"></script>
+
 
         <style>
             ul.listeInfo {
@@ -81,24 +81,24 @@
             id: 'mapbox.streets'
         }).addTo(map);
 
+        photoLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click', function (evt) {
+            evt.layer.bindPopup(L.Util.template('<img src="{url}"/></a><img id="imgLike" src="img/instaLike.png" style="float: left;"/><span style="line-height:25px;"><b>{likes}</b></span><p>{caption}</p>', evt.layer.photo), {
+                className: 'leaflet-popup-photo',
+                minWidth: 400
+            });
+        });
+
+
         var photoLayer;
+        var idInsta = [];
 
         function ajaxMap(hashtag = "code4marseille") {
 
-            if (photoLayer != null) {
-                map.removeLayer(photoLayer);
-            }
-
-            photoLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click', function (evt) {
-                evt.layer.bindPopup(L.Util.template('<img src="{url}"/></a><img id="imgLike" src="img/instaLike.png" style="float: left;"/><span style="line-height:25px;"><b>{likes}</b></span><p>{caption}</p>', evt.layer.photo), {
-                    className: 'leaflet-popup-photo',
-                    minWidth: 400
-                });
-            });
+            /*if (photoLayer != null) {
+             map.removeLayer(photoLayer);
+             }*/
 
             var UrlApi = "https://myprovence.code4marseille.fr/api/instas?tags=" + hashtag;
-
-            console.log(UrlApi);
 
             fetch(UrlApi)
                     .then(function (reponse) {
@@ -135,26 +135,31 @@
                                             var description = infoCourante.caption;
                                             var publicationDate = infoCourante.publicationDate;
                                             var image = infoCourante.lowResolution;
+                                            var id = infoCourante.id;
 
-                                            //Verification si image existe encore 
-                                            var img = new Image();
-                                            img.myLat = String(latitude);
-                                            img.myLng = String(longitude);
-                                            img.myLink = link;
-                                            img.myDescription = description;
-                                            img.myLikes = likes
-                                            img.onload = function () {
-                                                var photo = [{
-                                                        lat: this.myLat,
-                                                        lng: this.myLng,
-                                                        url: this.src,
-                                                        caption: "<a href='" + this.myLink + "'>" + this.myDescription + "</a>",
-                                                        thumbnail: this.src,
-                                                        likes: this.myLikes
-                                                    }];
-                                                photoLayer.add(photo).addTo(map);
+                                            //Verification d'ajout d'image (live)
+                                            if (idInsta.includes(id) == false) {
+                                                idInsta.push(id);
+                                                //Verification si image existe encore 
+                                                var img = new Image();
+                                                img.myLat = String(latitude);
+                                                img.myLng = String(longitude);
+                                                img.myLink = link;
+                                                img.myDescription = description;
+                                                img.myLikes = likes
+                                                img.onload = function () {
+                                                    var photo = [{
+                                                            lat: this.myLat,
+                                                            lng: this.myLng,
+                                                            url: this.src,
+                                                            caption: "<a href='" + this.myLink + "'>" + this.myDescription + "</a>",
+                                                            thumbnail: this.src,
+                                                            likes: this.myLikes
+                                                        }];
+                                                    photoLayer.add(photo).addTo(map);
+                                                }
+                                                img.src = infoCourante.lowResolution;
                                             }
-                                            img.src = infoCourante.lowResolution;
                                         }
 
                                         //photoLayer.add(photos).addTo(map);
@@ -170,7 +175,7 @@
 
         setInterval(function () {
             ajaxMap(hashtag);
-        }, 60000);
+        }, 3000);
 
 
         $("#hashtag").click(function () {
@@ -233,19 +238,19 @@
 
         var hauteur = (document.body.clientWidth);
 
-        $("#UpPage").click(function () {
-            if (page = 3) {
-                anime({
-                    targets: '.WallOfPictures',
-                    translateY: 2500
-                });
-                anime({
-                    targets: '#navBottom',
-                    translateY: 50
-                });
-                page = 2;
-            }
-        });
+        /*$("#UpPage").click(function () {
+         if (page = 3) {
+         anime({
+         targets: '.WallOfPictures',
+         translateY: 2500
+         });
+         anime({
+         targets: '#navBottom',
+         translateY: 50
+         });
+         page = 2;
+         }
+         });*/
 
 
         //SCRIPT DANIEL ACCUEIL.PHP
@@ -282,8 +287,6 @@
             // https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch
             fetch(urlApiAjax)
                     .then(function (data) {
-                        // DEBUG
-                        console.log(data);
                         // ON VEUT RECEVOIR UN OBJET JAVASCRIPT
                         return data.json();
                     })
@@ -293,7 +296,6 @@
 // URL API AJAX
         var ajouterImage = function (objetJS)
         {
-            console.log(objetJS);
             // CA Y'EST J'AI UN OBJET JS AVEC TOUTES INFOS PLANQUEES DEDANS...
             // IL FAUT ALLER RECUPERER LES INFOS QUI NOUS INTERESSENT
             var tableauInfo = objetJS["hydra:member"];
@@ -301,7 +303,7 @@
             // BOUCLE POUR PARCOURIR LES INFOS UNE PAR UNE
             for (var index = 0; index < tableauInfo.length; index++) {
                 var infoCourante = tableauInfo[index];
-                console.log(infoCourante);
+                //onsole.log(infoCourante);
                 var link = infoCourante.link;
                 var thumbnail = infoCourante.thumbnail;
                 var lowResolution = infoCourante.lowResolution;
@@ -329,8 +331,8 @@
             const BAR_ANIM_DURATION = 2.65
 
             bars.forEach((bar, index) => {
-                
-              
+
+
                 // Set 'animation-duration'
                 bar.style.animationDuration = `${BAR_ANIM_DURATION}s`
 
@@ -339,11 +341,11 @@
 
                 // Set Staggered Delay
                 bar.style.animationDelay = `${barDelay}s`
-                
+
                 bar.classList.add("animWall");
             })
         }
-        
+
 
 
 
