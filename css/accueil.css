@@ -52,7 +52,7 @@ h3 {
     width:100vw;
 }
 
- #intro p {
+#intro p {
     font-size: 1em;
     color: #ffffff;
     margin-top: 20px;
@@ -198,66 +198,66 @@ h2.hashtag{
 }
 
 .boutonanime{
-  position: relative;
-  padding: 1.4rem 4.2rem;
-  padding-right: 3.1rem;
-  font-size: 1.7rem;
-  font-weight: 900 !important;
-  color: #fadf12;
-  letter-spacing: 1rem;
-  text-transform: uppercase;
-  transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
-  cursor: pointer;
-  user-select: none;
+    position: relative;
+    padding: 1.4rem 4.2rem;
+    padding-right: 3.1rem;
+    font-size: 1.7rem;
+    font-weight: 900 !important;
+    color: #fadf12;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+    cursor: pointer;
+    user-select: none;
 }
 
 .boutonanime:before, .boutonanime:after {
-  content: '';
-  position: absolute;
-  transition: inherit;
-  z-index: -1;
+    content: '';
+    position: absolute;
+    transition: inherit;
+    z-index: -1;
 }
 
 .boutonanime:hover {
-  color: #EEEEEB;
-  transition-delay: .6s;
+    color: #EEEEEB;
+    transition-delay: .6s;
 }
 
 .boutonanime:hover:before {
-  transition-delay: 0s;
+    transition-delay: 0s;
 }
 
 .boutonanime:hover:after {
-  background: var(--inv);
-  transition-delay: .4s;
+    background: var(--inv);
+    transition-delay: .4s;
 }
 
 .from-middle:before {
-  top: 0;
-  left: 50%;
-  height: 100%;
-  width: 0;
-  border: 1px solid var(--inv);
-  border-left: 0;
-  border-right: 0;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 0;
+    border: 1px solid var(--inv);
+    border-left: 0;
+    border-right: 0;
 }
 
 .from-middle:after {
-  bottom: 0;
-  left: 0;
-  height: 0;
-  width: 100%;
-  background: var(--inv);
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background: var(--inv);
 }
 
 .from-middle:hover:before {
-  left: 0;
-  width: 100%;
+    left: 0;
+    width: 100%;
 }
 
 .from-middle:hover:after {
-  top: 0;
-  height: 100%;
+    top: 0;
+    height: 100%;
 }
 
 .marge {
@@ -291,7 +291,10 @@ div.listeInfo {
     position:relative;
     width:10vw;
     height:10vw;
-    margin:1vw;
+    margin:5px;
+    border-radius: 40px !important;
+    background-color: linear-gradient(top, #f00 0%,#00f 100%)!important;
+    border: 2px white solid !important;
 }
 
 .container{
@@ -393,7 +396,9 @@ footer a {
         position:relative;
         width:25vw;
         height:25vw;
-        border-radius: 30px !important;
+        margin:5px;
+        border-radius: 40px !important;
+        border: 2px white solid !important;
     }
 }
 
