@@ -1,97 +1,127 @@
 
-<style>
-    #navBottom.col-md-4{
-        width: 100%;
-        height: 100%;
-        min-height: 100%;
-        margin: 0; padding: 0;
-        display: inline-block;
-        margin-top: 50%;
-    }
-
-    input {
-        padding-top: 15px;
-        background: rgba(255,255,255,0.10);
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        border: none!important;
-        color: white;
-        padding: 10px 15px;
-        //border-radius: 25px!important;
-        font-size: 16px;
-        outline: none;
-    }
-
-    input[type="text"], textarea {
-        outline: none;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2)!important;
-        border:1px solid #ccc !important;
-    }
-
-    button[type="button"] {
-        outline: none;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2)!important;
-
-        border:none!important;
-    }
-
-    .left{
-        border-radius:50px 0px 0px 50px;
-        -moz-border-radius:50px 0px 0px 50px;
-        -webkit-border-radius:50px 0px 0px 50px;
-        background-color: #fff;
-    }
-    .right{
-        border-radius:0px 50px 50px 0px;
-        -moz-border-radius:0px 50px 50px 0px;
-        -webkit-border-radius:0px 50px 50px 0px;
-        background-color: #fff;
-    }
-</style>
 <div id="navBottom" class="container-fluid">
-    <div class="row">
-        <div class="col-md-4 mt-2">
-            <button type="button" class="btn btn-danger mr-2 question" style="border-radius:100px" data-container="body" data-toggle="popover" data-placement="top">
-                <i class="fa fa-question"></i>
-            </button>
-
-        </div>
-        <div class="col-md-4 mt-2">
-            <form>
-                <div class="form-row align-items-center w-80">
-                    <label class="sr-only" for="inlineFormInputGroup">hashtag</label>
-                    <div class="input-group mb-2">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text left">#</div>
-                        </div>
-                        <input type="text" class="form-control rounded-left" id="inputHashtag" placeholder="hashtag">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text btn right" id="hashtag">OK</div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="col-md-4 mt-2">
-            <div class="row float-right">
-                <button type="button" class="btn btn-primary mr-2" id="delete" style="border-radius:100px">
-                    <i class="fa fa-crosshairs"></i>
-                </button>
-                <button type="button" id="showRight" class="btn btn-info mr-2" style="border-radius:100px">
-                    <i class="fa fa-compass"></i>
-                </button>
-                <button type="button" class="btn btn-secondary mr-2" style="border-radius:100px">
-                    <i class="fa fa-camera-retro"></i>
-                </button>
-                <button type="button" id="showOverlay" class="btn btn-success mr-2" style="border-radius:100px">
-                    <i class="fa fa-heart"></i>
-                </button>
+  <div class="row">
+    <div class="col-md-4 mt-2">
+      <form>
+        <div class="form-row align-items-center w-80">
+          <label class="sr-only" for="inlineFormInputGroup">hashtag</label>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text borderRoundL p-1">#</div>
             </div>
-
-            <!--<button id="showRight" style="border-radius:100px">NavRight</button>
-              <button id="showOverlay" style="border-radius:100px">Overlay</button>-->
-
+            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="hashtag">
+            <div class="input-group-prepend">
+              <div class="input-group-text borderRoundR">OK</div>
+            </div>
+          </div>
         </div>
+      </form>
+
     </div>
+    <div class="col-md-2 mt-2">
+
+      <button type="button" class="btn btn-danger mr-2 question" style="border-radius:100px" data-container="body" data-toggle="popover" data-placement="top">
+            <i class="fa fa-question"></i>
+        </button>
+      <button type="button" class="btn btn-primary mr-2 myPosition" style="border-radius:100px">
+            <i class="fa fa-crosshairs"></i>
+        </button>
+    </div>
+    <div class="col-md-6 mt-2">
+      <div class="row float-right">
+        <div class="marker-menu" >
+        	<img class="draggable-marker" src="./images/marker-icon.png" alt="marker" />
+        </div>
+        <button type="button" id="showRight" class="btn btn-info mr-2" style="border-radius:100px">
+                  <i class="fa fa-compass"></i>
+              </button>
+        <button type="button" class="btn btn-secondary mr-2" style="border-radius:100px">
+                  <i class="fa fa-camera-retro"></i>
+              </button>
+        <button type="button" id="showOverlay" class="btn btn-success mr-2" style="border-radius:100px">
+                  <i class="fa fa-heart"></i>
+              </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="navBotMob" class="container-fluid ">
+  <div class="row text-center categoryHide">
+    <div class="col-6">
+      <div class="mt-2">
+        <i></i> <a><p>Musique</p></a>
+      </div>
+      <div class="mt-2">
+        <i></i> <a><p>Divertissement</p></a>
+      </div>
+      <div class="mt-2">
+        <i></i> <a><p>Shopping</p></a>
+      </div>
+      <div class="mt-2">
+        <i></i> <a><p>Restauration</p></a>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="mt-2">
+        <i></i> <a><p>Promenade</p></a>
+      </div>
+      <div class="mt-2">
+        <i></i> <a><p>Logement</p></a>
+      </div>
+      <div class="mt-2">
+        <i></i> <a><p>Sport</p></a>
+      </div>
+      <div class="mt-2">
+        <i></i> <a><p>Culture</p></a>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-4 mt-2">
+      <form>
+        <div class="form-row align-items-center w-80">
+          <label class="sr-only" for="inlineFormInputGroup">hashtag</label>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text borderRoundL p-1">#</div>
+            </div>
+            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="hashtag">
+            <div class="input-group-prepend">
+              <div class="input-group-text borderRoundR">OK</div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-4 mt-2 d-inline-block align-center btnMid p-0">
+      <button type="button" class="btn btn-danger border-circle question" data-container="body" data-toggle="popover" data-placement="top">
+            <i class="fa fa-question"></i>
+        </button>
+      <button type="button" class="btn btn-primary border-circle " >
+            <i class="fa fa-crosshairs"></i>
+        </button>
+    </div>
+
+    <div class="col-4 mt-2">
+      <button type="button" name="filtre" class="btn filtreBy float-right">Filtrer par</button>
+      <div class="" style="display:none;">
+        <button type="button" id="showRight" class="btn btn-info mr-2" style="border-radius:100px">
+            <i class="fa fa-compass"></i>
+        </button>
+        <button type="button" class="btn btn-secondary mr-2" style="border-radius:100px">
+            <i class="fa fa-camera-retro"></i>
+        </button>
+        <button type="button" id="showOverlay" class="btn btn-success mr-2" style="border-radius:100px">
+            <i class="fa fa-heart"></i>
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script type="text/javascript">
