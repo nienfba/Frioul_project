@@ -41,8 +41,11 @@
               <div class="container">
                 <div class="row">
 
+                 <!--SUPPRESSION DU BANDEAU POUR NE PAS AVOIR 2 CARTES
+
                   <section id="bandeau" class="col-xs-12">
-                    <!-- Bas de page avec boutons visible sur page home avec fond transparent-->
+
+                   Bas de page avec boutons visible sur page home avec fond transparent
                     <span class="dropdown">
                       <button class="btn-medium bouton" data-toggle="dropdown">Ville
                         <div class="dropdown-menu">
@@ -65,7 +68,7 @@
                     </span>
                     <a href="bons_plans.php" title=""><button class="btn-medium bouton">Bons plans</button></a>
                     <a href="autour.php" title=""><button class="btn-medium bouton">Autour de moi</button></a>
-                  </section>
+                  </section> -->
 
                   <!-- Affichage des hashtags et du fond depuis le fichier accueil.json -->
                   <script>
