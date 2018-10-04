@@ -27,12 +27,14 @@
 	top: -7px;
 	right: -11px;
 	color: #555;
-	background-color: #fff;
-	border-radius: 8px;
-	height: 12px;
-	min-width: 12px;
+	background-color: black;
+	border-radius: 10px;
+	height: 20px;
+	min-width: 20px;
 	line-height: 12px;
 	text-align: center;
 	padding: 3px;
+        color: white;
+        font-size: 16px;
 	//box-shadow: 0 3px 14px rgba(0,0,0,0.4);
 }

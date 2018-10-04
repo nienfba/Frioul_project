@@ -24,9 +24,14 @@ L.Photo = L.FeatureGroup.extend({
 	},
 
 	createMarker: function (photo) {
+            var html = '<div style="background-image: url(' + photo.thumbnail + ');"></div>​';
+            if(photo.icon)  {
+                html = '<div class="'+photo.icon+'" style="background-image: url(' + photo.thumbnail + ');"></div>​'
+            }
+
 		var marker = L.marker(photo, {
 			icon: L.divIcon(L.extend({
-				html: '<div style="background-image: url(' + photo.thumbnail + ');"></div>​',
+				html: html,
 				className: 'leaflet-marker-photo'
 			}, photo, this.options.icon)),
 			title: photo.caption || ''
