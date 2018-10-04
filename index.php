@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang=""> <!--<![endif]-->
-<?php include('html/inc/head.php'); ?>
+    <?php include('html/inc/head.php'); ?>
     <body>
         <?php include('html/inc/accueil.php'); ?>
         <?php include('html/inc/wallofpictures.php'); ?>
@@ -22,6 +22,62 @@
             maxZoom: 18,
             id: 'mapbox.streets'
         }).addTo(map);
+
+        // GESTION POINTS BONS PLANS ECT.. 
+
+        var idsInfos = [];
+
+        function ajaxInfos() {
+
+            /*if (photoLayer != null) {
+             map.removeLayer(photoLayer);
+             }*/
+
+            var UrlApi = "https://myprovence.code4marseille.fr/api/infos";
+
+            fetch(UrlApi)
+                    .then(function (reponse) {
+                        return reponse.json();
+                    })
+                    .then(function (objetJson) {
+                        //Nombres de pages à charger
+                        var LastPage = objetJson['hydra:totalItems'] / 100;
+                        var NbPages = Math.ceil(LastPage);
+                        for (var page = 1; page < NbPages + 1; page++) {
+                            var url = UrlApi + '?page=' + page;
+                            fetch(url)
+                                    .then(function (response) {
+                                        // SI ON VEUT GERER DU JSON
+                                        // ON VA TRANSFORMER LE RESULTAT EN OBJET JSON
+                                        return response.json();
+                                    })
+                                    .then(function (objetJson) {
+                                        var tableauInfo = objetJson["hydra:member"];
+                                        // BOUCLE POUR PARCOURIR LES INFOS UNE PAR UNE
+                                        for (var index = 0; index < tableauInfo.length; index++) {
+                                            var infoCourante = tableauInfo[index];
+                                            if (infoCourante.latitude && infoCourante.longitude) {
+                                                var id = infoCourante["@id"];
+                                                //Verification d'ajout d'image (live)
+                                                if (idsInfos.includes(id) == false) {
+                                                    idsInfos.push(id);
+                                                    //Icone : 
+                                                    if (infoCourante.icon != null && infoCourante.description != null) {
+                                                        var myIcon = L.divIcon({className: 'fa fa-2x fa-'+infoCourante.icon});
+                                                        //Création du marker :
+                                                        L.marker([infoCourante.latitude, infoCourante.longitude], {icon: myIcon})
+                                                                .addTo(map)
+                                                                .bindPopup(infoCourante.description);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    });
+                        }
+                    });
+        }
+
+        // GESTION POINTS INSTAGRAM
 
         photoLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click', function (evt) {
             evt.layer.bindPopup(L.Util.template('<img src="{url}"/></a><img id="imgLike" src="img/instaLike.png" style="float: left;"/><span style="line-height:25px;"><b>{likes}</b></span><p>{caption}</p>', evt.layer.photo), {
@@ -69,7 +125,7 @@
 
                                             var infoCourante = tableauInfo[index];
 
-                                            if(infoCourante.latitude && infoCourante.longitude) {
+                                            if (infoCourante.latitude && infoCourante.longitude) {
                                                 var title = infoCourante.title;
                                                 var likes = infoCourante.likes;
                                                 var link = infoCourante.link;
@@ -116,7 +172,8 @@
 
         setInterval(function () {
             ajaxMap(hashtag);
-        }, 3000);
+            ajaxInfos();
+        }, 5000);
 
 
         $("#hashtag").click(function () {
