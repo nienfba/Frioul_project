@@ -34,17 +34,4 @@
     <meta name="copyright" content="Provence Tourisme">
     <meta name="keywords" content="Provence Tourisme">
 
-    <style>
-        ul.listeInfo {
-            padding-left:0;
-            display:flex;
-            flex-wrap:wrap;
-            list-style:none;
-            width:100%;
-        }
-        ul.listeInfo li {
-            width:100%;
-        }
-    </style>
-
 </head>
