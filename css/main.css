@@ -6,6 +6,18 @@
 
 /*Animations WallOfPictures*/
 
+ul.listeInfo {
+    padding-left:0;
+    display:flex;
+    flex-wrap:wrap;
+    list-style:none;
+    width:100%;
+}
+
+ul.listeInfo li {
+    width:100%;
+}
+
 .listeInfo {
     background: linear-gradient(to left, #004e92, #000428);
     opacity: 0;

@@ -393,6 +393,7 @@ footer a {
         position:relative;
         width:25vw;
         height:25vw;
+        border-radius: 30px !important;
     }
 }
 
