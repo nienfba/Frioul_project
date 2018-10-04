@@ -1,43 +1,51 @@
 <div class='header'>
-    <div class="accueil">
-        <div class="container">
-            <div class="row">
-                <header class="col-xs-12 ml-1">
-                    <a href="#"></a><img src="media/c4m.png" alt="" class="logo" /></a>
-                    <nav class="">
-                        <!-- Navigation Top -->
-                        <ul class="hidden">
-                            <li class=""></li>
-                            <li class=""></li>
-                        </ul>
-                    </nav>
-                </header>
-            </div>
-        </div>
+  <div class="accueil">
+    <div class="container">
+      <div class="row">
+        <header class="col-xs-12 ml-1">
+          <a href="#"></a><img src="media/c4m.png" alt="" class="logo" /></a>
+          <nav class="">
+            <!-- Navigation Top -->
+            <ul class="hidden">
+              <li class=""></li>
+              <li class=""></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+    </div>
 
-        <article>
-            <!-- Full width -->
-            <div class="container">
-                <div class="row">
-                    <section id="intro" class="text-center col-xs-12 ml-1 mr-1">
-                        <!-- Background animé avec jquery et hashtag -->
-                        <h1 id="titre" class="animated bounce"> Découvrez en direct les merveilles du département.</h1>
-                        <div id="alternate">
-                            <h2 id="lieux" class="text-center col-xs-12 ml-1 mr-1 boutonanime from-middle"></h2>
-                        </div>
-                        <!-- ANCIENNE PHRASE D'ACCROCHE CELLE QUI APPARAIT EST SOUMISE A L'APPROBATION DE MY PROVENCE EVIDEMMENT -->
+    <article>
+      <!-- Full width -->
+      <div class="container">
+        <div class="row">
+          <section id="intro" class="text-center col-xs-12 ml-1 mr-1">
+            <!-- Background animé avec jquery et hashtag -->
+            <h1 id="titre" class="animated bounce"> Découvrez en direct les merveilles du département.</h1>
+            <div id="alternate">
+              <h2 id="lieux" class="text-center col-xs-12 ml-1 mr-1 boutonanime from-middle"></h2>
+            </div>
+            <!-- ANCIENNE PHRASE D'ACCROCHE CELLE QUI APPARAIT EST SOUMISE A L'APPROBATION DE MY PROVENCE EVIDEMMENT -->
                                   <!-- Ancienne <p class="">Des villes contemporaines qui abritent des petits villages de pêcheurs et des quartiers
                                   alternatifs.</p> -->
-                        <h3 class="text-center col-xs-12 ml-1 mr-1"> Bienvenue en Provence </h3>
-                    </section>
-                </div>
-            </div>
+                                  <h3 class="text-center col-xs-12 ml-1 mr-1"> Bienvenue en Provence </h3>
+                                </section>
+                              </div>
+                            </div>
 
-            <div class="container">
-                <div class="row">
+                            <div class="container">
+                              <div class="row">
 
-                    <section id="bandeau" class="col-xs-12">
-                        <!-- Bas de page avec boutons visible sur page home avec fond transparent-->
+
+
+
+
+                    <section id="bandeau" class="text-center col-xs-12 ml-1 mr-1">
+
+
+
+                       <!--SUPPRESSION DU BANDEAU POUR NE PAS AVOIR 2 CARTES
+                        Bas de page avec boutons visible sur page home avec fond transparent
                         <span class="dropdown">
                             <button class="btn-medium bouton" data-toggle="dropdown">Ville
                                 <div class="dropdown-menu">
@@ -57,13 +65,14 @@
                                     <div class="dropdown-item">Un peu de culture</div>
                                 </div>
                             </button>
-                        </span>
-                        <a href="bons_plans.php" title=""><button class="btn-medium bouton">Bons plans</button></a>
-                        <a href="autour.php" title=""><button class="btn-medium bouton">Autour de moi</button></a>
-                    </section>
+                          </span> -->
 
+                          <a href="bons_plans.php" title=""><button class="btn-medium bouton">Bons plans</button></a>
+                          <a href="autour.php" title=""><button class="btn-medium bouton">Autour de moi</button></a>
+                        </section>
+
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-    </div>
-</div>
 
