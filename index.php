@@ -27,8 +27,8 @@
         // GESTION POINTS BONS PLANS ECT.. 
 
         iconLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click', function (evt) {
-            evt.layer.bindPopup(L.Util.template('<p>{caption}</p>', evt.layer.photo), {
-                className: 'leaflet-popup-photo',
+            evt.layer.bindPopup(L.Util.template('<p><a href="{lien}" target="_blank">{caption}</a></p>', evt.layer.photo), {
+                className: 'leaflet-popup-info',
                 minWidth: 400
             });
         });
@@ -70,6 +70,7 @@
                                                 if (idsInfos.includes(id) == false) {
                                                     idsInfos.push(id);
                                                     //Icone : 
+                                                    var lien = id;
                                                     if (infoCourante.icon != null && infoCourante.description != null) {
                                                         var photo = [{
                                                                 lat: infoCourante.latitude,
@@ -77,7 +78,8 @@
                                                                 url: "img/map/"+infoCourante.icon+".png",
                                                                 caption: infoCourante.description,
                                                                 thumbnail: "img/map/"+infoCourante.icon+".png",
-                                                                icon: infoCourante.icon
+                                                                icon: infoCourante.icon,
+                                                                lien: lien.replace('/api/infos/','https://myprovence.code4marseille.fr/info-public/')
                                                             }];
                                                         iconLayer.add(photo).addTo(map);
                                                     }
