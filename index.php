@@ -31,6 +31,9 @@
             id: 'mapbox.streets'
         }).addTo(map);
 
+        // var mapDesign = ('<div class="border-map"></div>');
+       // mapDesign.addTo(map);
+
         // GESTION POINTS BONS PLANS ECT..
 
         iconLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click', function (evt) {
@@ -83,6 +86,12 @@
                                                 //Verification d'ajout d'image (live)
                                                 if (idsInfos.includes(id) == false) {
                                                     idsInfos.push(id);
+
+
+
+
+                                                    //Icone :
+
 
                                                     var lien = id;
 
