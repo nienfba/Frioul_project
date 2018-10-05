@@ -17,6 +17,9 @@
     </body>
     <script>
 
+        var filtreIcon = true;
+        var filtreQuestion = true;
+        var filtreLive = true;
         var map = L.map('mapHome').setView([43.3, 5.4], 13);
 
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
@@ -89,9 +92,13 @@
                                                                 lien: lien.replace('/api/infos/', 'https://myprovence.code4marseille.fr/info-public/')
                                                             }];
                                                         if (infoCourante.icon == "question") {
-                                                            questionLayer.add(photo).addTo(map);
+                                                            if (filtreQuestion) {
+                                                                questionLayer.add(photo).addTo(map);
+                                                            }
                                                         } else {
-                                                            iconLayer.add(photo).addTo(map);
+                                                            if (filtreIcon) {
+                                                                iconLayer.add(photo).addTo(map);
+                                                            }
                                                         }
                                                     }
                                                 }
@@ -183,7 +190,9 @@
                                                                 likes: this.myLikes,
                                                                 username: this.myUsername
                                                             }];
-                                                        photoLayer.add(photo).addTo(map);
+                                                        if (filtreLive) {
+                                                            photoLayer.add(photo).addTo(map);
+                                                        }
                                                     }
                                                     img.src = infoCourante.lowResolution;
                                                 }
@@ -375,7 +384,9 @@
         }
 
 
-
+        map.on("click", function () {
+            alert("test");
+        });
 
 
 
