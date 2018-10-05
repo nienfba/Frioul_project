@@ -3,7 +3,10 @@
 
        <script>
 // URL API AJAX
-var urlApiAjax = 'http://api.openweathermap.org/data/2.5/forecast?lat=43.3&lon=5.4&units=metric&appid=ee3abf652133c6c47b5daef91a31b166';
+var lat = 43.3;
+var lng = 5.4;
+var city = "Marseille";
+var urlApiAjax = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lng + '&units=metric&appid=ee3abf652133c6c47b5daef91a31b166';
 // https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch
 fetch(urlApiAjax)
 .then(function(data){
@@ -83,27 +86,16 @@ console.log(listWeather);
         infoH[dateHour].iconH.iconHour;
       }
   }
-  var screenHour = [];
+
+   var screenHour = [];
   for (var dateHour in infoH) {
     var h = infoH[dateHour];
     screenHour.push(h.hour);
     screenHour.push(h.iconH);
   }
-
-  var texteFinal = "";
-
   var dayLet = {0:'dim.',1:'lun.',2:'mar.',3:'mer.',4:'jeu.',5:'ven.',6:'sam.'};
   var today = new Date();
   var dayNum = today.getDay();
-    for(i=0; i < 7; i++)  {
-      console.log(dayLet[dayNum]);
-      texteFinal += " " + dayLet[dayNum];
-      if(dayNum === 6) {
-        dayNum = 0;
-      } else {
-        dayNum++;
-      }
-    }
 
   var baliseUl = document.querySelector("ul.listeInfoMeteo");
   // DOM Document Object Model
@@ -111,20 +103,21 @@ console.log(listWeather);
 
 
      var codeHtmlLi = '<div class = "border">'
-                        + '<h3 class="padding-side">' + 'Marseille' + '</h3>' +
-                        '<div class="meteo-flex-head" >'
-                          + '<div class="meteo-index padding-side margin">' + dayLet[dayNum] + ' ' + day  + '</div>'
-                          + '<div class="meteo-index margin">' + '<img class="meteo-icon-day" src="https://openweathermap.org/img/w/'+ iconScreenDay[0][0] + '.png">' + tempMaxScreen[0] + ' ' + '°C' + '</div>'
-                          + '<div class="meteo-index padding-side margin">'+ 'vent '+ ' ' + windMaxScreen[0] + ' ' + 'km/h' + '<br>' + 'humidité :' + humidity + '%' + '</div>'
+                        + '<div class="meteo-flex-title padding-side">' + city
                         + '</div>' +
-                        '<div class="meteo-flex">'
+                        '<div class="meteo-flex-head padding-botom" >'
+                          + '<div class="meteo-index padding-side ">' + dayLet[dayNum] + ' ' + day  + '</div>'
+                          + '<div class="meteo-index">' + '<img class="meteo-icon-day" src="https://openweathermap.org/img/w/'+ iconScreenDay[0][0] + '.png">' + tempMaxScreen[0] + ' ' + '°C' + '</div>'
+                          + '<div class="meteo-index padding-side">'+ 'vent '+ ' ' + windMaxScreen[0] + ' ' + 'km/h' + '<br>' + 'humidité :' + humidity + '%' + '</div>'
+                        + '</div>' +
+                        '<div class="meteo-flex padding-botom">'
                           + '<div class="meteo-index">' +'<img src="https://openweathermap.org/img/w/'+ screenHour[1] + '.png">' + '</div>'
                           + '<div class="meteo-index">' +'<img src="https://openweathermap.org/img/w/'+ screenHour[3] + '.png">' + '</div>'
                           + '<div class="meteo-index">' +'<img src="https://openweathermap.org/img/w/'+ screenHour[5] + '.png">' + '</div>'
                           + '<div class="meteo-index">' +'<img src="https://openweathermap.org/img/w/'+ screenHour[7] + '.png">' + '</div>'
                           + '<div class="meteo-index">' +'<img src="https://openweathermap.org/img/w/'+ screenHour[9] + '.png">' + '</div>'
                         + '</div>' +
-                        '<div class = "meteo-flex margin" >'
+                        '<div class = "meteo-flex padding-botom" >'
                           + '<div class="meteo-index">' + screenHour[0] + ':' + '00' + '</div>'
                           + '<div class="meteo-index">' + screenHour[2] + ':' + '00' + '</div>'
                           + '<div class="meteo-index">' + screenHour[4] + ':' + '00' + '</div>'
@@ -133,7 +126,7 @@ console.log(listWeather);
                         + '</div>' +
                       '</div>' +
                       '<div class = "border">'
-                        + '<div class = "meteo-flex">'
+                        + '<div class = "meteo-flex padding-top">'
                           + '<div class="meteo-index">' + dayLet[dayNum] + '</div>'
                           + '<div class="meteo-index">' + dayLet[(dayNum+1)%7] + '</div>'
                           + '<div class="meteo-index">' + dayLet[(dayNum+2)%7] + '</div>'

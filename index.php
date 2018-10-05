@@ -2,9 +2,14 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+
 <!--[if gt IE 8]><!-->
 <html lang="fr">
 <!--<![endif]-->
+
+<!--[if gt IE 8]><!-->
+<html lang=""> <!--<![endif]-->
+
     <?php include('html/inc/head.php'); ?>
     <body>
         <?php include('html/inc/accueil.php'); ?>
@@ -26,6 +31,13 @@
         }).addTo(map);
 
         // GESTION POINTS BONS PLANS ECT..
+
+        iconLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click', function (evt) {
+            evt.layer.bindPopup(L.Util.template('<p><a href="{lien}" target="_blank">{caption}</a></p>', evt.layer.photo), {
+                className: 'leaflet-popup-info',
+                minWidth: 400
+            });
+        });
 
         var idsInfos = [];
 
@@ -63,13 +75,23 @@
                                                 //Verification d'ajout d'image (live)
                                                 if (idsInfos.includes(id) == false) {
                                                     idsInfos.push(id);
+
                                                     //Icone :
+
+                                                    //Icone :
+                                                    var lien = id;
+
                                                     if (infoCourante.icon != null && infoCourante.description != null) {
-                                                        var myIcon = L.divIcon({className: 'fa fa-2x fa-'+infoCourante.icon});
-                                                        //Création du marker :
-                                                        L.marker([infoCourante.latitude, infoCourante.longitude], {icon: myIcon})
-                                                                .addTo(map)
-                                                                .bindPopup(infoCourante.description);
+                                                        var photo = [{
+                                                                lat: infoCourante.latitude,
+                                                                lng: infoCourante.longitude,
+                                                                url: "img/map/"+infoCourante.icon+".png",
+                                                                caption: infoCourante.description,
+                                                                thumbnail: "img/map/"+infoCourante.icon+".png",
+                                                                icon: infoCourante.icon,
+                                                                lien: lien.replace('/api/infos/','https://myprovence.code4marseille.fr/info-public/')
+                                                            }];
+                                                        iconLayer.add(photo).addTo(map);
                                                     }
                                                 }
                                             }
@@ -82,7 +104,7 @@
         // GESTION POINTS INSTAGRAM
 
         photoLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click', function (evt) {
-            evt.layer.bindPopup(L.Util.template('<img src="{url}"/></a><img id="imgLike" src="img/instaLike.png" style="float: left;"/><span style="line-height:25px;"><b>{likes}</b></span><p>{caption}</p>', evt.layer.photo), {
+            evt.layer.bindPopup(L.Util.template('<img src="{url}"/><img id="imgLike" src="img/instaLike.png" style="float: left;"/><span style="line-height:25px;"><b>{likes}</b></span><p>{caption}</p>', evt.layer.photo), {
                 className: 'leaflet-popup-photo',
                 minWidth: 400
             });
