@@ -3,7 +3,10 @@
 
        <script>
 // URL API AJAX
-var urlApiAjax = 'http://api.openweathermap.org/data/2.5/forecast?lat=43.3&lon=5.4&units=metric&appid=ee3abf652133c6c47b5daef91a31b166';
+var lat = 43.3;
+var lng = 5.4;
+var city = "Marseille";
+var urlApiAjax = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lng + '&units=metric&appid=ee3abf652133c6c47b5daef91a31b166';
 // https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch
 fetch(urlApiAjax)
 .then(function(data){
@@ -100,7 +103,7 @@ console.log(listWeather);
 
 
      var codeHtmlLi = '<div class = "border">'
-                        + '<div class="meteo-flex-title padding-side">' + 'Marseille'
+                        + '<div class="meteo-flex-title padding-side">' + city
                         + '</div>' +
                         '<div class="meteo-flex-head padding-botom" >'
                           + '<div class="meteo-index padding-side ">' + dayLet[dayNum] + ' ' + day  + '</div>'
