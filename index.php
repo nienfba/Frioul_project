@@ -3,9 +3,11 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
 
+
 <!--[if gt IE 8]><!-->
 <html lang="fr">
 <!--<![endif]-->
+
 
 
 
@@ -82,9 +84,6 @@
                                                 if (idsInfos.includes(id) == false) {
                                                     idsInfos.push(id);
 
-                                                  
-
-                                                    //Icone : 
                                                     var lien = id;
 
                                                     if (infoCourante.icon != null && infoCourante.description != null) {

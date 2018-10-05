@@ -13,10 +13,38 @@
   min-height: 100%;
   margin: 0; padding: 0;
   display: inline-block;
-margin-top: 50%;
+  margin-top: 50%;
 }
 
-#navBottom>input {
+#inputHashtag{
+  height: 100%!important;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2)!important;
+  border:1px solid #ccc !important;
+  color: black;
+}
+#hashtag button[type="button"] {
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2)!important;
+  border:none!important;
+  border-radius: 50px!important;
+  color: black;
+  background-color: none!important;
+}
+
+.input-group-text{
+  background-color: #fff;
+}
+.borderRoundR {
+  border-radius: 0px 100px 100px 0px!important;
+  height: auto;
+}
+.borderRoundL {
+  border-radius: 100px 0px 0px 100px!important;
+  height: auto;
+}
+/**POPUP Question*/
+.formQuestion input {
   padding-top: 15px;
   background: rgba(255,255,255,0.10);
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
@@ -27,26 +55,21 @@ margin-top: 50%;
   outline: none;
 }
 
-#navBottom>input[type="text"], #navBottom>textarea {
-outline: none;
-box-shadow: 0 2px 8px rgba(0,0,0,0.2)!important;
-border:1px solid #ccc !important;
+.formQuestion input[type="text"], .formQuestion textarea {
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2)!important;
+  border:1px solid #ccc !important;
+  color: black;
 }
 
-#navBottom>button[type="button"] {
-outline: none;
-box-shadow: 0 2px 8px rgba(0,0,0,0.2)!important;
-border:none!important;
-border-radius: 50px;
+.formQuestion button[type="button"] {
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2)!important;
+  border:none!important;
+  border-radius: 50px!important;
+  color: black;
 }
 
-
-#inlineFormInputGroup{
-
-}
-.input-group-text{
-  background-color: #fff;
-}
 
 /**
 *

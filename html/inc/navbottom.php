@@ -10,7 +10,10 @@
             </div>
             <input type="text" class="form-control" id="inputHashtag" placeholder="hashtag">
             <div class="input-group-prepend">
-              <div class="input-group-text borderRoundR" id="hashtag">OK</div>
+              <div class="input-group-text borderRoundR">
+                <button id="hashtag" class="btn" type="button" name="buttonHashtag">OK</button>
+              </div>
+
             </div>
           </div>
         </div>
@@ -19,7 +22,7 @@
     </div>
     <div class="col-md-2 mt-2">
       <div class="marker-menu" >
-        <img class="draggable-marker" src="./images/question.png" alt="marker" />
+        <img class="draggable-marker" src="./img/map/question.png" alt="marker" />
 
       </div>
 
@@ -121,7 +124,7 @@
     </div>
   </div>
 </div>
-  
+
 <script type="text/javascript">
     jQuery(document).ready(function () {
 
