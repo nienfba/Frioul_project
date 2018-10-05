@@ -25,7 +25,7 @@
     <script>
 
         var infosFiltres = [
-            "child", "cocktail", "eye", "thumps-up", "umbrella-beach", "swimmer", "futbol", "fish",
+            "child", "cocktail", "eye", "thumbs-up", "umbrella-beach", "swimmer", "futbol", "fish",
             "kiwi-bird", "smile", "camera", "question"
         ];
         /*
@@ -243,38 +243,6 @@
                 ajaxMap(hashtag);
             }
         });
-
-        var page = 1;
-
-        /*window.addEventListener('wheel', function (e) {
-         if (e.deltaY < 10) {
-         //scroll up
-         }
-         if (e.deltaY > 10) {
-         //scroll down
-         if (page == 1) {
-         anime({
-         targets: '.header',
-         translateY: (document.body.clientWidth)
-         });
-         appelAjax(urlApiAjax, ajouterImage);
-         $("#UpPage").show();
-         page = 2;
-         } else if (page == 2) {
-         anime({
-         targets: '.WallOfPictures',
-         translateY: -(document.body.clientWidth)
-         });
-         anime({
-         targets: '#navBottom',
-         translateY: -50
-         });
-         page = 3;
-         //$("#navBottom").slideDown(1000);
-         }
-         //$("#UpPage").show();
-         }
-         });*/
 
         $("#showOverlay").click(function () {
             if ($(".overlay-box").is(":visible")) {
