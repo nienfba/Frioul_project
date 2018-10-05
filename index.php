@@ -49,14 +49,14 @@
         // GESTION POINTS BONS PLANS ECT..
 
         iconLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click', function (evt) {
-            evt.layer.bindPopup(L.Util.template('<p><a href="{lien}" target="_blank">{caption}</a></p>', evt.layer.photo), {
+            evt.layer.bindPopup(L.Util.template('{image}<p><a href="{lien}" target="_blank">{title}</a><br>{caption}</p>', evt.layer.photo), {
                 className: 'leaflet-popup-info',
                 minWidth: 400
             });
         });
 
         questionLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click', function (evt) {
-            evt.layer.bindPopup(L.Util.template('<p><a href="{lien}" target="_blank">{caption}</a></p>', evt.layer.photo), {
+            evt.layer.bindPopup(L.Util.template('{image}<p><a href="{lien}" target="_blank">{title}</a><br>{caption}</p>', evt.layer.photo), {
                 className: 'leaflet-popup-info',
                 minWidth: 400
             });
@@ -90,6 +90,7 @@
                                     })
                                     .then(function (objetJson) {
                                         var tableauInfo = objetJson["hydra:member"];
+                                        console.log(tableauInfo);
                                         // BOUCLE POUR PARCOURIR LES INFOS UNE PAR UNE
                                         for (var index = 0; index < tableauInfo.length; index++) {
                                             var infoCourante = tableauInfo[index];
@@ -98,34 +99,37 @@
                                                 //Verification d'ajout d'image (live)
                                                 if (idsInfos.includes(id) == false) {
                                                     idsInfos.push(id);
+                                                    var image = "";
 
-                                                    var lien = id;
+                                                var lien = id;
 
-                                                    if (infoCourante.icon != null && infoCourante.description != null) {
-                                                        if (infosFiltres.includes(infoCourante.icon)) {
-                                                            var photo = [{
-                                                                    lat: infoCourante.latitude,
-                                                                    lng: infoCourante.longitude,
-                                                                    url: "img/map/" + infoCourante.icon + ".png",
-                                                                    caption: infoCourante.description,
-                                                                    thumbnail: "img/map/" + infoCourante.icon + ".png",
-                                                                    icon: infoCourante.icon,
-                                                                    lien: lien.replace('/api/infos/', 'https://myprovence.code4marseille.fr/info-public/')
-                                                                }];
-                                                            if (infoCourante.icon == "question") {
-                                                                if (filtreQuestion) {
-                                                                    questionLayer.add(photo).addTo(map);
-                                                                }
-                                                            } else {
-                                                                if (filtreIcon) {
-                                                                    iconLayer.add(photo).addTo(map);
-                                                                }
+                                                if (infoCourante.icon != null && infoCourante.description != null) {
+                                                    if (infosFiltres.includes(infoCourante.icon)) {
+                                                        var photo = [{
+                                                                lat: infoCourante.latitude,
+                                                                lng: infoCourante.longitude,
+                                                                url: "img/map/" + infoCourante.icon + ".png",
+                                                                caption: infoCourante.description,
+                                                                thumbnail: "img/map/" + infoCourante.icon + ".png",
+                                                                icon: infoCourante.icon,
+                                                                lien: lien.replace('/api/infos/', 'https://myprovence.code4marseille.fr/info-public/'),
+                                                                image: image,
+                                                                title: infoCourante.title
+                                                            }];
+                                                        if (infoCourante.icon == "question") {
+                                                            if (filtreQuestion) {
+                                                                questionLayer.add(photo).addTo(map);
+                                                            }
+                                                        } else {
+                                                            if (filtreIcon) {
+                                                                iconLayer.add(photo).addTo(map);
                                                             }
                                                         }
                                                     }
                                                 }
                                             }
                                         }
+                                    }
                                     });
                         }
                     });
