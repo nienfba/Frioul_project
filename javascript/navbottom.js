@@ -37,7 +37,7 @@ jQuery(document).ready(function() {
       markersCount = 0; // the number of the added markers
 
 
-    var question =
+    var popUpQuestion =
       '<form class="formQuestion" action="" method="post">' +
       '<div class="glyph">' +
       '<i class="fa fa-question"></i>' + '</div>' +
@@ -67,8 +67,7 @@ jQuery(document).ready(function() {
 
             // Creating a custom icon
             IconQuestion = L.icon({
-              iconUrl: 'images/question.png', // the url of the img
-              iconSize: [20, 40],
+              iconUrl: './img/map/question.png', // the url of the img
               iconAnchor: [10, 40] // the coordinates of the "tip" of the icon ( in this case must be ( icon width/ 2, icon height )
             });
 
@@ -81,7 +80,7 @@ jQuery(document).ready(function() {
             draggable: false,
             icon: IconQuestion
 
-          }).bindPopup(question).addTo(map).openPopup();
+          }).bindPopup(popUpQuestion).addTo(map).openPopup();
 
           markersCount++;
 
