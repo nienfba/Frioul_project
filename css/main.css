@@ -168,15 +168,6 @@ html, body {
     border-radius: 30px !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+.filtred {
+    display: none;
+}

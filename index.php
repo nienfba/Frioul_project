@@ -6,7 +6,7 @@
 
 <!--[if gt IE 8]><!-->
 <html lang="fr">
-<!--<![endif]-->
+    <!--<![endif]-->
 
 
 
@@ -16,7 +16,7 @@
         <?php include('html/inc/accueil.php'); ?>
         <?php include('html/inc/wallofpictures.php'); ?>
         <?php include('html/inc/map.php'); ?>
-        <?php include('html/inc/navright.html'); ?>
+        <?php include('html/inc/navright.php'); ?>
         <?php include('html/inc/overlay.php'); ?>
 
         <!--BOUTON HAUT DE PAGE -->
@@ -24,6 +24,21 @@
     </body>
     <script>
 
+        var infosFiltres = [
+            "child", "cocktail", "eye", "thumps-up", "umbrella-beach", "swimmer", "futbol", "fish",
+            "kiwi-bird", "smile", "camera", "question"
+        ];
+        /*
+         console.log(infosFiltres.includes('eye'));
+         var test = infosFiltres.indexOf('smile');
+         delete infosFiltres[test];
+         console.log(infosFiltres);
+         */
+        //INDEXOF pour trouver la position et le supprimer
+
+        var filtreIcon = true;
+        var filtreQuestion = true;
+        var filtreLive = true;
         var map = L.map('mapHome').setView([43.3, 5.4], 13);
 
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
@@ -96,19 +111,25 @@
                                                     var lien = id;
 
                                                     if (infoCourante.icon != null && infoCourante.description != null) {
-                                                        var photo = [{
-                                                                lat: infoCourante.latitude,
-                                                                lng: infoCourante.longitude,
-                                                                url: "img/map/" + infoCourante.icon + ".png",
-                                                                caption: infoCourante.description,
-                                                                thumbnail: "img/map/" + infoCourante.icon + ".png",
-                                                                icon: infoCourante.icon,
-                                                                lien: lien.replace('/api/infos/', 'https://myprovence.code4marseille.fr/info-public/')
-                                                            }];
-                                                        if (infoCourante.icon == "question") {
-                                                            questionLayer.add(photo).addTo(map);
-                                                        } else {
-                                                            iconLayer.add(photo).addTo(map);
+                                                        if (infosFiltres.includes(infoCourante.icon)) {
+                                                            var photo = [{
+                                                                    lat: infoCourante.latitude,
+                                                                    lng: infoCourante.longitude,
+                                                                    url: "img/map/" + infoCourante.icon + ".png",
+                                                                    caption: infoCourante.description,
+                                                                    thumbnail: "img/map/" + infoCourante.icon + ".png",
+                                                                    icon: infoCourante.icon,
+                                                                    lien: lien.replace('/api/infos/', 'https://myprovence.code4marseille.fr/info-public/')
+                                                                }];
+                                                            if (infoCourante.icon == "question") {
+                                                                if (filtreQuestion) {
+                                                                    questionLayer.add(photo).addTo(map);
+                                                                }
+                                                            } else {
+                                                                if (filtreIcon) {
+                                                                    iconLayer.add(photo).addTo(map);
+                                                                }
+                                                            }
                                                         }
                                                     }
                                                 }
@@ -178,31 +199,32 @@
                                                 var image = infoCourante.lowResolution;
                                                 var id = infoCourante.id;
                                                 var username = infoCourante.userUsername;
-
-                                                //Verification d'ajout d'image (live)
-                                                if (idInsta.includes(id) == false) {
-                                                    idInsta.push(id);
-                                                    //Verification si image existe encore
-                                                    var img = new Image();
-                                                    img.myLat = String(latitude);
-                                                    img.myLng = String(longitude);
-                                                    img.myLink = link;
-                                                    img.myDescription = description;
-                                                    img.myLikes = likes;
-                                                    img.myUsername = username;
-                                                    img.onload = function () {
-                                                        var photo = [{
-                                                                lat: this.myLat,
-                                                                lng: this.myLng,
-                                                                url: this.src,
-                                                                caption: "<a href='" + this.myLink + "'>" + this.myDescription + "</a>",
-                                                                thumbnail: this.src,
-                                                                likes: this.myLikes,
-                                                                username: this.myUsername
-                                                            }];
-                                                        photoLayer.add(photo).addTo(map);
+                                                if (filtreLive) {
+                                                    //Verification d'ajout d'image (live)
+                                                    if (idInsta.includes(id) == false) {
+                                                        idInsta.push(id);
+                                                        //Verification si image existe encore
+                                                        var img = new Image();
+                                                        img.myLat = String(latitude);
+                                                        img.myLng = String(longitude);
+                                                        img.myLink = link;
+                                                        img.myDescription = description;
+                                                        img.myLikes = likes;
+                                                        img.myUsername = username;
+                                                        img.onload = function () {
+                                                            var photo = [{
+                                                                    lat: this.myLat,
+                                                                    lng: this.myLng,
+                                                                    url: this.src,
+                                                                    caption: "<a href='" + this.myLink + "'>" + this.myDescription + "</a>",
+                                                                    thumbnail: this.src,
+                                                                    likes: this.myLikes,
+                                                                    username: this.myUsername
+                                                                }];
+                                                            photoLayer.add(photo).addTo(map);
+                                                        }
+                                                        img.src = infoCourante.lowResolution;
                                                     }
-                                                    img.src = infoCourante.lowResolution;
                                                 }
                                             }
                                         }
@@ -392,9 +414,57 @@
         }
 
 
+        $("#live").on("click", function () {
+            if (filtreLive) {
+                map.removeLayer(photoLayer);
+                photoLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click', function (evt) {
+                    evt.layer.bindPopup(L.Util.template('<img src="{url}"/><img src="img/logoInsta.png" style="display: inline-block; height: 40px !important; width: 40px !important;"><span><b>Photo de {username}</b></span><span style="float:right;"><img id="imgLike" src="img/instaLike.png"/></span><b style="float: right; line-height:28px;">{likes}</b><p>{caption}</p><br><br>', evt.layer.photo), {
+                        className: 'leaflet-popup-photo',
+                        minWidth: 400
+                    });
+                });
+                filtreLive = false;
+                idInsta = [];
+            } else {
+                photoLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click', function (evt) {
+                    evt.layer.bindPopup(L.Util.template('<img src="{url}"/><img src="img/logoInsta.png" style="display: inline-block; height: 40px !important; width: 40px !important;"><span><b>Photo de {username}</b></span><span style="float:right;"><img id="imgLike" src="img/instaLike.png"/></span><b style="float: right; line-height:28px;">{likes}</b><p>{caption}</p><br><br>', evt.layer.photo), {
+                        className: 'leaflet-popup-photo',
+                        minWidth: 400
+                    });
+                });
+                idInsta = [];
+                filtreLive = true;
+                ajaxMap(hashtag);
+            }
+        });
 
+        function filtre(filtre_nom) {
+            if (infosFiltres.includes(filtre_nom)) {
+                var pos = infosFiltres.indexOf(filtre_nom);
+                delete infosFiltres[pos];
+                console.log(infosFiltres);
+            } else {
+                infosFiltres.push(filtre_nom);
+                console.log(infosFiltres);
+            }
+            map.removeLayer(questionLayer);
+            map.removeLayer(iconLayer);
+            questionLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click', function (evt) {
+                evt.layer.bindPopup(L.Util.template('<p><a href="{lien}" target="_blank">{caption}</a></p>', evt.layer.photo), {
+                    className: 'leaflet-popup-info',
+                    minWidth: 400
+                });
+            });
+            iconLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click', function (evt) {
+                evt.layer.bindPopup(L.Util.template('<p><a href="{lien}" target="_blank">{caption}</a></p>', evt.layer.photo), {
+                    className: 'leaflet-popup-info',
+                    minWidth: 400
+                });
+            });
+            idsInfos = [];
+            ajaxInfos();
 
-
+        }
 
     </script>
 </html>
