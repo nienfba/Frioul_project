@@ -74,7 +74,6 @@ jQuery(document).ready(function() {
           lat = markerCoords.lat;
           lng = markerCoords.lng;
 
-
           // Creating a new marker and adding it to the map
           markers[markersCount] = L.marker([markerCoords.lat, markerCoords.lng], {
             draggable: false,
@@ -130,4 +129,14 @@ function submitQuestion() {
     .then(function(objetJson) {
       console.log(objetJson);
     });
+  var question = [{
+    lat: lat,
+    lng: lng,
+    url: "img/map/question.png",
+    caption: description,
+    thumbnail: "img/map/question.png",
+    icon: question,
+    lien: lien.replace('/api/infos/', 'https://myprovence.code4marseille.fr/info-public/')
+  }];
+  questionLayer.add(question).addTo(map);
 }

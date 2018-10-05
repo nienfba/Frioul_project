@@ -20,15 +20,13 @@
       </form>
 
     </div>
-    <div class="col-md-2 mt-2">
+    <div class="col-md-2 mt-2 btnUtil">
       <div class="marker-menu" >
         <img class="draggable-marker" src="./img/map/question.png" alt="marker" />
-
       </div>
-
       <button type="button" class="btn btn-primary mr-2 myPosition" style="border-radius:100px">
-            <i class="fa fa-crosshairs"></i>
-        </button>
+        <i class="fa fa-crosshairs"></i>
+      </button>
     </div>
     <div class="col-md-6 mt-2">
       <div class="row float-right">
