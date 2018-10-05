@@ -7,8 +7,7 @@
 <html lang="fr">
 <!--<![endif]-->
 
-<!--[if gt IE 8]><!-->
-<html lang=""> <!--<![endif]-->
+
 
     <?php include('html/inc/head.php'); ?>
     <body>
@@ -76,9 +75,10 @@
                                                 if (idsInfos.includes(id) == false) {
                                                     idsInfos.push(id);
 
-                                                    //Icone :
+
 
                                                     //Icone :
+
                                                     var lien = id;
 
                                                     if (infoCourante.icon != null && infoCourante.description != null) {
