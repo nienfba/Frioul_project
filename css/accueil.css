@@ -312,7 +312,7 @@ div.listeInfo {
     margin:5px;
     border-radius: 40px !important;
     background-color: linear-gradient(top, #f00 0%,#00f 100%)!important;
-    border: 2px white solid !important;
+    border: 1px white solid !important;
 }
 
 .container{

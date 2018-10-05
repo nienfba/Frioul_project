@@ -69,10 +69,47 @@
 
                           <a href="bons_plans.php" title=""><button class="btn-medium bouton">Bons plans</button></a>
                           <a href="autour.php" title=""><button class="btn-medium bouton">Autour de moi</button></a>
-                        </section>
+                          <a class="btn-scroll-down ct-js-btn-scroll animated" href="#mapHome">scrollToMap</a>
+                          <a class="btn-scroll-top ct-js-btn-scroll animated" href="#intro">scrollTop</a>
+                          <script>
+                            $(document).ready(function(){
+                            $(".btn-scroll-down").on('click', function(event) {
+                              if (this.hash !== "") {
+                                event.preventDefault();
+                                var hash = this.hash;
+                                $('html, body').animate({
+                                  scrollTop: $(hash).offset().top
+                                }, 800, function(){
+                                  window.location.hash = hash;
+                                });
+                              }
+                              });
+                              setInterval(function(){
+                                $('.btn-scroll-down').toggleClass("bounce");
+                              }, 5000);
+                            });
 
+                            $(document).ready(function(){
+                            $(".btn-scroll-top").on('click', function(event) {
+                              if (this.hash !== "") {
+                                event.preventDefault();
+                                var hash = this.hash;
+                                $('html, body').animate({
+                                  scrollTop: $(hash).offset().top
+                                }, 5000, function(){
+                                  window.location.hash = hash;
+                                });
+                              }
+                              });
+                              setInterval(function(){
+                                $('.btn-scroll-top').toggleClass("bounce");
+                              }, 800);
+                            });
+                            </script>
+                          </section>
+
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 

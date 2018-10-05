@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/accueil.css">
     <link rel="stylesheet" href="css/meteo.css">
     <link rel="stylesheet" href="css/navbottom.css">
+    <link rel="stylesheet" href="css/buttonMainPage.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
 
 
@@ -32,6 +33,7 @@
     <script src="javascript/Leaflet.Photo.js"></script>
     <script src="javascript/anime.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+
 
 
     <title>Code4Marseille - Provence Tourisme</title>
