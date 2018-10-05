@@ -3,7 +3,7 @@
 
 <div id="navRight" class="bounceIn animated" style="color:white;">
 
-    <button id="live">Live</button><br>
+    live : <input type="checkbox" id="live" checked/><br>
 
     <?php
     $filtres = [
@@ -24,7 +24,7 @@
 
     foreach ($filtres as $filtre) {
         ?>
-        <button onclick="filtre('<?= $filtre ?>')"><?= $filtre ?></button>
+        <?= $filtre ?> : <input type="checkbox" onclick="filtre('<?= $filtre ?>')" checked/><br>
         <?php
     }
     ?>
