@@ -15,7 +15,7 @@ jQuery(document).ready(function() {
    *Geolocalisation
    */
   $('.myPosition').on('click', () => {
-    carte.locate({
+    map.locate({
       setView: true,
       maxZoom: 16
     });
@@ -24,13 +24,13 @@ jQuery(document).ready(function() {
   function onLocationFound(e) {
     var radius = e.accuracy / 2;
 
-    L.marker(e.latlng).addTo(carte)
-      .bindPopup("Vous êtes à " + radius + " métre de ce point!").openPopup();
+    L.marker(e.latlng).addTo(map)
+      .bindPopup("Vous êtes à " + radius + " métres de ce point!").openPopup();
 
-    L.circle(e.latlng, radius).addTo(carte);
+    L.circle(e.latlng, radius).addTo(map);
   }
 
-  carte.on('locationfound', onLocationFound);
+  map.on('locationfound', onLocationFound);
 
   $(document).ready(function() {
     var markers = [], // an array containing all the markers added to the map
@@ -63,7 +63,7 @@ jQuery(document).ready(function() {
           var coordsX = event.clientX - 50, // 50 is the width of the menu
             coordsY = event.clientY + 20, // 20 is the half of markers height
             point = L.point(coordsX, coordsY), // createing a Point object with the given x and y coordinates
-            markerCoords = carte.containerPointToLatLng(point), // getting the geographical coordinates of the point
+            markerCoords = map.containerPointToLatLng(point), // getting the geographical coordinates of the point
 
             // Creating a custom icon
             IconQuestion = L.icon({
@@ -81,7 +81,7 @@ jQuery(document).ready(function() {
             draggable: false,
             icon: IconQuestion
 
-          }).bindPopup(question).addTo(carte).openPopup();
+          }).bindPopup(question).addTo(map).openPopup();
 
           markersCount++;
 
@@ -97,9 +97,9 @@ jQuery(document).ready(function() {
   });
 
   function infoQuestion(e) {
-    L.marker(e.latlng).addTo(carte)
+    L.marker(e.latlng).addTo(map)
       .bindPopup("You are within " + radius + " meters from this point").openPopup();
-    L.circle(e.latlng, radius).addTo(carte);
+    L.circle(e.latlng, radius).addTo(map);
   }
 });
 
