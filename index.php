@@ -3,9 +3,11 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
 
+
 <!--[if gt IE 8]><!-->
 <html lang="fr">
 <!--<![endif]-->
+
 
 
 
@@ -35,6 +37,13 @@
         // GESTION POINTS BONS PLANS ECT..
 
         iconLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click', function (evt) {
+            evt.layer.bindPopup(L.Util.template('<p><a href="{lien}" target="_blank">{caption}</a></p>', evt.layer.photo), {
+                className: 'leaflet-popup-info',
+                minWidth: 400
+            });
+        });
+
+        questionLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click', function (evt) {
             evt.layer.bindPopup(L.Util.template('<p><a href="{lien}" target="_blank">{caption}</a></p>', evt.layer.photo), {
                 className: 'leaflet-popup-info',
                 minWidth: 400
@@ -80,7 +89,9 @@
 
 
 
+
                                                     //Icone :
+
 
                                                     var lien = id;
 
@@ -88,13 +99,17 @@
                                                         var photo = [{
                                                                 lat: infoCourante.latitude,
                                                                 lng: infoCourante.longitude,
-                                                                url: "img/map/"+infoCourante.icon+".png",
+                                                                url: "img/map/" + infoCourante.icon + ".png",
                                                                 caption: infoCourante.description,
-                                                                thumbnail: "img/map/"+infoCourante.icon+".png",
+                                                                thumbnail: "img/map/" + infoCourante.icon + ".png",
                                                                 icon: infoCourante.icon,
-                                                                lien: lien.replace('/api/infos/','https://myprovence.code4marseille.fr/info-public/')
+                                                                lien: lien.replace('/api/infos/', 'https://myprovence.code4marseille.fr/info-public/')
                                                             }];
-                                                        iconLayer.add(photo).addTo(map);
+                                                        if (infoCourante.icon == "question") {
+                                                            questionLayer.add(photo).addTo(map);
+                                                        } else {
+                                                            iconLayer.add(photo).addTo(map);
+                                                        }
                                                     }
                                                 }
                                             }
@@ -107,7 +122,7 @@
         // GESTION POINTS INSTAGRAM
 
         photoLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click', function (evt) {
-            evt.layer.bindPopup(L.Util.template('<img src="{url}"/><img id="imgLike" src="img/instaLike.png" style="float: left;"/><span style="line-height:25px;"><b>{likes}</b></span><p>{caption}</p>', evt.layer.photo), {
+            evt.layer.bindPopup(L.Util.template('<img src="{url}"/><img src="img/logoInsta.png" style="display: inline-block; height: 40px !important; width: 40px !important;"><span><b>Photo de {username}</b></span><span style="float:right;"><img id="imgLike" src="img/instaLike.png"/></span><b style="float: right; line-height:28px;">{likes}</b><p>{caption}</p><br><br>', evt.layer.photo), {
                 className: 'leaflet-popup-photo',
                 minWidth: 400
             });
@@ -162,6 +177,7 @@
                                                 var publicationDate = infoCourante.publicationDate;
                                                 var image = infoCourante.lowResolution;
                                                 var id = infoCourante.id;
+                                                var username = infoCourante.userUsername;
 
                                                 //Verification d'ajout d'image (live)
                                                 if (idInsta.includes(id) == false) {
@@ -172,7 +188,8 @@
                                                     img.myLng = String(longitude);
                                                     img.myLink = link;
                                                     img.myDescription = description;
-                                                    img.myLikes = likes
+                                                    img.myLikes = likes;
+                                                    img.myUsername = username;
                                                     img.onload = function () {
                                                         var photo = [{
                                                                 lat: this.myLat,
@@ -180,7 +197,8 @@
                                                                 url: this.src,
                                                                 caption: "<a href='" + this.myLink + "'>" + this.myDescription + "</a>",
                                                                 thumbnail: this.src,
-                                                                likes: this.myLikes
+                                                                likes: this.myLikes,
+                                                                username: this.myUsername
                                                             }];
                                                         photoLayer.add(photo).addTo(map);
                                                     }
