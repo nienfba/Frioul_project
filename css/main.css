@@ -21,7 +21,7 @@ ul.listeInfo li {
 .listeInfo {
     background: linear-gradient(to left, #004e92, #000428);
     opacity: 0;
-    box-shadow: 10px 15px 15px grey;
+    box-shadow: 8px 8px 10px grey;
 }
 
 .animWall {
