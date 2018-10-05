@@ -31,6 +31,7 @@
     <script src="javascript/anime.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
     <script src="javascript/navbottom.js"></script>
+    
 
     <title>Code4Marseille - Provence Tourisme</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />

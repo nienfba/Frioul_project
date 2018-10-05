@@ -1,6 +1,5 @@
 #navBottom {
-    position: fixed;
-    display: inline-block;
+
     z-index: 10;
     width: 100%;
     left: 0;
