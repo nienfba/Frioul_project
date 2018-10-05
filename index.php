@@ -2,7 +2,9 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang=""> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="fr">
+<!--<![endif]-->
     <?php include('html/inc/head.php'); ?>
     <body>
         <?php include('html/inc/accueil.php'); ?>
@@ -23,7 +25,7 @@
             id: 'mapbox.streets'
         }).addTo(map);
 
-        // GESTION POINTS BONS PLANS ECT.. 
+        // GESTION POINTS BONS PLANS ECT..
 
         var idsInfos = [];
 
@@ -61,7 +63,7 @@
                                                 //Verification d'ajout d'image (live)
                                                 if (idsInfos.includes(id) == false) {
                                                     idsInfos.push(id);
-                                                    //Icone : 
+                                                    //Icone :
                                                     if (infoCourante.icon != null && infoCourante.description != null) {
                                                         var myIcon = L.divIcon({className: 'fa fa-2x fa-'+infoCourante.icon});
                                                         //Création du marker :
@@ -139,7 +141,7 @@
                                                 //Verification d'ajout d'image (live)
                                                 if (idInsta.includes(id) == false) {
                                                     idInsta.push(id);
-                                                    //Verification si image existe encore 
+                                                    //Verification si image existe encore
                                                     var img = new Image();
                                                     img.myLat = String(latitude);
                                                     img.myLng = String(longitude);
