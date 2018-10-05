@@ -1,4 +1,3 @@
-
 <div id="navBottom" class="container-fluid">
   <div class="row">
     <div class="col-md-4 mt-2">
@@ -11,27 +10,27 @@
             </div>
             <input type="text" class="form-control" id="inputHashtag" placeholder="hashtag">
             <div class="input-group-prepend">
-              <div class="input-group-text borderRoundR" id="hashtag">OK</div>
+              <div class="input-group-text borderRoundR">
+                <button id="hashtag" class="btn" type="button" name="buttonHashtag">OK</button>
+              </div>
+
             </div>
           </div>
         </div>
       </form>
 
     </div>
-    <div class="col-md-2 mt-2">
-
-      <button type="button" class="btn btn-danger mr-2 question" style="border-radius:100px" data-container="body" data-toggle="popover" data-placement="top">
-            <i class="fa fa-question"></i>
-        </button>
+    <div class="col-md-2 mt-2 btnUtil">
+      <div class="marker-menu" >
+        <img class="draggable-marker" src="./img/map/question.png" alt="marker" />
+      </div>
       <button type="button" class="btn btn-primary mr-2 myPosition" style="border-radius:100px">
-            <i class="fa fa-crosshairs"></i>
-        </button>
+        <i class="fa fa-crosshairs"></i>
+      </button>
     </div>
     <div class="col-md-6 mt-2">
       <div class="row float-right">
-        <div class="marker-menu" >
-        	<img class="draggable-marker" src="./images/marker-icon.png" alt="marker" />
-        </div>
+
         <button type="button" id="showRight" class="btn btn-info mr-2" style="border-radius:100px">
                   <i class="fa fa-compass"></i>
               </button>

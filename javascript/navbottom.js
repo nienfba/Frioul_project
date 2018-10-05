@@ -15,7 +15,7 @@ jQuery(document).ready(function() {
    *Geolocalisation
    */
   $('.myPosition').on('click', () => {
-    carte.locate({
+    map.locate({
       setView: true,
       maxZoom: 16
     });
@@ -24,20 +24,20 @@ jQuery(document).ready(function() {
   function onLocationFound(e) {
     var radius = e.accuracy / 2;
 
-    L.marker(e.latlng).addTo(carte)
-      .bindPopup("Vous êtes à " + radius + " métre de ce point!").openPopup();
+    L.marker(e.latlng).addTo(map)
+      .bindPopup("Vous êtes à " + radius + " métres de ce point!").openPopup();
 
-    L.circle(e.latlng, radius).addTo(carte);
+    L.circle(e.latlng, radius).addTo(map);
   }
 
-  carte.on('locationfound', onLocationFound);
+  map.on('locationfound', onLocationFound);
 
   $(document).ready(function() {
     var markers = [], // an array containing all the markers added to the map
       markersCount = 0; // the number of the added markers
 
 
-    var question =
+    var popUpQuestion =
       '<form class="formQuestion" action="" method="post">' +
       '<div class="glyph">' +
       '<i class="fa fa-question"></i>' + '</div>' +
@@ -63,25 +63,23 @@ jQuery(document).ready(function() {
           var coordsX = event.clientX - 50, // 50 is the width of the menu
             coordsY = event.clientY + 20, // 20 is the half of markers height
             point = L.point(coordsX, coordsY), // createing a Point object with the given x and y coordinates
-            markerCoords = carte.containerPointToLatLng(point), // getting the geographical coordinates of the point
+            markerCoords = map.containerPointToLatLng(point), // getting the geographical coordinates of the point
 
             // Creating a custom icon
             IconQuestion = L.icon({
-              iconUrl: 'images/question.png', // the url of the img
-              iconSize: [20, 40],
+              iconUrl: './img/map/question.png', // the url of the img
               iconAnchor: [10, 40] // the coordinates of the "tip" of the icon ( in this case must be ( icon width/ 2, icon height )
             });
 
           lat = markerCoords.lat;
           lng = markerCoords.lng;
 
-
           // Creating a new marker and adding it to the map
           markers[markersCount] = L.marker([markerCoords.lat, markerCoords.lng], {
             draggable: false,
             icon: IconQuestion
 
-          }).bindPopup(question).addTo(carte).openPopup();
+          }).bindPopup(popUpQuestion).addTo(map).openPopup();
 
           markersCount++;
 
@@ -97,9 +95,9 @@ jQuery(document).ready(function() {
   });
 
   function infoQuestion(e) {
-    L.marker(e.latlng).addTo(carte)
+    L.marker(e.latlng).addTo(map)
       .bindPopup("You are within " + radius + " meters from this point").openPopup();
-    L.circle(e.latlng, radius).addTo(carte);
+    L.circle(e.latlng, radius).addTo(map);
   }
 });
 
@@ -131,4 +129,14 @@ function submitQuestion() {
     .then(function(objetJson) {
       console.log(objetJson);
     });
+  var question = [{
+    lat: lat,
+    lng: lng,
+    url: "img/map/question.png",
+    caption: description,
+    thumbnail: "img/map/question.png",
+    icon: question,
+    lien: lien.replace('/api/infos/', 'https://myprovence.code4marseille.fr/info-public/')
+  }];
+  questionLayer.add(question).addTo(map);
 }
