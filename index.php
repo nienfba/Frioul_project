@@ -435,4 +435,7 @@
         }
 
     </script>
+    <script type="text/javascript" src="./javascript/mapControl.js">
+
+    </script>
 </html>
