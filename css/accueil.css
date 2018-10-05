@@ -84,7 +84,7 @@ section {
     display: block;
     position: relative;
     text-align:center;
-    padding-top:50vh;
+    padding-top:20vh;
 }
 
 #bandeau {
@@ -398,7 +398,7 @@ footer a {
         height:25vw;
         margin:5px;
         border-radius: 40px !important;
-        border: 2px white solid !important;
+        border: 1px white solid !important;
     }
 }
 

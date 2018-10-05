@@ -13,6 +13,7 @@
               <div class="input-group-text borderRoundR">
                 <button id="hashtag" class="btn" type="button" name="buttonHashtag">OK</button>
               </div>
+
             </div>
           </div>
         </div>
@@ -89,9 +90,9 @@
             <div class="input-group-prepend">
               <div class="input-group-text borderRoundL p-1">#</div>
             </div>
-            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="hashtag">
+            <input type="text" class="form-control" id="inputHashtag" placeholder="hashtag">
             <div class="input-group-prepend">
-              <div class="input-group-text borderRoundR">OK</div>
+                <div class="input-group-text borderRoundR"><button id="hashtag">OK</button></div>
             </div>
           </div>
         </div>
