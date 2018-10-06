@@ -1,6 +1,6 @@
 #bandeau {
-  width: 5vw;
-  height: 100vh;
+  width: 100%;
+  height: 80px;
   position: fixed;
   top: 0px;
   right: 0px;
