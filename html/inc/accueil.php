@@ -40,7 +40,7 @@
 
 
 
-                    <section id="bandeau" class="text-center col-xs-12 ml-1 mr-1 animated bounceInLeft">
+                    <section id="bandeau" class="text-center col-xs-12 ml-1 mr-1">
 
 
 
