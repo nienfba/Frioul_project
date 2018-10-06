@@ -40,7 +40,7 @@
 
 
 
-                    <section id="bandeau" class="text-center col-xs-12 ml-1 mr-1">
+                    <div id="bandeau" class="text-center col-xs-12 ml-1 mr-1 animated flipInX">
 
 
 
@@ -106,7 +106,7 @@
                                 }, 800);
                             });
                         </script>
-                    </section>
+                    </div>
 
                 </div>
             </div>
