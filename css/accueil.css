@@ -103,8 +103,7 @@ section {
 }
 
 #bandeau {
-    display: block;
-    width:100vw;
+    width:200vw;
     position: relative;
     padding: 10px;
     text-align: center;
@@ -382,7 +381,7 @@ footer a {
     }
 
     #bandeau{
-        display:block;
+        display:none;
         position:relative;
         bottom:0;
         height:auto;
