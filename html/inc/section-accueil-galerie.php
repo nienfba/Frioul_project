@@ -4,13 +4,13 @@
         display: flex;
         flex-wrap: wrap;
         list-style: none;
-        width: 100%;
+        width: 60%;
         justify-content: center;
     }
 
     ul.listeInfo li {
         width: 160px;
-    }
+    }*/
 </style>
 
 <section class="container-fluid">
@@ -41,7 +41,7 @@
                     var tableauInfo = objetJS["hydra:member"];
                     // objet.propriete OU objet["propriete"]
                     // BOUCLE POUR PARCOURIR LES INFOS UNE PAR UNE
-                    for (var index = 0; index < tableauInfo.length; index++) {
+                    for (var index = 0; index < 10; index++) {
                         var infoCourante = tableauInfo[index];
                         console.log(infoCourante);
                         var link = infoCourante.link;

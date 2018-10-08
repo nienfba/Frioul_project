@@ -330,7 +330,7 @@
             var tableauInfo = objetJS["hydra:member"];
             // objet.propriete OU objet["propriete"]
             // BOUCLE POUR PARCOURIR LES INFOS UNE PAR UNE
-            for (var index = 0; index < tableauInfo.length; index++) {
+            for (var index = 0; index < 10; index++) {
                 var infoCourante = tableauInfo[index];
                 //onsole.log(infoCourante);
                 var link = infoCourante.link;
