@@ -4,6 +4,27 @@
             <div class="row">
                 <header class="col-xs-12 ml-1 mr-1">
                     <a href="#"></a><img src="media/c4m.png" alt="" class="logo" /></a>
+                    <a class="btn-scroll ct-js-btn-scroll animated" href="#mapHome"><img class="scroll" src="img/scroll.png" ></a>
+
+                        <script>
+                            $(document).ready(function () {
+                                $(".btn-scroll").on('click', function (event) {
+                                    if (this.hash !== "") {
+                                        event.preventDefault();
+                                        var hash = this.hash;
+                                        $('html, body').animate({
+                                            scrollTop: $(hash).offset().top
+                                        }, 800, function () {
+                                            window.location.hash = hash;
+                                        });
+                                    }
+                                });
+                                setInterval(function () {
+                                    $('.btn-scroll').toggleClass("bounce");
+                                }, 5000);
+                            });
+                        </script>
+
                     <nav class="">
                         <!-- Navigation Top -->
                         <ul class="hidden">
@@ -36,15 +57,8 @@
             <div class="container">
                 <div class="row">
 
-
-
-
-
+                     <!--SUPPRESSION DU BANDEAU POUR NE PAS AVOIR 2 CARTES
                     <div id="bandeau" class="text-center col-xs-12 ml-1 mr-1 animated flipInX">
-
-
-
-                        <!--SUPPRESSION DU BANDEAU POUR NE PAS AVOIR 2 CARTES
                          Bas de page avec boutons visible sur page home avec fond transparent
                          <span class="dropdown">
                              <button class="btn-medium bouton" data-toggle="dropdown">Ville
@@ -67,52 +81,16 @@
                              </button>
                            </span> -->
 
+                        <!-- SUPPRESSION DES LIENS VERS "BONS PLANS" ET "AUTOUR DE MOI"
                         <a href="bons_plans.php" title=""><button class="btn-medium bouton">Bons plans</button></a>
                         <a href="autour.php" title=""><button class="btn-medium bouton">Autour de moi</button></a>
-                        <a class="btn-scroll-down ct-js-btn-scroll animated" href="#mapHome">scrollToMap</a>
-                        <a class="btn-scroll-top ct-js-btn-scroll animated" href="#intro">scrollTop</a>
-                        <script>
-                            $(document).ready(function () {
-                                $(".btn-scroll-down").on('click', function (event) {
-                                    if (this.hash !== "") {
-                                        event.preventDefault();
-                                        var hash = this.hash;
-                                        $('html, body').animate({
-                                            scrollTop: $(hash).offset().top
-                                        }, 800, function () {
-                                            window.location.hash = hash;
-                                        });
-                                    }
-                                });
-                                setInterval(function () {
-                                    $('.btn-scroll-down').toggleClass("bounce");
-                                }, 5000);
-                            });
-
-                            $(document).ready(function () {
-                                $(".btn-scroll-top").on('click', function (event) {
-                                    if (this.hash !== "") {
-                                        event.preventDefault();
-                                        var hash = this.hash;
-                                        $('html, body').animate({
-                                            scrollTop: $(hash).offset().top
-                                        }, 5000, function () {
-                                            window.location.hash = hash;
-                                        });
-                                    }
-                                });
-                                setInterval(function () {
-                                    $('.btn-scroll-top').toggleClass("bounce");
-                                }, 800);
-                            });
-                        </script>
-                    </div>
+                        -->
 
                 </div>
             </div>
     </div>
 </div>
-<!-- Bouton menu par stéphane pour cacher et afficher la side bar... -->
+<!-- Bouton menu par stéphane pour cacher et afficher la side bar...
 <div id="menu">
     <img width="40" height="40" src="img/menu.png"/>
 </div>
@@ -123,7 +101,9 @@
         } else {
             $("#bandeau").show();
         }
+
     });
+
 </script>
 
 
