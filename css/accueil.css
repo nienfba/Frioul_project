@@ -219,35 +219,7 @@ section {
 
 
 
-.dropdown-item:hover {
-  display: block;
-  z-index: 110;
-  position: relative;
-  top: 0px;
-  left: 0px;
-}
 
-.dropdown {
-  opacity: 1;
-  position: relative;
-}
-
-.dropdown-menu {
-  width: 100%;
-  padding: 0px;
-  z-index: 100;
-  background-color: transparent;
-}
-
-.dropdown-item {
-  display: block;
-  color: #fff;
-  background-color: rgb(43, 51, 110);
-  border-radius: 20px;
-  padding: 10px 20px 10px 20px;
-  margin-bottom: 2px;
-  z-index: 110;
-}
 
 #infos h1 {
   color: #2b3376;
@@ -298,6 +270,7 @@ section {
 div.liste {
   display:block;
   position:relative;
+  text-align: center;
 }
 
 div.listeInfo {
