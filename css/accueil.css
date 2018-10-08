@@ -183,6 +183,7 @@ section {
   margin: 0;
 }
 
+
 #infos h1 {
   color: #2b3376;
   font-size: 2em;
@@ -232,7 +233,9 @@ section {
 div.liste {
   display:block;
   position:relative;
-  text-align:center;
+
+  text-align: center;
+
 }
 
 div.listeInfo {
