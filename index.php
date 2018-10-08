@@ -10,7 +10,6 @@
 
 
 
-
     <?php include('html/inc/head.php'); ?>
     <body>
         <?php include('html/inc/accueil.php'); ?>
@@ -25,7 +24,7 @@
     <script>
 
         var infosFiltres = [
-            "child", "cocktail", "eye", "thumbs-up", "umbrella-beach", "swimmer", "futbol", "fish",
+            "En famille", "Cocktails", "Vues imprenables", "thumbs-up", "umbrella-beach", "swimmer", "futbol", "fish",
             "kiwi-bird", "smile", "camera", "question"
         ];
         /*
@@ -292,7 +291,7 @@
 
             $.getJSON('html/inc/accueil.json', function (data) {
                 $.each(data, function (index, d) {
-                    $('#lieux').delay(5000, function () {
+                    $('#lieux').delay(2000, function () {
 
                         $('#lieux').html(d.hashtag);
                         $('article').css('background-image', 'url(' + d
