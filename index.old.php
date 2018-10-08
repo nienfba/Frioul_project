@@ -1,8 +1,8 @@
-<!-- Mise en forme pour que le site soit 100% responsive -->
+<!-- Mise en forme pour que le site soit 100% responsive
 <!DOCTYPE html>
 <html lang="fr">
-<!-- Pour faire appel a une autre page en php -->
-<?php include_once "html/inc/head.php"; ?>
+<Pour faire appel a une autre page en php>
+  php include_once "html/inc/head.php";
 
 <body class="accueil">
   <div class="container">
@@ -10,7 +10,7 @@
       <header class="col-xs-12 ml-1">
         <a href="#"></a><img src="media/c4m.png" alt="" class="logo" /></a>
         <nav class="">
-          <!-- Navigation Top -->
+          <Navigation Top
           <ul class="hidden">
             <li class=""></li>
             <li class=""></li>
@@ -21,18 +21,18 @@
   </div>
 
   <article>
-    <!-- Full width -->
-    <div class="container">
+    Full width
+        <div class="container">
       <div class="row">
         <section id="intro" class="text-center col-xs-12 ml-1 mr-1">
-          <!-- Background animé avec jquery et hashtag -->
+          <Background animé avec jquery et hashtag>
           <h1 id="titre" class="animated bounce"> Découvrez en direct les merveilles du département.</h1>
           <div id="alternate">
             <h2 id="lieux" class="text-center col-xs-12 ml-1 mr-1 boutonanime from-middle"></h2>
           </div>
-          <!-- ANCIENNE PHRASE D'ACCROCHE CELLE QUI APPARAIT EST SOUMISE A L'APPROBATION DE MY PROVENCE EVIDEMMENT -->
+          <!ANCIENNE PHRASE D'ACCROCHE CELLE QUI APPARAIT EST SOUMISE A L'APPROBATION DE MY PROVENCE EVIDEMMENT -->
                     <!-- Ancienne <p class="">Des villes contemporaines qui abritent des petits villages de pêcheurs et des quartiers
-                    alternatifs.</p> -->
+                    alternatifs.</p>>
                     <h3 class="text-center col-xs-12 ml-1 mr-1"> Bienvenue en Provence </h3>
                   </section>
                 </div>
@@ -41,7 +41,7 @@
               <div class="container">
                 <div class="row">
 
-                 <!--SUPPRESSION DU BANDEAU POUR NE PAS AVOIR 2 CARTES
+                 <!SUPPRESSION DU BANDEAU POUR NE PAS AVOIR 2 CARTES
 
                   <section id="bandeau" class="col-xs-12">
 
@@ -70,7 +70,7 @@
                     <a href="autour.php" title=""><button class="btn-medium bouton">Autour de moi</button></a>
                   </section> -->
 
-                  <!-- Affichage des hashtags et du fond depuis le fichier accueil.json -->
+                  <!-- Affichage des hashtags et du fond depuis le fichier accueil.json
                   <script>
                     $(document).ready(function () {
                       $.fn.delay = function (time, callback) {
@@ -108,7 +108,7 @@
             <div class="container">
               <div class="row">
                 <section id="infos" class="col-xs-12 mx-auto">
-                  <!-- Bas de page avec liens icons -->
+                  <! Bas de page avec liens icons
 
                   <h1 >Vous pouvez dès à présent publier vos photos avec Instagram</h1>
                   <div class="row">
@@ -130,8 +130,8 @@
               <div class="row">
                 <div class="col-xs-12">
                   <section id="social">
-                    <!-- Block du flux instagram -->
-                    <?php include_once "html/inc/social.php"; ?>
+                    <Block du flux instagram>
+                    <php include_once "html/inc/social.php"; >
                   </section>
                 </div>
               </div>
@@ -141,11 +141,11 @@
               <div class="row">
                 <div class="col-xs-12">
                   <section id="footer">
-                    <?php include_once "html/inc/footer.php"; ?>
+                    <php include_once "html/inc/footer.php"; >
                   </section>
                 </div>
               </div>
             </div>
 
           </body>
-          </html>
+          </html> -->

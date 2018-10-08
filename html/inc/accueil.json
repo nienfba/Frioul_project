@@ -2,17 +2,54 @@
 {
     "hashtag"   : "#Marseille",
     "lien"      : "#",
-    "image"     : "media/mucem.jpg"
+    "image"     : "media/images_background/Mucem.jpg"
 },
 {
     "hashtag"   : "#Panier",
     "lien"      : "#",
-    "image"     : "media/Rue_du_Panier01.jpg"
+    "image"     : "media/images_background/Vue_du_panier.jpg"
 },
 {
     "hashtag"   : "#Vieux port",
     "lien"      : "#",
-    "image"     : "media/vieuxport.jpg"
+    "image"     : "media/images_background/Vieuxport.jpg"
+},
+{
+    "hashtag"   : "#Calanques",
+    "lien"      : "#",
+    "image"     : "media/images_background/Calanques2.jpg"
+},
+{
+    "hashtag"   : "#Notredamedelagarde",
+    "lien"      : "#",
+    "image"     : "media/images_background/Notre-Dame.jpg"
+},
+{
+    "hashtag"   : "#Stadevelodrome",
+    "lien"      : "#",
+    "image"     : "media/images_background/Stade-velodrome-marseille.jpg"
+},
+{
+    "hashtag"   : "#Arles",
+    "lien"      : "#",
+    "image"     : "media/images_background/Arles2.jpg"
+},
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    "hashtag"   : "#Calanques",
+    "lien"      : "#",
+    "image"     : "media/Calanques_de_Marseille.jpg"
 },
 {
     "hashtag"   : "#Calanques",
@@ -20,8 +57,21 @@
     "image"     : "media/Calanques_de_Marseille.jpg"
 },
 {
+    "hashtag"   : "#Calanques",
+    "lien"      : "#",
+    "image"     : "media/Calanques_de_Marseille.jpg"
+},
+
+
+
+
+
+
+
+
+{
     "hashtag"   : "#Marseille",
     "lien"      : "#",
-    "image"     : "media/mucem.jpg"
+    "image"     : "media/Mucem.jpg"
 }
 ]

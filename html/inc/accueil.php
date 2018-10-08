@@ -2,7 +2,7 @@
     <div class="accueil">
         <div class="container">
             <div class="row">
-                <header class="col-xs-12 ml-1">
+                <header class="col-xs-12 ml-1 mr-1">
                     <a href="#"></a><img src="media/c4m.png" alt="" class="logo" /></a>
                     <nav class="">
                         <!-- Navigation Top -->
@@ -21,14 +21,14 @@
                 <div class="row">
                     <section id="intro" class="text-center col-xs-12 ml-1 mr-1">
                         <!-- Background animé avec jquery et hashtag -->
-                        <h1 id="titre" class="animated bounce"> Découvrez en direct les merveilles du département.</h1>
+                        <h1 id="titre" class="text-center col-xs-12 ml-1 mr-1 animated bounce"> Découvrez en direct les merveilles de la Provence</h1>
                         <div id="alternate">
                             <h2 id="lieux" class="text-center col-xs-12 ml-1 mr-1 boutonanime from-middle"></h2>
                         </div>
                         <!-- ANCIENNE PHRASE D'ACCROCHE CELLE QUI APPARAIT EST SOUMISE A L'APPROBATION DE MY PROVENCE EVIDEMMENT -->
                                               <!-- Ancienne <p class="">Des villes contemporaines qui abritent des petits villages de pêcheurs et des quartiers
                                               alternatifs.</p> -->
-                        <h3 class="text-center col-xs-12 ml-1 mr-1"> Bienvenue en Provence </h3>
+                        <!-- <h3 class="text-center col-xs-12 ml-1 mr-1"> Bienvenue en Provence </h3>-->
                     </section>
                 </div>
             </div>
@@ -124,6 +124,6 @@
             $("#bandeau").show();
         }
     });
-</script>   
+</script>
 
 
