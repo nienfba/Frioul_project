@@ -44,7 +44,7 @@
                         <!-- Background animé avec jquery et hashtag -->
                         <h1 id="titre" class="text-center col-xs-12 ml-1 mr-1 animated bounce"> Découvrez en direct les merveilles de la Provence</h1>
                         <div id="alternate">
-                            <h2 id="lieux" class="text-center col-xs-12 ml-1 mr-1 boutonanime from-middle"></h2>
+                            <h2 id="lieux" class="text-center col-xs-12 ml-1 mr-1 boutonanime "></h2>
                         </div>
                         <!-- ANCIENNE PHRASE D'ACCROCHE CELLE QUI APPARAIT EST SOUMISE A L'APPROBATION DE MY PROVENCE EVIDEMMENT -->
                                               <!-- Ancienne <p class="">Des villes contemporaines qui abritent des petits villages de pêcheurs et des quartiers
