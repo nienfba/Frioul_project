@@ -143,38 +143,6 @@ h4 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .align-item {
   text-align: : justify;
 }
@@ -216,11 +184,6 @@ section {
 }
 
 
-
-
-
-
-
 #infos h1 {
   color: #2b3376;
   font-size: 2em;
@@ -254,30 +217,32 @@ section {
   margin: 10px;
 }
 
+
 .liste {
   text-align:center;
   margin: 20px;
 }
 
 .listeInfo {
-  display:inline-block;
-  position:relative;
+  display: inline-block;
+  position: relative;
   width:15vw;
   height:15vw;
   margin: 5px;
-}
 
 div.liste {
   display:block;
   position:relative;
+
   text-align: center;
+
 }
 
 div.listeInfo {
   display:inline-block;
   position:relative;
-  width:15vw;
-  height:15vw;
+  width:10vw;
+  height:10vw;
   margin:5px;
 }
 
@@ -291,10 +256,8 @@ div.listeInfo {
 footer {
   display: block;
   position:sticky;
-
   bottom:0px;
   left:0px;
-
   font-size: 1em;
   width:100vw;
 
@@ -432,6 +395,7 @@ footer a {
     height:25vw;
     margin:5px;
   }
+}
 
 .border-map {
   position: relative;
@@ -454,7 +418,7 @@ footer a {
   right: 40px;
   top: ;
   z-index: 1000;
-  }
+}
 
 nav{
   display:block;
