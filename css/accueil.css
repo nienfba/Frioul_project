@@ -79,7 +79,7 @@ h4 {
 .accueil article {
     position: relative;
     display: block;
-    background-image: url("../media/mucem.jpg");
+    background-image: url("../media/images_background/Mucem.jpg");
     background-size: cover;
     background-position: center center;
     width: 100vw;
